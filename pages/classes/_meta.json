@@ -1,0 +1,20 @@
+{
+  "c_ai_manager": "c_ai_manager",
+  "c_buff": "c_buff",
+    "c_buff_cache": "c_buff_cache",
+    "c_buff_manager": "c_buff_manager",
+  "c_config": "c_config",
+  "c_entity_list": "c_entity_list",
+  "c_evade": "c_evade",
+  "c_input": "c_input",
+  "c_module": "c_module",
+  "c_navgrid": "c_navgrid",
+  "c_object": "c_object",
+  "c_orbwalker": "c_orbwalker",
+  "c_prediction": "c_prediction",
+  "c_renderer": "c_renderer",
+  "c_spell_book": "c_spell_book",
+  "c_spell_cast_info": "c_spell_cast_info",
+  "c_spell_slot": "c_spell_slot",
+  "c_target_selector": "c_target_selector"
+}

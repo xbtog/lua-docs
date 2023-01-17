@@ -1,0 +1,85 @@
+# c_buff_cache
+
+## Functions
+
+### get_buff
+
+#### Arguments
+
+| Argument     | Type                                         | Required |
+|--------------|----------------------------------------------|----------|
+| object_index | `number`                                     | +        |
+| returns      | [`buff_cache_t`](/docs/structs/buff_cache_t) |          |
+
+```lua
+local buff = features.buff_cache:get_buff(g_local.index, "asheqcastready")
+
+if buff and buff:get_stacks() == 4 then
+    print("Ashe has 4 stacks of her Q")
+end
+```
+
+### has_buff_of_type
+
+#### Arguments
+
+| Argument     | Type                                     | Required |
+|--------------|------------------------------------------|----------|
+| object_index | `number`                                 | +        |
+| type         | [`e_buff_type`](/docs/enums/e_buff_type) | +        |
+| returns      | `boolean`                                |          |
+
+
+```lua
+local is_blind = features.buff_cache:has_buff_of_type(g_local.index, e_buff_type.blind)
+
+if is_blind then
+    print("I'm blind!")
+end
+```
+
+### has_hard_cc
+
+#### Arguments
+
+| Argument     | Type      | Required |
+|--------------|-----------|----------|
+| object_index | `number`  | +        |
+| returns      | `boolean` |          |
+
+
+### is_immobile
+
+#### Arguments
+
+| Argument     | Type      | Required |
+|--------------|-----------|----------|
+| object_index | `number`  | +        |
+| returns      | `boolean` |          |
+
+### can_cast
+
+#### Arguments
+
+| Argument     | Type      | Required |
+|--------------|-----------|----------|
+| object_index | `number`  | +        |
+| returns      | `boolean` |          |
+
+### get_all_buffs
+
+#### Arguments
+
+| Argument     | Type                                                | Required |
+|--------------|-----------------------------------------------------|----------|
+| object_index | `number`                                            | +        |
+| returns      | [`table<buff_cache_t>`](/docs/structs/buff_cache_t) |          |
+
+```lua
+local buffs = features.buff_cache:get_all_buffs(g_local.index)
+
+-- Print all buffs on the local player
+for _, buff in pairs(buffs) do
+    print(buff:get_name())
+end
+```

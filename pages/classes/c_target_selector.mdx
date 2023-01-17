@@ -1,0 +1,117 @@
+import { Callout } from 'nextra-theme-docs'
+
+# c_target_selector
+
+## Functions
+
+### get_default_target
+
+#### Arguments
+
+| Argument | Type      | Required |
+|----------|-----------|----------|
+| returns  | `c_objet` |          |
+
+```lua
+local target = features.target_selector:get_default_target()
+
+if target ~= nil then
+    -- draw circle around current target
+    g_render:circle_3d(target.position, color:new(255, 255, 255), 50, 2, 25, 2)
+end
+```
+
+### get_orbwalker_default_target
+
+#### Arguments
+
+| Argument | Type      | Required |
+|----------|-----------|----------|
+| returns  | `c_objet` |          |
+
+```lua
+local target = features.target_selector:get_orbwalker_default_target()
+
+if target ~= nil then
+    -- draw circle around current target
+    g_render:circle_3d(target.position, color:new(255, 255, 255), 50, 2, 25, 2)
+end
+```
+
+### get_forced_target
+
+#### Arguments
+
+| Argument | Type      | Required |
+|----------|-----------|----------|
+| returns  | `c_objet` |          |
+
+```lua
+local target = features.target_selector:get_forced_target()
+
+if target ~= nil then
+    -- draw circle around forced target
+    g_render:circle_3d(target.position, color:new(255, 255, 255), 50, 2, 25, 2)
+end
+```
+
+### is_forced
+
+#### Arguments
+
+| Argument | Type      | Required |
+|----------|-----------|----------|
+| returns  | `boolean` |          |
+
+```lua
+if features.target_selector:is_forced() then
+    print("Target forced")
+end
+```
+
+### is_bad_target
+
+#### Arguments
+
+| Argument | Type      | Required |
+|----------|-----------|----------|
+| index    | `number`  | +        |
+| returns  | `c_objet` |          |
+
+```lua
+if features.target_selector:is_bad_target(0) then
+    print("Bad target")
+end
+```
+
+### force_target
+
+<Callout type="warning" emoji="⚠️">
+  To reset forced target call force_target with nil or -1 as object argument
+</Callout>
+
+#### Arguments
+
+| Argument | Type      | Required |
+|----------|-----------|----------|
+| index    | `number`  | +        |
+| returns  | `boolean` |          |
+#### or
+
+### get_antigapclose_target
+
+#### Arguments
+
+| Argument        | Type      | Required |
+|-----------------|-----------|----------|
+| danger_distance | `number`  | +        |
+| returns         | `c_objet` |          |
+
+
+```lua
+local target = features.target_selector:get_antigapclose_target(400)
+
+if target ~= nil then
+    print("Got target")
+end
+```

@@ -1,0 +1,64 @@
+# menu
+
+## Functions
+
+### get_main_window
+
+| Argument | Type       | Required |
+|----------|------------|----------|
+| returns  | `c_window` |          |
+
+
+```lua
+local window = menu.get_main_window()
+
+local navigation = window:push_navigation("Script, 0")
+local misc_section = navigation:add_section("misc")
+
+-- add a checkbox
+local config_var = g_config:add_bool(false, "config_var_name")
+misc_section:checkbox("Test checkbox", config_var)
+
+-- add a select
+local select_var = g_config:add_int(0, "select_var_name")
+misc_section:select("Select label", select_var, {
+  "Option 1",
+  "Option 2",
+  "Option 3",
+})
+
+-- add a multi select
+local multi_select_var1 = g_config:add_bool(false, "multi_select_var1_name")
+local multi_select_var2 = g_config:add_bool(false, "multi_select_var2_name")
+misc_section:multi_select("Multi select label", {multi_select_var1, multi_select_var2}, {"option1", "option2"} )
+
+-- add a int slider
+local slider_int_var = g_config:add_int(0, "slider_int_var_name")
+--                       label              config_var     min  max  step
+misc_section:slider_int("Slider int label", slider_int_var,  0  , 5  ,  1)
+
+-- add a float slider
+local slider_float_var = g_config:add_float(0, "slider_float_var_name")
+--                       label                  config_var       min  max  step
+misc_section:slider_float("Slider float label", slider_float_var,  0  , 5  ,  0.5)
+
+-- add a button
+misc_section:button("Button", function()
+  print("Button pressed")
+end)
+
+-- make components only show under specific condition
+-- you can use a conditional like a section e.g. conditional:checkbox(...), ...
+local conditional = misc_section:add_conditional(function()
+  return true
+end)
+
+-- get value
+local orb_navigation = window:find_navigation("orbwalker")
+local orb_misc_section = orb_navigation:find_section("misc")
+local misc_support_mode = orb_misc_section:find_child("support mode")
+
+print(misc_support_mode:get_value())
+
+misc_support_mode:set_value(true)
+```

@@ -1,0 +1,188 @@
+# c_input
+
+## Functions
+
+### set_cursor_position
+
+#### Arguments
+
+| Argument      | Type      | Required |
+|---------------|-----------|----------|
+| position      | `vec2`    | +        |
+
+
+```lua
+g_input:set_cursor_position(vec2:new(50, 50))
+```
+
+### get_cursor_position
+
+#### Arguments
+
+| Argument | Type   | Required |
+|----------|--------|----------|
+| returns  | `vec2` |          |
+
+```lua
+local pos = g_input:get_cursor_position()
+
+print("vec2(" .. pos.x .. ", " .. pos.y .. " )")
+```
+
+### send_key_event
+
+#### Arguments
+
+| Argument | Type          | Required |
+|----------|---------------|----------|
+| key      | `e_key`       | +        |
+| state    | `e_key_state` | +        |
+
+
+```lua
+g_input:send_key_event(e_key.space, e_key_state.key_down)
+g_input:send_key_event(e_key.space, e_key_state.key_up)
+```
+
+### send_mouse_key_event
+
+#### Arguments
+
+| Argument     | Type             | Required |
+|--------------|------------------|----------|
+| mouse_button | `e_mouse_button` | +        |
+| state        | `e_key_state`    | +        |
+
+
+```lua
+g_input:send_mouse_key_event(e_mouse_button.left, e_key_state.key_down)
+g_input:send_mouse_key_event(e_mouse_button.left, e_key_state.key_up)
+```
+
+### issue_order_move
+
+#### Arguments
+
+| Argument      | Type      | Required |
+|---------------|-----------|----------|
+| position      | `vec3`    | +        |
+| returns       | `boolean` |          |
+
+
+```lua
+g_input:issue_order_move(g_local.position)
+```
+
+### issue_order_attack
+
+#### Arguments
+
+| Argument | Type       | Required |
+|----------|------------|----------|
+| object   | `c_object` | +        |
+| returns  | `boolean`  |          |
+
+
+or
+
+| Argument   | Type      | Required |
+|------------|-----------|----------|
+| network_id | `number`  | +        |
+| returns    | `boolean` |          |
+
+```lua
+local target = features.target_selector:get_default_target()
+
+if target ~= nil then
+  g_input:issue_order_attack(target)
+end
+```
+
+### cast_spell
+
+#### Arguments
+
+| Argument | Type           | Required |
+|----------|----------------|----------|
+| slot     | `e_spell_slot` | +        |
+| object   | `c_object`     | +        |
+| end      | `vec3`         | +        |
+| returns  | `boolean`      |          |
+
+or
+
+| Argument | Type           | Required |
+|----------|----------------|----------|
+| slot     | `e_spell_slot` | +        |
+| position | `vec3`         | +        |
+| end      | `vec3`         | +        |
+| returns  | `boolean`      |          |
+
+or
+
+| Argument   | Type           | Required |
+|------------|----------------|----------|
+| slot       | `e_spell_slot` | +        |
+| network_id | `number`       | +        |
+| end        | `vec3`         | +        |
+| returns    | `boolean`      |          |
+
+```lua
+local target = features.target_selector:get_default_target()
+
+if target ~= nil then
+  g_input:cast_spell(e_spell_slot.q, target)
+end
+```
+
+### release_chargeable
+
+#### Arguments
+
+| Argument | Type           | Required |
+|----------|----------------|----------|
+| slot     | `e_spell_slot` | +        |
+| position | `vec3`         | +        |
+| returns  | `boolean`      |          |
+
+```lua
+local cast_start = -1.0
+local channeling_q = false
+
+cheat.on("feature.run", function()
+    local target = features.target_selector:get_default_target()
+
+    if target == nil then
+        return
+    end
+
+    if not channeling_q and g_input:cast_spell(e_spell_slot.q) then
+        cast_start = g_time
+        channeling_q = true
+        return
+    end
+
+    if g_time - cast_start > 0.2 then
+        g_input:release_chargeable(e_spell_slot.q, target.position)
+        channeling_q = false
+    end
+end)
+
+g_input:release_chargeable(e_spell_slot.q, g_local.position)
+```
+
+### is_key_pressed
+
+#### Arguments
+
+| Argument | Type      | Required |
+|----------|-----------|----------|
+| key      | `e_key`   | +        |
+| returns  | `boolean` |          |
+
+
+```lua
+if g_input:is_key_pressed(e_key.space) then
+  print("space is pressed")
+end
+```

@@ -1,0 +1,35 @@
+# rectangle_t
+
+## Constructors
+
+`rectangle_t:new(start, end, width_start)`
+
+## Members
+
+- `direction:` [`vec3`](/docs/structs/vec3)
+- `perpendicular:` [`vec3`](/docs/structs/vec3)
+- `r_end:` [`vec3`](/docs/structs/vec3)
+- `r_start:` [`vec3`](/docs/structs/vec3)
+- `width:` `number`
+
+## Functions
+
+### to_polygon
+
+#### Arguments
+
+| Argument       | Type        | Required |
+|----------------|-------------|----------|
+| offset         | `number`    | +        |
+| override_width | `number`    | +        |
+| returns        | `polygon_t` |          |
+
+### intersection
+
+#### Arguments
+
+| Argument | Type       | Required |
+|----------|------------|----------|
+| circle   | `circle_t` | +        |
+| returns  | `boolean`  |          |
+

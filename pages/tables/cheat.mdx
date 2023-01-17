@@ -1,0 +1,186 @@
+# cheat
+
+## Functions
+
+### on
+
+#### Arguments
+
+| Argument | Type       | Required |
+|----------|------------|----------|
+| name     | `string`   | +        |
+| callback | `function` | +        |
+
+#### Available callbacks
+
+- `lua.load`
+- `lua.unload`
+- `local.cast_spell`
+- `local.issue_order_attack`
+- `local.issue_order_move`
+- `champion.create`
+- `champion.delete`
+- `features.pre_run`
+- `features.run`
+- `features.orbwalker`
+- `features.prediction`
+- `features.entity_list`
+- `features.buff_cache`
+- `features.evade`
+- `features.target_selector`
+- `renderer.draw`
+
+```lua
+-- Cancel all issue_order_move calls. Also works with "local.cast_spell", "local.issue_order_attack"
+cheat.on("local.issue_order_move", function(e)
+    e:cancel()
+end)
+
+cheat.on("features.run", function()
+    -- replacement for cheat.register_callback("feature")
+end)
+
+cheat.on("renderer.draw", function()
+    local target = features.target_selector:get_default_target()
+
+    if target ~= nil and g_local ~= nil then
+        -- Draw line from local to current target
+        g_render:line_3d(g_local.position, target.position, color:new(255, 255, 255, 255), 1)
+    end
+end)
+```
+
+### register_module
+
+#### Arguments
+
+| Argument | Type    | Required |
+|----------|---------|----------|
+| module   | `table` | +        |
+
+
+module table
+
+| Key | Type  | Return type  | Required |
+| - | - | - | - |
+| champion_name | `string` | `void` | + |
+| get_priorities | `function` | `string` | + |
+| on_draw | `function` | `void` | + |
+| spell_q | `function` | `boolean` | + |
+| spell_w | `function` | `boolean` | + |
+| spell_e | `function` | `boolean` | + |
+| spell_r | `function` | `boolean` | + |
+| initialize | `function` | `void` | + |
+
+Data passed to all spell\_\* functions is of type [champion_module_spell_data_t](/docs/structs/champion_module_spell_data_t).
+
+Functions for spells will only be called when the slot is ready.
+
+```lua
+-- example usage
+-- `spell_w` will be called first, then `spell_q`, then `spell_e`, then `spell_r`
+local registered = cheat.register_module({
+    champion_name = "Ezreal",
+    spell_q = function(data)
+        return false
+    end,
+    spell_w = function(data)
+        return false
+    end,
+    spell_e = function(data)
+        return false
+    end,
+    spell_r = function(data)
+        return false
+    end,
+    initialize = function()
+        -- register menu components here
+    end,
+    on_draw = function()
+        -- draw stuff here
+    end,
+    get_priorities = function()
+        -- the return value of this table can also be changed dynamically
+        return { "spell_w", "spell_q", "spell_e", "spell_r" }
+    end,
+})
+```
+
+### get_module_by_champion
+
+Get core module by champion name.
+
+#### Arguments
+
+| Argument      | Type       | Required |
+|---------------|------------|----------|
+| champion_name | `string`   | +        |
+| returns       | `c_module` | +        |
+
+```lua
+-- example usage
+local coreEzreal = cheat.get_module_by_champion("Ezreal")
+
+if coreEzreal == nil then
+  return
+end
+
+-- extend core champion module
+cheat.register_module({
+    champion_name = "Ezreal",
+    spell_q = function(data)
+        return coreEzreal:spell_q()
+    end,
+    spell_w = function(data)
+       return coreEzreal:spell_w()
+    end,
+    spell_e = function(data)
+        -- add custom e spell to module
+        return g_input:cast_spell(e_spell_slot.e)
+    end,
+    spell_r = function(data)
+       return coreEzreal:spell_r()
+    end,
+    get_priorities = function()
+        return { "spell_w", "spell_q", "spell_e", "spell_r" }
+    end,
+})
+```
+
+### ~~register_callback~~
+
+Deprecated use `cheat.on`
+
+#### Arguments
+
+| Argument | Type       | Required |
+|----------|------------|----------|
+| name     | `string`   | +        |
+| callback | `function` | +        |
+
+
+```lua
+cheat.register_callback(name, callback)
+
+-- usage example
+cheat.register_callback("render", function()
+    local text = "Hello world!"
+    local size = g_render:get_text_size(text, nil, 16)
+    local screen = g_render:get_screen_size()
+
+    -- draw text in the upper right corner of the screen
+    g_render:text(vec2:new(screen.x - (size.x + 8), 4), color:new(255, 255, 255), text, nil, 16)
+end)
+
+cheat.register_callback("champion_create", function(champ)
+    print("Champion " .. champ.champion_name.text .. " was just created.")
+end)
+```
+
+#### Available callbacks
+
+- ~~`feature`~~
+- ~~`render`~~
+- ~~`pre_feature`~~
+- ~~`champion_create`~~
+- ~~`champion_delete`~~

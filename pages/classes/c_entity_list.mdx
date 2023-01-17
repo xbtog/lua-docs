@@ -1,0 +1,113 @@
+# c_entity_list
+
+## Functions
+
+### force_update
+
+```lua
+-- force update the entity list
+features.entity_list:force_update()
+```
+
+### get_enemies
+
+#### Arguments
+
+| Argument | Type                                        | Required |
+|----------|---------------------------------------------|----------|
+| returns  | [`table<c_object>`](/docs/classes/c_object) |          |
+
+```lua
+local enemies = features.entity_list:get_enemies()
+
+-- print all enemy champion names
+for _, enemy in pairs(enemies) do
+    print(enem.champion_name.text)
+end
+```
+
+### get_allies
+
+#### Arguments
+
+| Argument | Type                                        | Required |
+|----------|---------------------------------------------|----------|
+| returns  | [`table<c_object>`](/docs/classes/c_object) |          |
+
+### get_enemy_turrests
+
+#### Arguments
+
+| Argument | Type                                        | Required |
+|----------|---------------------------------------------|----------|
+| returns  | [`table<c_object>`](/docs/classes/c_object) |          |
+
+### get_ally_turrets
+
+#### Arguments
+
+| Argument | Type                                        | Required |
+|----------|---------------------------------------------|----------|
+| returns  | [`table<c_object>`](/docs/classes/c_object) |          |
+
+### get_ally_minions
+
+#### Arguments
+
+| Argument | Type                                        | Required |
+|----------|---------------------------------------------|----------|
+| returns  | [`table<c_object>`](/docs/classes/c_object) |          |
+
+### get_enemy_minions
+
+#### Arguments
+
+| Argument | Type                                        | Required |
+|----------|---------------------------------------------|----------|
+| returns  | [`table<c_object>`](/docs/classes/c_object) |          |
+
+### get_ally_missiles
+
+#### Arguments
+
+| Argument | Type                                        | Required |
+|----------|---------------------------------------------|----------|
+| returns  | [`table<c_object>`](/docs/classes/c_object) |          |
+
+### get_enemy_missiles
+
+#### Arguments
+
+| Argument | Type                                        | Required |
+|----------|---------------------------------------------|----------|
+| returns  | [`table<c_object>`](/docs/classes/c_object) |          |
+
+### get_by_index
+
+#### Arguments
+
+| Argument | Type                                 | Required |
+|----------|--------------------------------------|----------|
+| index    | `number`                             | +        |
+| returns  | [`c_object`](/docs/classes/c_object) |          |
+
+```lua
+local local = features.entity_list:get_by_index(g_local.index)
+```
+
+### get_by_network_id
+
+#### Arguments
+
+| Argument   | Type                                 | Required |
+|------------|--------------------------------------|----------|
+| network_id | `number`                             | +        |
+| returns    | [`c_object`](/docs/classes/c_object) |          |
+
+### get_all
+
+#### Arguments
+
+| Argument | Type                                        | Required |
+|----------|---------------------------------------------|----------|
+| returns  | [`table<c_object>`](/docs/classes/c_object) |          |

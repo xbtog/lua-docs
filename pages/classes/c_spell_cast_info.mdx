@@ -1,0 +1,27 @@
+# c_spell_cast_info
+
+## Members
+
+- `slot:` [`e_spell_slot`](../enums/e_spell_slot)
+- `missile_index:` `number`
+- `start_position:` [`vec3`](../structs/vec3)
+- `end_position:` [`vec3`](../structs/vec3)
+- `windup_time:` `number`
+- `total_cast_time:` `number`
+- `server_cast_time:` `number`
+- `end_time:` `number`
+- `start_time:` `number`
+
+## Functions
+
+### get_target_index
+
+#### Arguments
+
+| Argument | Type     | Required |
+|----------|----------|----------|
+| returns  | `number` |          |
+
+```lua
+print("Target " .. spell_cast_info:get_target_index())
+```

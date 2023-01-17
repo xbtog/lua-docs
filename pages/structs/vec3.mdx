@@ -1,0 +1,149 @@
+# vec3
+
+## Members
+
+- `x:` `number`
+- `y:` `number`
+- `z:` `number`
+
+## Functions
+
+### length
+
+#### Arguments
+
+| Argument | Type     | Required |
+|----------|----------|----------|
+| returns  | `number` |          |
+
+```lua
+vec:length()
+```
+
+### length2d
+
+#### Arguments
+
+| Argument | Type     | Required |
+|----------|----------|----------|
+| returns  | `number` |          |
+
+```lua
+vec:length2d()
+```
+
+### dist_to
+
+#### Arguments
+
+| Argument | Type     | Required |
+|----------|----------|----------|
+| other    | `vec3`   | +        |
+| returns  | `number` |          |
+```lua
+vec3:new(1, 1):dist_to(vec3:new(2, 2))
+```
+
+### dot
+
+#### Arguments
+
+| Argument | Type     | Required |
+|----------|----------|----------|
+| other    | `vec3`   | +        |
+| returns  | `number` |          |
+
+```lua
+vec:dot(other)
+```
+
+### cross
+
+#### Arguments
+
+| Argument | Type     | Required |
+|----------|----------|----------|
+| other    | `vec3`   | +        |
+| returns  | `number` |          |
+
+```lua
+vec:cross(other): number
+```
+
+### normalized
+
+#### Arguments
+
+| Argument | Type   | Required |
+|----------|--------|----------|
+| returns  | `vec3` |          |
+
+```lua
+vec:normalized(): vec3
+```
+
+### angle_between
+
+#### Arguments
+
+| Argument | Type     | Required |
+|----------|----------|----------|
+| other    | `vec3`   | +        |
+| returns  | `number` |          |
+
+```lua
+vec:angle_between(other)
+```
+
+### rotated
+
+#### Arguments
+
+| Argument | Type     | Required |
+|----------|----------|----------|
+| angle    | `number` | +        |
+| returns  | `vec3`   |          |
+
+
+```lua
+vec:rotated(angle)
+```
+
+### extend
+
+#### Arguments
+
+| Argument | Type     | Required |
+|----------|----------|----------|
+| to       | `vec3`   | +        |
+| distance | `number` | +        |
+| returns  | `vec3`   |          |
+
+
+```lua
+vec:extend(to, distance)
+```
+
+### to_screen
+
+#### Arguments
+
+| Argument | Type     | Required |
+|----------|----------|----------|
+| returns  | `vec2`   |          |
+
+```lua
+vec:to_screen()
+```
+
+### to_minimap
+
+#### Arguments
+
+| Argument | Type     | Required |
+|----------|----------|----------|
+| returns  | `vec2`   |          |
+
+```lua
+vec:to_minimap()
+```

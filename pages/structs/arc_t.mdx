@@ -1,0 +1,39 @@
+# arc_t
+
+## Constructors
+
+```lua
+arc_t:new(start_position, end_position, hitbox)
+```
+
+## Members
+
+- `end:` [`vec3`](/docs/structs/vec3)
+- `hitbox:` `number`
+- `start:` [`vec3`](/docs/structs/vec3)
+- `distance:` `number`
+
+## Functions
+
+### circle_circle_intersection
+
+#### Arguments
+
+| Argument | Type      | Required |
+|----------|-----------|----------|
+| center1  | `vec3`    | +        |
+| center2  | `vec3`    | +        |
+| radius1  | `number`  | +        |
+| radius2  | `number`  | +        |
+| returns  | `boolean` |          |
+
+
+### to_polygon
+
+#### Arguments
+
+| Argument | Type        | Required |
+|----------|-------------|----------|
+| center   | `number`    | +        |
+| returns  | `polygon_t` |          |
+

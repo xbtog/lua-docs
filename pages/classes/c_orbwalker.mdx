@@ -1,0 +1,194 @@
+# c_orbwalker
+
+## Functions
+
+### send_attack
+
+#### Arguments
+
+| Argument   | Type     | Required |
+|------------|----------|----------|
+| network_id | `number` | +        |
+
+
+```lua
+local target = feature.targeting.get_default_target()
+
+if target ~= nil then
+    features.orbwalker:send_attack(target.network_id)
+end
+```
+
+### is_in_attack
+
+#### Arguments
+
+| Argument | Type      | Required |
+|----------|-----------|----------|
+| returns  | `boolean` |          |
+
+```lua
+if features.orbwalker:is_in_attack() then
+    print("Orbwalker in attack")
+end
+```
+
+### send_move_input
+
+#### Arguments
+
+| Argument | Type      | Required |
+|----------|-----------|----------|
+| position | `vec3`    | +        |
+| force    | `boolean` | +        |
+
+
+```lua
+features.orbwalker:send_move_input(vec3(0, 0, 0), true)
+```
+
+### set_cast_time
+
+#### Arguments
+
+| Argument | Type     | Required |
+|----------|----------|----------|
+| time     | `number` | +        |
+
+```lua
+features.orbwalker:set_cast_time(0.25)
+```
+
+### can_move
+
+#### Arguments
+
+| Argument | Type      | Required |
+|----------|-----------|----------|
+| returns  | `boolean` |          |
+
+```lua
+if features.orbwalker:can_move() then
+    print("Can move")
+end
+```
+
+### is_attackable
+
+#### Arguments
+
+| Argument   | Type      | Required |
+|------------|-----------|----------|
+| index      | `number`  | +        |
+| range      | `number`  | +        |
+| edge_range | `boolean` | +        |
+| returns    | `boolean` |          |
+
+```lua
+
+<ArgTable
+  arguments={[
+    {
+      name: "index",
+      type: "number",
+      required: true,
+    },
+    {
+      name: "range",
+      type: "number",
+      required: true,
+    },
+    {
+      name: "edge_range",
+      type: "boolean",
+      required: true,
+    },
+  ]}
+  returnType={"boolean"}
+/>
+
+```lua
+local target = features.target_select:get_default_target()
+
+if target == nil then
+    return
+end
+
+local is_attackable = features.orbwalker:is_attackable(target.index, 1000, true)
+
+if is_attackable then
+    print("Target is attackable")
+end
+```
+
+### get_ping
+
+#### Arguments
+
+| Argument | Type     | Required |
+|----------|----------|----------|
+| returns  | `number` |          |
+
+```lua
+print("Ping: " .. features.orbwalker:get_ping())
+```
+
+### get_mode
+
+#### Arguments
+
+| Argument | Type               | Required |
+|----------|--------------------|----------|
+| returns  | `e_orbwalker_mode` |          |
+
+
+### reset_aa_timer
+
+```lua
+-- Reset orbwalker attack timer
+features.orbwalker:reset_aa_timer()
+```
+
+### can_attack
+
+#### Arguments
+
+| Argument | Type      | Required |
+|----------|-----------|----------|
+| returns  | `boolean` |          |
+
+```lua
+if features.orbwalker:can_attack() then
+    print("Can attack")
+end
+```
+
+### should_reset_aa
+
+#### Arguments
+
+| Argument | Type      | Required |
+|----------|-----------|----------|
+| returns  | `boolean` |          |
+
+```lua
+if features.orbwalker:should_reset_aa() then
+    print("Should reset aa")
+end
+```
+
+### allow_movement
+
+#### Arguments
+
+| Argument | Type      | Required |
+|----------|-----------|----------|
+| allowed  | `boolean` | +        |
+
+### allow_attacks
+
+#### Arguments
+
+| Argument | Type      | Required |
+|----------|-----------|----------|
+| allowed  | `boolean` | +        |

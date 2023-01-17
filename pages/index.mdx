@@ -1,11 +1,29 @@
-# Introduction
- 
-Welcome to Nextra! This is a basic docs template. You can use it as a starting point for your own project :)
+# Getting started
 
-## What is Nextra?
+## Gettings started with lua scripting
 
-A **simple**, **powerful** and **flexible** site generation framework with everything you love from Next.js.
+### Text editor
 
-## Documentation
+| Editor             | Link                                                    |
+|--------------------|---------------------------------------------------------|
+| Visual Studio Code | [code.visualstudio.com](https://code.visualstudio.com/) |
+| Sublime Text       | [sublimetext.com](https://www.sublimetext.com/)         |
+| Notepad++          | [notepad-plus-plus.org](https://notepad-plus-plus.org/) |
 
-The documentation is available at [https://nextra.site](https://nextra.site).
+
+
+## Register a callback
+
+```lua
+cheat.on("renderer.draw", function()
+    print("hello from render callback")
+end)
+```
+
+## Load libraries
+
+```lua
+-- example
+-- loads "extra_math" fron <lua_folder>/lib
+local extra_math = require("extra_math")
+```
