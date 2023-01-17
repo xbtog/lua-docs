@@ -6,4 +6,5 @@ const withNextra = require("nextra")({
 
 module.exports = withNextra({
   basePath: "/docs",
+  siteUrl: "https://slotted.cc/docs",
 });
