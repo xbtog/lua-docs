@@ -39,7 +39,7 @@ end
 
 | Argument | Type      | Required |
 |----------|-----------|----------|
-| position | `vec3`    | +        |
+| position | [`vec3`](/structs/vec3)    | +        |
 | force    | `boolean` | +        |
 
 
@@ -84,28 +84,6 @@ end
 | edge_range | `boolean` | +        |
 | returns    | `boolean` |          |
 
-```lua
-
-<ArgTable
-  arguments={[
-    {
-      name: "index",
-      type: "number",
-      required: true,
-    },
-    {
-      name: "range",
-      type: "number",
-      required: true,
-    },
-    {
-      name: "edge_range",
-      type: "boolean",
-      required: true,
-    },
-  ]}
-  returnType={"boolean"}
-/>
 
 ```lua
 local target = features.target_select:get_default_target()
@@ -139,7 +117,7 @@ print("Ping: " .. features.orbwalker:get_ping())
 
 | Argument | Type               | Required |
 |----------|--------------------|----------|
-| returns  | `e_orbwalker_mode` |          |
+| returns  | [`e_orbwalker_mode`](/enums/e_orbwalker_mode) |          |
 
 
 ### reset_aa_timer

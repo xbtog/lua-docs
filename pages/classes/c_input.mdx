@@ -8,7 +8,7 @@
 
 | Argument      | Type      | Required |
 |---------------|-----------|----------|
-| position      | `vec2`    | +        |
+| position      | [`vec2`](/structs/vec2)    | +        |
 
 
 ```lua
@@ -21,7 +21,7 @@ g_input:set_cursor_position(vec2:new(50, 50))
 
 | Argument | Type   | Required |
 |----------|--------|----------|
-| returns  | `vec2` |          |
+| returns  | [`vec2`](/structs/vec2) |          |
 
 ```lua
 local pos = g_input:get_cursor_position()
@@ -65,7 +65,7 @@ g_input:send_mouse_key_event(e_mouse_button.left, e_key_state.key_up)
 
 | Argument      | Type      | Required |
 |---------------|-----------|----------|
-| position      | `vec3`    | +        |
+| position      | [`vec3`](/structs/vec3)    | +        |
 | returns       | `boolean` |          |
 
 
@@ -106,7 +106,7 @@ end
 |----------|----------------|----------|
 | slot     | `e_spell_slot` | +        |
 | object   | `c_object`     | +        |
-| end      | `vec3`         | +        |
+| end      | [`vec3`](/structs/vec3)         | +        |
 | returns  | `boolean`      |          |
 
 or
@@ -114,8 +114,8 @@ or
 | Argument | Type           | Required |
 |----------|----------------|----------|
 | slot     | `e_spell_slot` | +        |
-| position | `vec3`         | +        |
-| end      | `vec3`         | +        |
+| position | [`vec3`](/structs/vec3)         | +        |
+| end      | [`vec3`](/structs/vec3)         | +        |
 | returns  | `boolean`      |          |
 
 or
@@ -124,7 +124,7 @@ or
 |------------|----------------|----------|
 | slot       | `e_spell_slot` | +        |
 | network_id | `number`       | +        |
-| end        | `vec3`         | +        |
+| end        | [`vec3`](/structs/vec3)         | +        |
 | returns    | `boolean`      |          |
 
 ```lua
@@ -142,7 +142,7 @@ end
 | Argument | Type           | Required |
 |----------|----------------|----------|
 | slot     | `e_spell_slot` | +        |
-| position | `vec3`         | +        |
+| position | [`vec3`](/structs/vec3)         | +        |
 | returns  | `boolean`      |          |
 
 ```lua
