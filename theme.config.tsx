@@ -8,6 +8,12 @@ const config: DocsThemeConfig = {
   footer: {
     text: `© ${new Date().getFullYear()} slotted.cc`,
   },
+  useNextSeoProps: () => {
+    return {
+      title: "Slotted - LUA Documentation",
+      description: "Slotted League Script LUA Documentation."
+    }
+  },
   darkMode: true,
 
 }
