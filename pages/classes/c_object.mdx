@@ -34,6 +34,7 @@
 - `max_gold:` `number`
 - `champion_name:` [`lstring`](../structs/lstring)
 - `level:` `number`
+- `recalling_flag:` `number`
 
 ## Functions
 
@@ -300,3 +301,15 @@ print("Ability power: " .. obj:get_ability_power())
 | Argument | Type           | Required |
 |----------|----------------|----------|
 | returns  | [`c_ai_manager`](/classes/c_ai_manager) |          |
+
+### get_hpbar_position
+
+#### Arguments
+
+| Argument | Type     | Required |
+|----------|----------|----------|
+| returns  | `vec2` |          |
+
+```lua
+print("position: " .. obj:get_hpbar_position())
+```
