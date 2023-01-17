@@ -6,16 +6,16 @@
 
 #### Arguments
 
-| Argument         | Type                  | Required |
-|------------------|-----------------------|----------|
-| target_index     | `number`              | +        |
-| projectile_range | `number`              | +        |
-| projectile_speed | `number`              | +        |
-| projectile_width | `number`              | +        |
-| delay            | `number`              | +        |
-| source_position  | `vec3`                | +        |
-| extend           | `boolean`             |          |
-| returns          | `prediction_result_t` |          |
+| Argument         | Type                                                  | Required |
+|------------------|-------------------------------------------------------|----------|
+| target_index     | `number`                                              | +        |
+| projectile_range | `number`                                              | +        |
+| projectile_speed | `number`                                              | +        |
+| projectile_width | `number`                                              | +        |
+| delay            | `number`                                              | +        |
+| source_position  | `vec3`                                                | +        |
+| extend           | `boolean`                                             |          |
+| returns          | [`prediction_result_t`](/structs/prediction_result_t) |          |
 
 
 ```lua
@@ -35,11 +35,11 @@ end
 
 #### Arguments
 
-| Argument     | Type     | Required |
-|--------------|----------|----------|
-| target_index | `number` | +        |
-| time         | `number` | +        |
-| returns      | `vec3`   |          |
+| Argument     | Type                    | Required |
+|--------------|-------------------------|----------|
+| target_index | `number`                | +        |
+| time         | `number`                | +        |
+| returns      | [`vec3`](/structs/vec3) |          |
 
 ```lua
 local target = features.target_selector:get_default_target()
@@ -72,13 +72,13 @@ print("Predicted health is " .. predicted)
 
 #### Arguments
 
-| Argument           | Type      | Required |
-|--------------------|-----------|----------|
-| start_pos          | `vec3`    | +        |
-| end_pos            | `vec3`    | +        |
-| projectile_width   | `number`  | +        |
-| ignored_network_id | `number`  | +        |
-| returns            | `boolean` |          |
+| Argument           | Type                    | Required |
+|--------------------|-------------------------|----------|
+| start_pos          | [`vec3`](/structs/vec3) | +        |
+| end_pos            | [`vec3`](/structs/vec3) | +        |
+| projectile_width   | `number`                | +        |
+| ignored_network_id | `number`                | +        |
+| returns            | `boolean`               |          |
 
 ```lua
 local target = features.target_selector:get_default_target()
@@ -100,13 +100,13 @@ end
 
 #### Arguments
 
-| Argument           | Type     | Required |
-|--------------------|----------|----------|
-| start_pos          | `vec3`   | +        |
-| end_pos            | `vec3`   | +        |
-| projectile_width   | `number` | +        |
-| ignored_network_id | `number` | +        |
-| returns            | `number` |          |
+| Argument           | Type                    | Required |
+|--------------------|-------------------------|----------|
+| start_pos          | [`vec3`](/structs/vec3) | +        |
+| end_pos            | [`vec3`](/structs/vec3) | +        |
+| projectile_width   | `number`                | +        |
+| ignored_network_id | `number`                | +        |
+| returns            | `number`                |          |
 
 ```lua
 local target = features.target_selector:get_default_target()
