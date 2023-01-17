@@ -1,0 +1,29 @@
+# Getting started
+
+## Gettings started with lua scripting
+
+### Text editor
+
+| Editor             | Link                                                    |
+|--------------------|---------------------------------------------------------|
+| Visual Studio Code | [code.visualstudio.com](https://code.visualstudio.com/) |
+| Sublime Text       | [sublimetext.com](https://www.sublimetext.com/)         |
+| Notepad++          | [notepad-plus-plus.org](https://notepad-plus-plus.org/) |
+
+
+
+## Register a callback
+
+```lua
+cheat.on("renderer.draw", function()
+    print("hello from render callback")
+end)
+```
+
+## Load libraries
+
+```lua
+-- example
+-- loads "extra_math" fron <lua_folder>/lib
+local extra_math = require("extra_math")
+```
