@@ -9,7 +9,7 @@
 | Argument     | Type                                         | Required |
 |--------------|----------------------------------------------|----------|
 | object_index | `number`                                     | +        |
-| returns      | [`buff_cache_t`](/docs/structs/buff_cache_t) |          |
+| returns      | [`buff_cache_t`](/structs/buff_cache_t) |          |
 
 ```lua
 local buff = features.buff_cache:get_buff(g_local.index, "asheqcastready")
@@ -26,7 +26,7 @@ end
 | Argument     | Type                                     | Required |
 |--------------|------------------------------------------|----------|
 | object_index | `number`                                 | +        |
-| type         | [`e_buff_type`](/docs/enums/e_buff_type) | +        |
+| type         | [`e_buff_type`](/enums/e_buff_type) | +        |
 | returns      | `boolean`                                |          |
 
 
@@ -73,7 +73,7 @@ end
 | Argument     | Type                                                | Required |
 |--------------|-----------------------------------------------------|----------|
 | object_index | `number`                                            | +        |
-| returns      | [`table<buff_cache_t>`](/docs/structs/buff_cache_t) |          |
+| returns      | [`table<buff_cache_t>`](/structs/buff_cache_t) |          |
 
 ```lua
 local buffs = features.buff_cache:get_all_buffs(g_local.index)
