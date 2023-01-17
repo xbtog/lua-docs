@@ -3,5 +3,8 @@
   "Home": {
     "type": "page",
     "href": "https://slotted.cc"
+  },
+  "index": {
+    "display": "hidden"
   }
 }
