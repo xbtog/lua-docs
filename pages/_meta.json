@@ -4,6 +4,7 @@
   "classes": "Classes",
   "structs": "Structs",
   "enums": "Enums",
+  "examples": "Examples",
   "Home": {
     "type": "page",
     "href": "https://slotted.cc"

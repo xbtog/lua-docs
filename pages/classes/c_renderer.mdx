@@ -95,6 +95,20 @@ end
 | segments  | `number`                  | +        |
 | thickness | `number`                  | +        |
 
+```lua /circle_3d/
+local target = features.target_selector:get_default_target()
+
+if target ~= nil and g_local ~= nil then
+    --[[ Draw circle around current target
+        flags:
+            1 - filled circle
+            2 - outlined circle
+            4 - filled circle with outline
+    ]]
+    g_render:circle_3d(target.position, color:new(255, 255, 255), 50, 2, 100, 1)
+end
+```
+
 ### triangle
 
 | Argument  | Type                      | Required |
@@ -136,7 +150,7 @@ end
 | size     | [`vec2`](/structs/vec2)           | +        |
 | texture  | [`texture_t`](/structs/texture_t) | +        |
 
-```lua
+```lua /image/
 local texture = g_render:load_texture_from_file("C:\\Users\\user\\Desktop\\texture.png")
 
 if texture ~= nil then

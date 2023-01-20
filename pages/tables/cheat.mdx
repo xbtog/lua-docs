@@ -28,7 +28,7 @@
 - `features.target_selector`
 - `renderer.draw`
 
-```lua
+```lua /cheat.on/
 -- Cancel all issue_order_move calls. Also works with "local.cast_spell", "local.issue_order_attack"
 cheat.on("local.issue_order_move", function(e)
     e:cancel()
@@ -110,7 +110,7 @@ Get core module by champion name.
 | champion_name | `string`                        | +        |
 | returns       | [`c_module`](/classes/c_module) |          |
 
-```lua
+```lua /cheat.get_module_by_champion/
 -- example usage
 local coreEzreal = cheat.get_module_by_champion("Ezreal")
 

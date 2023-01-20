@@ -10,7 +10,7 @@ import { Callout } from "nextra-theme-docs";
 | -------- | ------------------------------ | -------- |
 | returns  | [`c_objet`](/classes/c_object) |          |
 
-```lua
+```lua /get_default_target/
 local target = features.target_selector:get_default_target()
 
 if target ~= nil then
@@ -25,7 +25,7 @@ end
 | -------- | ------------------------------ | -------- |
 | returns  | [`c_objet`](/classes/c_object) |          |
 
-```lua
+```lua /get_orbwalker_default_target/
 local target = features.target_selector:get_orbwalker_default_target()
 
 if target ~= nil then
@@ -40,7 +40,7 @@ end
 | -------- | ------------------------------ | -------- |
 | returns  | [`c_objet`](/classes/c_object) |          |
 
-```lua
+```lua /get_forced_target/
 local target = features.target_selector:get_forced_target()
 
 if target ~= nil then
@@ -55,7 +55,7 @@ end
 | -------- | --------- | -------- |
 | returns  | `boolean` |          |
 
-```lua
+```lua /is_forced/
 if features.target_selector:is_forced() then
     print("Target forced")
 end
@@ -68,7 +68,7 @@ end
 | index    | `number`                       | +        |
 | returns  | [`c_objet`](/classes/c_object) |          |
 
-```lua
+```lua /is_bad_target/
 if features.target_selector:is_bad_target(0) then
     print("Bad target")
 end
@@ -85,7 +85,14 @@ end
 | index    | `number`  | +        |
 | returns  | `boolean` |          |
 
-#### or
+```lua /force_target/
+local target = features.target_selector:get_default_target()
+
+features.target_selector:force_target(target.index)
+
+-- reset target
+features.target_selector:force_target(nil)
+```
 
 ### get_antigapclose_target
 
@@ -94,7 +101,7 @@ end
 | danger_distance | `number`                       | +        |
 | returns         | [`c_objet`](/classes/c_object) |          |
 
-```lua
+```lua /get_antigapclose_target/
 local target = features.target_selector:get_antigapclose_target(400)
 
 if target ~= nil then

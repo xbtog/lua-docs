@@ -15,7 +15,7 @@
 | extend           | `boolean`                                             |          |
 | returns          | [`prediction_result_t`](/structs/prediction_result_t) |          |
 
-```lua
+```lua /:predict/
 -- Example data from https://forum.slotted.cc/threads/168/
 local q_range, q_speed, q_width, q_windup = 710, 2200, 150 / 2, 0.25
 
@@ -36,7 +36,7 @@ end
 | time         | `number`                | +        |
 | returns      | [`vec3`](/structs/vec3) |          |
 
-```lua
+```lua /predict_default/
 local target = features.target_selector:get_default_target()
 local predicted = features.prediction:predict_default(target.index, 0.25)
 
@@ -70,16 +70,16 @@ print("Predicted health is " .. predicted)
 | ignored_network_id | `number`                | +        |
 | returns            | `boolean`               |          |
 
-```lua
+```lua /minion_in_line/
 local target = features.target_selector:get_default_target()
 
 if target == nil then
     return
 end
 
-local minion_in_line = features.prediction:minion_in_line(g_local.position, target.position, 40, -1)
+local in_line = features.prediction:minion_in_line(g_local.position, target.position, 40, -1)
 
-if minion_in_line then
+if in_line then
     return
 end
 
@@ -96,7 +96,7 @@ end
 | ignored_network_id | `number`                | +        |
 | returns            | `number`                |          |
 
-```lua
+```lua /count_minions_in_line/
 local target = features.target_selector:get_default_target()
 
 if target == nil then

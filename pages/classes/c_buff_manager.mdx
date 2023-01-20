@@ -12,7 +12,7 @@ Calculates and returns current number of buffs in the buff manager.
 | -------- | -------- | -------- |
 | returns  | `number` |          |
 
-```lua
+```lua /size/
 local local_buff_manager = g_local:get_buff_manager()
 
 print("Local player has " .. local_buff_manager:size() .. " buffs.")
@@ -29,7 +29,7 @@ print("Local player has " .. local_buff_manager:size() .. " buffs.")
 | -------- | --------------- | -------- |
 | returns  | `table<c_buff>` |          |
 
-```lua
+```lua /get_all/
 local local_buff_manager = g_local:get_buff_manager()
 local buffs = local_buff_manager:get_all()
 

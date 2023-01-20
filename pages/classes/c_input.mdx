@@ -73,7 +73,7 @@ or
 | network_id | `number`  | +        |
 | returns    | `boolean` |          |
 
-```lua
+```lua /issue_order_attack/
 local target = features.target_selector:get_default_target()
 
 if target ~= nil then
@@ -108,7 +108,7 @@ or
 | end        | [`vec3`](/structs/vec3)               | +        |
 | returns    | `boolean`                             |          |
 
-```lua
+```lua /cast_spell/
 local target = features.target_selector:get_default_target()
 
 if target ~= nil then
@@ -124,7 +124,7 @@ end
 | position | [`vec3`](/structs/vec3)               | +        |
 | returns  | `boolean`                             |          |
 
-```lua
+```lua /release_chargeable/
 local cast_start = -1.0
 local channeling_q = false
 

@@ -8,7 +8,7 @@
 | ---------- | -------- | -------- |
 | network_id | `number` | +        |
 
-```lua
+```lua /send_attack/
 local target = feature.targeting.get_default_target()
 
 if target ~= nil then
@@ -70,16 +70,16 @@ end
 | edge_range | `boolean` | +        |
 | returns    | `boolean` |          |
 
-```lua
+```lua /is_attackable/
 local target = features.target_select:get_default_target()
 
 if target == nil then
     return
 end
 
-local is_attackable = features.orbwalker:is_attackable(target.index, 1000, true)
+local attackable = features.orbwalker:is_attackable(target.index, 1000, true)
 
-if is_attackable then
+if attackable then
     print("Target is attackable")
 end
 ```

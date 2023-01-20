@@ -9,7 +9,7 @@
 | slot     | [`e_spell_slot`](/enums/e_spell_slot)   | +        |
 | returns  | [`c_spell_slot`](/classes/c_spell_slot) |          |
 
-```lua
+```lua /get_spell_slot/
 local spell_book = g_local:get_spell_book()
 local q_slot = spell_book:get_spell_slot(e_spell_slot.q)
 
@@ -24,7 +24,7 @@ end
 | -------- | --------------------------------------------------------- | -------- |
 | returns  | [`c_spell_cast_info  \| nil`](/classes/c_spell_cast_info) |          |
 
-```lua
+```lua /get_spell_cast_info/
 local spell_book = g_local:get_spell_book()
 local cast_info = spell_book:get_spell_cast_info()
 

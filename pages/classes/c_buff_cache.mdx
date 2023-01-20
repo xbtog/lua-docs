@@ -9,7 +9,7 @@
 | object_index | `number`                                | +        |
 | returns      | [`buff_cache_t`](/structs/buff_cache_t) |          |
 
-```lua
+```lua /get_buff/
 local buff = features.buff_cache:get_buff(g_local.index, "asheqcastready")
 
 if buff and buff:get_stacks() == 4 then
@@ -25,7 +25,7 @@ end
 | type         | [`e_buff_type`](/enums/e_buff_type) | +        |
 | returns      | `boolean`                           |          |
 
-```lua
+```lua /has_buff_of_type/
 local is_blind = features.buff_cache:has_buff_of_type(g_local.index, e_buff_type.blind)
 
 if is_blind then
@@ -61,7 +61,7 @@ end
 | object_index | `number`                                       | +        |
 | returns      | [`table<buff_cache_t>`](/structs/buff_cache_t) |          |
 
-```lua
+```lua /get_all_buffs/
 local buffs = features.buff_cache:get_all_buffs(g_local.index)
 
 -- Print all buffs on the local player
