@@ -1,20 +1,24 @@
+import { Callout } from "nextra-theme-docs";
+
 # buff_cache_t
 
 ## Members
 
+<Callout type="warning" emoji="⚠️">
+  Members except for `name` are currently broken
+</Callout>
+
 - `buff`
 - `buff_data`
 - `buff_info`
-- `name`
+- `name`: `string`
 
 ## Functions
 
 ### get_stacks
 
-#### Arguments
-
 | Argument | Type     | Required |
-|----------|----------|----------|
+| -------- | -------- | -------- |
 | returns  | `number` |          |
 
 ```lua

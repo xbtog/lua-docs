@@ -1,4 +1,4 @@
-import { Callout } from 'nextra-theme-docs'
+import { Callout } from "nextra-theme-docs";
 
 # c_buff_manager
 
@@ -8,12 +8,9 @@ import { Callout } from 'nextra-theme-docs'
 
 Calculates and returns current number of buffs in the buff manager.
 
-#### Arguments
-
 | Argument | Type     | Required |
-|----------|----------|----------|
+| -------- | -------- | -------- |
 | returns  | `number` |          |
-
 
 ```lua
 local local_buff_manager = g_local:get_buff_manager()
@@ -23,17 +20,14 @@ print("Local player has " .. local_buff_manager:size() .. " buffs.")
 
 ### get_all
 
-
 <Callout type="warning" emoji="⚠️">
-Using c_buff_manager has a big performance impact. Use c_buff_cache whenever possible.
+  Using c_buff_manager has a big performance impact. Use c_buff_cache whenever
+  possible.
 </Callout>
 
-#### Arguments
-
 | Argument | Type            | Required |
-|----------|-----------------|----------|
+| -------- | --------------- | -------- |
 | returns  | `table<c_buff>` |          |
-
 
 ```lua
 local local_buff_manager = g_local:get_buff_manager()

@@ -4,19 +4,16 @@
 
 ### predict
 
-#### Arguments
-
 | Argument         | Type                                                  | Required |
-|------------------|-------------------------------------------------------|----------|
+| ---------------- | ----------------------------------------------------- | -------- |
 | target_index     | `number`                                              | +        |
 | projectile_range | `number`                                              | +        |
 | projectile_speed | `number`                                              | +        |
 | projectile_width | `number`                                              | +        |
 | delay            | `number`                                              | +        |
-| source_position  | `vec3`                                                | +        |
+| source_position  | [`vec3`](/structs/vec3)                               | +        |
 | extend           | `boolean`                                             |          |
 | returns          | [`prediction_result_t`](/structs/prediction_result_t) |          |
-
 
 ```lua
 -- Example data from https://forum.slotted.cc/threads/168/
@@ -33,10 +30,8 @@ end
 
 ### predict_default
 
-#### Arguments
-
 | Argument     | Type                    | Required |
-|--------------|-------------------------|----------|
+| ------------ | ----------------------- | -------- |
 | target_index | `number`                | +        |
 | time         | `number`                | +        |
 | returns      | [`vec3`](/structs/vec3) |          |
@@ -52,15 +47,12 @@ end
 
 ### predict_health
 
-#### Arguments
-
-| Argument         | Type       | Required |
-|------------------|------------|----------|
+| Argument         | Type                           | Required |
+| ---------------- | ------------------------------ | -------- |
 | object           | [`c_objet`](/classes/c_object) | +        |
-| time             | `number`   | +        |
-| multiple_attacks | `boolean`  | -        |
-| returns          | `number`   |          |
-
+| time             | `number`                       | +        |
+| multiple_attacks | `boolean`                      | -        |
+| returns          | `number`                       |          |
 
 ```lua
 local predicted = features.prediction:predict_health(minion, 0.25)
@@ -70,10 +62,8 @@ print("Predicted health is " .. predicted)
 
 ### minion_in_line
 
-#### Arguments
-
 | Argument           | Type                    | Required |
-|--------------------|-------------------------|----------|
+| ------------------ | ----------------------- | -------- |
 | start_pos          | [`vec3`](/structs/vec3) | +        |
 | end_pos            | [`vec3`](/structs/vec3) | +        |
 | projectile_width   | `number`                | +        |
@@ -98,10 +88,8 @@ end
 
 ### count_minions_in_line
 
-#### Arguments
-
 | Argument           | Type                    | Required |
-|--------------------|-------------------------|----------|
+| ------------------ | ----------------------- | -------- |
 | start_pos          | [`vec3`](/structs/vec3) | +        |
 | end_pos            | [`vec3`](/structs/vec3) | +        |
 | projectile_width   | `number`                | +        |

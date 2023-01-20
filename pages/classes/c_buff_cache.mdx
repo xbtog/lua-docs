@@ -4,11 +4,9 @@
 
 ### get_buff
 
-#### Arguments
-
-| Argument     | Type                                         | Required |
-|--------------|----------------------------------------------|----------|
-| object_index | `number`                                     | +        |
+| Argument     | Type                                    | Required |
+| ------------ | --------------------------------------- | -------- |
+| object_index | `number`                                | +        |
 | returns      | [`buff_cache_t`](/structs/buff_cache_t) |          |
 
 ```lua
@@ -21,14 +19,11 @@ end
 
 ### has_buff_of_type
 
-#### Arguments
-
-| Argument     | Type                                     | Required |
-|--------------|------------------------------------------|----------|
-| object_index | `number`                                 | +        |
+| Argument     | Type                                | Required |
+| ------------ | ----------------------------------- | -------- |
+| object_index | `number`                            | +        |
 | type         | [`e_buff_type`](/enums/e_buff_type) | +        |
-| returns      | `boolean`                                |          |
-
+| returns      | `boolean`                           |          |
 
 ```lua
 local is_blind = features.buff_cache:has_buff_of_type(g_local.index, e_buff_type.blind)
@@ -40,39 +35,30 @@ end
 
 ### has_hard_cc
 
-#### Arguments
-
 | Argument     | Type      | Required |
-|--------------|-----------|----------|
+| ------------ | --------- | -------- |
 | object_index | `number`  | +        |
 | returns      | `boolean` |          |
 
-
 ### is_immobile
 
-#### Arguments
-
 | Argument     | Type      | Required |
-|--------------|-----------|----------|
+| ------------ | --------- | -------- |
 | object_index | `number`  | +        |
 | returns      | `boolean` |          |
 
 ### can_cast
 
-#### Arguments
-
 | Argument     | Type      | Required |
-|--------------|-----------|----------|
+| ------------ | --------- | -------- |
 | object_index | `number`  | +        |
 | returns      | `boolean` |          |
 
 ### get_all_buffs
 
-#### Arguments
-
-| Argument     | Type                                                | Required |
-|--------------|-----------------------------------------------------|----------|
-| object_index | `number`                                            | +        |
+| Argument     | Type                                           | Required |
+| ------------ | ---------------------------------------------- | -------- |
+| object_index | `number`                                       | +        |
 | returns      | [`table<buff_cache_t>`](/structs/buff_cache_t) |          |
 
 ```lua

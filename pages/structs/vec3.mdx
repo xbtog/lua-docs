@@ -10,10 +10,8 @@
 
 ### length
 
-#### Arguments
-
 | Argument | Type     | Required |
-|----------|----------|----------|
+| -------- | -------- | -------- |
 | returns  | `number` |          |
 
 ```lua
@@ -22,10 +20,8 @@ vec:length()
 
 ### length2d
 
-#### Arguments
-
 | Argument | Type     | Required |
-|----------|----------|----------|
+| -------- | -------- | -------- |
 | returns  | `number` |          |
 
 ```lua
@@ -34,24 +30,21 @@ vec:length2d()
 
 ### dist_to
 
-#### Arguments
+| Argument | Type                    | Required |
+| -------- | ----------------------- | -------- |
+| other    | [`vec3`](/structs/vec3) | +        |
+| returns  | `number`                |          |
 
-| Argument | Type     | Required |
-|----------|----------|----------|
-| other    | `vec3`   | +        |
-| returns  | `number` |          |
 ```lua
 vec3:new(1, 1):dist_to(vec3:new(2, 2))
 ```
 
 ### dot
 
-#### Arguments
-
-| Argument | Type     | Required |
-|----------|----------|----------|
-| other    | `vec3`   | +        |
-| returns  | `number` |          |
+| Argument | Type                    | Required |
+| -------- | ----------------------- | -------- |
+| other    | [`vec3`](/structs/vec3) | +        |
+| returns  | `number`                |          |
 
 ```lua
 vec:dot(other)
@@ -59,12 +52,10 @@ vec:dot(other)
 
 ### cross
 
-#### Arguments
-
-| Argument | Type     | Required |
-|----------|----------|----------|
-| other    | `vec3`   | +        |
-| returns  | `number` |          |
+| Argument | Type                    | Required |
+| -------- | ----------------------- | -------- |
+| other    | [`vec3`](/structs/vec3) | +        |
+| returns  | `number`                |          |
 
 ```lua
 vec:cross(other): number
@@ -72,11 +63,9 @@ vec:cross(other): number
 
 ### normalized
 
-#### Arguments
-
-| Argument | Type   | Required |
-|----------|--------|----------|
-| returns  | `vec3` |          |
+| Argument | Type                    | Required |
+| -------- | ----------------------- | -------- |
+| returns  | [`vec3`](/structs/vec3) |          |
 
 ```lua
 vec:normalized(): vec3
@@ -84,12 +73,10 @@ vec:normalized(): vec3
 
 ### angle_between
 
-#### Arguments
-
-| Argument | Type     | Required |
-|----------|----------|----------|
-| other    | `vec3`   | +        |
-| returns  | `number` |          |
+| Argument | Type                    | Required |
+| -------- | ----------------------- | -------- |
+| other    | [`vec3`](/structs/vec3) | +        |
+| returns  | `number`                |          |
 
 ```lua
 vec:angle_between(other)
@@ -97,13 +84,10 @@ vec:angle_between(other)
 
 ### rotated
 
-#### Arguments
-
-| Argument | Type     | Required |
-|----------|----------|----------|
-| angle    | `number` | +        |
-| returns  | `vec3`   |          |
-
+| Argument | Type                    | Required |
+| -------- | ----------------------- | -------- |
+| angle    | `number`                | +        |
+| returns  | [`vec3`](/structs/vec3) |          |
 
 ```lua
 vec:rotated(angle)
@@ -111,14 +95,11 @@ vec:rotated(angle)
 
 ### extend
 
-#### Arguments
-
-| Argument | Type     | Required |
-|----------|----------|----------|
-| to       | `vec3`   | +        |
-| distance | `number` | +        |
-| returns  | `vec3`   |          |
-
+| Argument | Type                    | Required |
+| -------- | ----------------------- | -------- |
+| to       | [`vec3`](/structs/vec3) | +        |
+| distance | `number`                | +        |
+| returns  | [`vec3`](/structs/vec3) |          |
 
 ```lua
 vec:extend(to, distance)
@@ -126,11 +107,9 @@ vec:extend(to, distance)
 
 ### to_screen
 
-#### Arguments
-
-| Argument | Type     | Required |
-|----------|----------|----------|
-| returns  | `vec2`   |          |
+| Argument | Type                           | Required |
+| -------- | ------------------------------ | -------- |
+| returns  | [`vec2 \| nil`](/structs/vec2) |          |
 
 ```lua
 vec:to_screen()
@@ -138,11 +117,9 @@ vec:to_screen()
 
 ### to_minimap
 
-#### Arguments
-
-| Argument | Type     | Required |
-|----------|----------|----------|
-| returns  | `vec2`   |          |
+| Argument | Type                           | Required |
+| -------- | ------------------------------ | -------- |
+| returns  | [`vec2 \| nil`](/structs/vec2) |          |
 
 ```lua
 vec:to_minimap()

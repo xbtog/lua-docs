@@ -1,5 +1,4 @@
-import { Callout } from 'nextra-theme-docs'
-
+import { Callout } from "nextra-theme-docs";
 
 # c_renderer
 
@@ -11,14 +10,12 @@ import { Callout } from 'nextra-theme-docs'
 
 ### line
 
-#### Arguments
-
-| Argument  | Type     | Required |
-|-----------|----------|----------|
+| Argument  | Type                      | Required |
+| --------- | ------------------------- | -------- |
 | start_pos | [`vec2`](/structs/vec2)   | +        |
 | end_pos   | [`vec2`](/structs/vec2)   | +        |
-| color     | [`color`](/structs/color)  | +        |
-| thickness | `number` | +        |
+| color     | [`color`](/structs/color) | +        |
+| thickness | `number`                  | +        |
 
 ```lua
 local target = features.target_selector:get_default_target()
@@ -34,14 +31,12 @@ end
 
 ### line_3d
 
-#### Arguments
-
-| Argument  | Type     | Required |
-|-----------|----------|----------|
+| Argument  | Type                      | Required |
+| --------- | ------------------------- | -------- |
 | start_pos | [`vec3`](/structs/vec3)   | +        |
 | end_pos   | [`vec3`](/structs/vec3)   | +        |
-| color     | [`color`](/structs/color)  | +        |
-| thickness | `number` | +        |
+| color     | [`color`](/structs/color) | +        |
+| thickness | `number`                  | +        |
 
 ```lua
 local target = features.target_selector:get_default_target()
@@ -54,92 +49,75 @@ end
 
 ### box
 
-#### Arguments
-
-| Argument  | Type     | Required |
-|-----------|----------|----------|
+| Argument  | Type                      | Required |
+| --------- | ------------------------- | -------- |
 | start     | [`vec2`](/structs/vec2)   | +        |
 | size      | [`vec2`](/structs/vec2)   | +        |
-| color     | [`color`](/structs/color)  | +        |
-| rounding  | `number` | +        |
-| thickness | `number` | +        |
+| color     | [`color`](/structs/color) | +        |
+| rounding  | `number`                  | +        |
+| thickness | `number`                  | +        |
 
 ### filled_box
 
-#### Arguments
-
-| Argument  | Type     | Required |
-|-----------|----------|----------|
-| start     | [`vec2`](/structs/vec2)   | +        |
-| size      | [`vec2`](/structs/vec2)   | +        |
-| color     | [`color`](/structs/color)  | +        |
-| rounding  | `number` | +        |
+| Argument | Type                      | Required |
+| -------- | ------------------------- | -------- |
+| start    | [`vec2`](/structs/vec2)   | +        |
+| size     | [`vec2`](/structs/vec2)   | +        |
+| color    | [`color`](/structs/color) | +        |
+| rounding | `number`                  | +        |
 
 ### circle
 
-#### Arguments
-
-| Argument | Type     | Required |
-|----------|----------|----------|
+| Argument | Type                      | Required |
+| -------- | ------------------------- | -------- |
 | position | [`vec2`](/structs/vec2)   | +        |
-| color    | [`color`](/structs/color)  | +        |
-| radius   | `number` | +        |
-| segments | `number` | +        |
-
+| color    | [`color`](/structs/color) | +        |
+| radius   | `number`                  | +        |
+| segments | `number`                  | +        |
 
 ### filled_circle
 
-#### Arguments
-
-| Argument | Type     | Required |
-|----------|----------|----------|
+| Argument | Type                      | Required |
+| -------- | ------------------------- | -------- |
 | position | [`vec2`](/structs/vec2)   | +        |
-| color    | [`color`](/structs/color)  | +        |
-| radius   | `number` | +        |
-| segments | `number` | +        |
+| color    | [`color`](/structs/color) | +        |
+| radius   | `number`                  | +        |
+| segments | `number`                  | +        |
 
 ### circle_3d
 
-#### Arguments
-
-| Argument  | Type     | Required |
-|-----------|----------|----------|
+| Argument  | Type                      | Required |
+| --------- | ------------------------- | -------- |
 | position  | [`vec3`](/structs/vec3)   | +        |
-| color     | [`color`](/structs/color)  | +        |
-| radius    | `number` | +        |
-| flags     | `number` | +        |
-| segments  | `number` | +        |
-| thickness | `number` | +        |
+| color     | [`color`](/structs/color) | +        |
+| radius    | `number`                  | +        |
+| flags     | `number`                  | +        |
+| segments  | `number`                  | +        |
+| thickness | `number`                  | +        |
 
 ### triangle
 
-#### Arguments
-
-| Argument  | Type     | Required |
-|-----------|----------|----------|
-| left      | [`vec2`](/structs/vec2)  | +        |
-| right     | [`vec2`](/structs/vec2)   | +        |
-| bottom    | [`vec2`](/structs/vec2)   | +        |
-| color     | [`color`](/structs/color)  | +        |
-| thickness | `number` | +        |
-
-### filled_triangle
-
-#### Arguments
-
-| Argument  | Type     | Required |
-|-----------|----------|----------|
+| Argument  | Type                      | Required |
+| --------- | ------------------------- | -------- |
 | left      | [`vec2`](/structs/vec2)   | +        |
 | right     | [`vec2`](/structs/vec2)   | +        |
 | bottom    | [`vec2`](/structs/vec2)   | +        |
-| color     | [`color`](/structs/color)  | +        |
+| color     | [`color`](/structs/color) | +        |
+| thickness | `number`                  | +        |
+
+### filled_triangle
+
+| Argument | Type                      | Required |
+| -------- | ------------------------- | -------- |
+| left     | [`vec2`](/structs/vec2)   | +        |
+| right    | [`vec2`](/structs/vec2)   | +        |
+| bottom   | [`vec2`](/structs/vec2)   | +        |
+| color    | [`color`](/structs/color) | +        |
 
 ### load_texture_from_file
 
-#### Arguments
-
 | Argument  | Type     | Required |
-|-----------|----------|----------|
+| --------- | -------- | -------- |
 | file_path | `string` | +        |
 
 ```lua
@@ -152,13 +130,11 @@ end
 
 ### image
 
-#### Arguments
-
-| Argument | Type        | Required |
-|----------|-------------|----------|
-| position | [`vec2`](/structs/vec2)      | +        |
-| size     | [`vec2`](/structs/vec2)      | +        |
-| texture  | `texture_t` | +        |
+| Argument | Type                              | Required |
+| -------- | --------------------------------- | -------- |
+| position | [`vec2`](/structs/vec2)           | +        |
+| size     | [`vec2`](/structs/vec2)           | +        |
+| texture  | [`texture_t`](/structs/texture_t) | +        |
 
 ```lua
 local texture = g_render:load_texture_from_file("C:\\Users\\user\\Desktop\\texture.png")
@@ -170,11 +146,9 @@ end
 
 ### get_screensize
 
-#### Arguments
-
-| Argument | Type   | Required |
-|----------|--------|----------|
-| returns  | [`vec2`](/structs/vec2) | +        |
+| Argument | Type                    | Required |
+| -------- | ----------------------- | -------- |
+| returns  | [`vec2`](/structs/vec2) |          |
 
 ```lua
 local size = g_render:get_screensize()
@@ -184,15 +158,13 @@ print("Screen size: " .. size.x .. "x" .. size.y)
 
 ### circle_minimap
 
-#### Arguments
-
-| Argument  | Type     | Required |
-|-----------|----------|----------|
+| Argument  | Type                      | Required |
+| --------- | ------------------------- | -------- |
 | position  | [`vec3`](/structs/vec3)   | +        |
-| color     | [`color`](/structs/color)  | +        |
-| radius    | `number` | +        |
-| segments  | `number` | -        |
-| thickness | `number` | -        |
+| color     | [`color`](/structs/color) | +        |
+| radius    | `number`                  | +        |
+| segments  | `number`                  | -        |
+| thickness | `number`                  | -        |
 
 ```lua
 -- Draw cicle on minimap at local player position
@@ -201,15 +173,13 @@ g_render:cicle_minimap(g_local.position, color:new(255, 255, 255), 15)
 
 ### text
 
-#### Arguments
-
-| Argument | Type     | Required |
-|----------|----------|----------|
+| Argument | Type                      | Required |
+| -------- | ------------------------- | -------- |
 | position | [`vec2`](/structs/vec2)   | +        |
-| color    | [`color`](/structs/color)  | +        |
-| text     | `string` | +        |
-| font     | `string` | +        |
-| size     | `number` | +        |
+| color    | [`color`](/structs/color) | +        |
+| text     | `string`                  | +        |
+| font     | `string`                  | +        |
+| size     | `number`                  | +        |
 
 ```lua
 -- uses fallback font when font = nil or not found
@@ -218,14 +188,11 @@ g_render:text(vec2:new(50, 50), color:new(255, 255, 255), "Hello world!", nil, 2
 
 ### get_text_size
 
-#### Arguments
-
 | Argument | Type     | Required |
-|----------|----------|----------|
+| -------- | -------- | -------- |
 | text     | `string` | +        |
 | font     | `string` | +        |
 | size     | `number` | +        |
-
 
 ```lua
 local size = g_render:get_text_size("Hello world!", nil, 20)

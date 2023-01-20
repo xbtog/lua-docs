@@ -1,4 +1,4 @@
-import { Callout } from 'nextra-theme-docs'
+import { Callout } from "nextra-theme-docs";
 
 # c_target_selector
 
@@ -6,10 +6,8 @@ import { Callout } from 'nextra-theme-docs'
 
 ### get_default_target
 
-#### Arguments
-
-| Argument | Type      | Required |
-|----------|-----------|----------|
+| Argument | Type                           | Required |
+| -------- | ------------------------------ | -------- |
 | returns  | [`c_objet`](/classes/c_object) |          |
 
 ```lua
@@ -23,10 +21,8 @@ end
 
 ### get_orbwalker_default_target
 
-#### Arguments
-
-| Argument | Type      | Required |
-|----------|-----------|----------|
+| Argument | Type                           | Required |
+| -------- | ------------------------------ | -------- |
 | returns  | [`c_objet`](/classes/c_object) |          |
 
 ```lua
@@ -40,10 +36,8 @@ end
 
 ### get_forced_target
 
-#### Arguments
-
-| Argument | Type      | Required |
-|----------|-----------|----------|
+| Argument | Type                           | Required |
+| -------- | ------------------------------ | -------- |
 | returns  | [`c_objet`](/classes/c_object) |          |
 
 ```lua
@@ -57,10 +51,8 @@ end
 
 ### is_forced
 
-#### Arguments
-
 | Argument | Type      | Required |
-|----------|-----------|----------|
+| -------- | --------- | -------- |
 | returns  | `boolean` |          |
 
 ```lua
@@ -71,11 +63,9 @@ end
 
 ### is_bad_target
 
-#### Arguments
-
-| Argument | Type      | Required |
-|----------|-----------|----------|
-| index    | `number`  | +        |
+| Argument | Type                           | Required |
+| -------- | ------------------------------ | -------- |
+| index    | `number`                       | +        |
 | returns  | [`c_objet`](/classes/c_object) |          |
 
 ```lua
@@ -90,23 +80,19 @@ end
   To reset forced target call force_target with nil or -1 as object argument
 </Callout>
 
-#### Arguments
-
 | Argument | Type      | Required |
-|----------|-----------|----------|
+| -------- | --------- | -------- |
 | index    | `number`  | +        |
 | returns  | `boolean` |          |
+
 #### or
 
 ### get_antigapclose_target
 
-#### Arguments
-
-| Argument        | Type      | Required |
-|-----------------|-----------|----------|
-| danger_distance | `number`  | +        |
+| Argument        | Type                           | Required |
+| --------------- | ------------------------------ | -------- |
+| danger_distance | `number`                       | +        |
 | returns         | [`c_objet`](/classes/c_object) |          |
-
 
 ```lua
 local target = features.target_selector:get_antigapclose_target(400)

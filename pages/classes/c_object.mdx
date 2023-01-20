@@ -7,7 +7,7 @@
 - `team:` `number`
 - `network_id:` `number`
 - `framecount:` `number`
-- `position:` [`vec3`](../structs/vec3)
+- `position:` [`vec3`](/structs/vec3)
 - `mana:` `number`
 - `max_mana:` `number`
 - `mana_enabled:` `number`
@@ -32,7 +32,7 @@
 - `total_gold:` `number`
 - `min_gold:` `number`
 - `max_gold:` `number`
-- `champion_name:` [`lstring`](../structs/lstring)
+- `champion_name:` [`lstring`](/structs/lstring)
 - `level:` `number`
 - `recalling_flag:` `number`
 
@@ -40,10 +40,8 @@
 
 ### is_recalling
 
-#### Arguments
-
 | Argument | Type      | Required |
-|----------|-----------|----------|
+| -------- | --------- | -------- |
 | returns  | `boolean` |          |
 
 ```lua
@@ -54,10 +52,8 @@ end
 
 ### is_local
 
-#### Arguments
-
 | Argument | Type      | Required |
-|----------|-----------|----------|
+| -------- | --------- | -------- |
 | returns  | `boolean` |          |
 
 ```lua
@@ -68,154 +64,116 @@ end
 
 ### is_game_object
 
-#### Arguments
-
 | Argument | Type      | Required |
-|----------|-----------|----------|
+| -------- | --------- | -------- |
 | returns  | `boolean` |          |
 
 ### is_dead_object
 
-#### Arguments
-
 | Argument | Type      | Required |
-|----------|-----------|----------|
+| -------- | --------- | -------- |
 | returns  | `boolean` |          |
 
 ### is_invalid_object
 
-#### Arguments
-
 | Argument | Type      | Required |
-|----------|-----------|----------|
+| -------- | --------- | -------- |
 | returns  | `boolean` |          |
 
 ### is_neutral_camp
 
-#### Arguments
-
 | Argument | Type      | Required |
-|----------|-----------|----------|
+| -------- | --------- | -------- |
 | returns  | `boolean` |          |
 
 ### is_ai_base_common
 
-#### Arguments
-
 | Argument | Type      | Required |
-|----------|-----------|----------|
+| -------- | --------- | -------- |
 | returns  | `boolean` |          |
 
 ### is_attackable_unit
 
-#### Arguments
-
 | Argument | Type      | Required |
-|----------|-----------|----------|
+| -------- | --------- | -------- |
 | returns  | `boolean` |          |
 
 ### is_ai
 
-#### Arguments
-
 | Argument | Type      | Required |
-|----------|-----------|----------|
+| -------- | --------- | -------- |
 | returns  | `boolean` |          |
 
 ### is_minion
 
-#### Arguments
-
 | Argument | Type      | Required |
-|----------|-----------|----------|
+| -------- | --------- | -------- |
 | returns  | `boolean` |          |
 
 ### is_hero
 
-#### Arguments
-
 | Argument | Type      | Required |
-|----------|-----------|----------|
+| -------- | --------- | -------- |
 | returns  | `boolean` |          |
 
 ### is_building
 
-#### Arguments
-
 | Argument | Type      | Required |
-|----------|-----------|----------|
+| -------- | --------- | -------- |
 | returns  | `boolean` |          |
 
 ### is_missile
 
-#### Arguments
-
 | Argument | Type      | Required |
-|----------|-----------|----------|
+| -------- | --------- | -------- |
 | returns  | `boolean` |          |
 
 ### is_invisible
 
-#### Arguments
-
 | Argument | Type      | Required |
-|----------|-----------|----------|
+| -------- | --------- | -------- |
 | returns  | `boolean` |          |
 
 ### is_visible
 
-#### Arguments
-
 | Argument | Type      | Required |
-|----------|-----------|----------|
+| -------- | --------- | -------- |
 | returns  | `boolean` |          |
 
 ### is_targetable
 
-#### Arguments
-
 | Argument | Type      | Required |
-|----------|-----------|----------|
+| -------- | --------- | -------- |
 | returns  | `boolean` |          |
 
 ### is_alive
 
-#### Arguments
-
 | Argument | Type      | Required |
-|----------|-----------|----------|
+| -------- | --------- | -------- |
 | returns  | `boolean` |          |
 
 ### is_dead
 
-#### Arguments
-
 | Argument | Type      | Required |
-|----------|-----------|----------|
+| -------- | --------- | -------- |
 | returns  | `boolean` |          |
 
 ### is_enemy
 
-#### Arguments
-
 | Argument | Type      | Required |
-|----------|-----------|----------|
+| -------- | --------- | -------- |
 | returns  | `boolean` |          |
 
 ### is_ally
 
-#### Arguments
-
 | Argument | Type      | Required |
-|----------|-----------|----------|
+| -------- | --------- | -------- |
 | returns  | `boolean` |          |
 
 ### dist_to_local
 
-#### Arguments
-
 | Argument | Type     | Required |
-|----------|----------|----------|
+| -------- | -------- | -------- |
 | returns  | `number` |          |
 
 ```lua
@@ -224,10 +182,8 @@ print("Dist to local: " .. obj:dist_to_local())
 
 ### get_attack_damage
 
-#### Arguments
-
 | Argument | Type     | Required |
-|----------|----------|----------|
+| -------- | -------- | -------- |
 | returns  | `number` |          |
 
 ```lua
@@ -236,10 +192,8 @@ print("Attack damage: " .. obj:get_attack_damage())
 
 ### get_bonus_attack_damage
 
-#### Arguments
-
 | Argument | Type     | Required |
-|----------|----------|----------|
+| -------- | -------- | -------- |
 | returns  | `number` |          |
 
 ```lua
@@ -248,10 +202,8 @@ print("Bonus attack damage: " .. obj:get_bonus_attack_damage())
 
 ### get_spell_book
 
-#### Arguments
-
-| Argument | Type           | Required |
-|----------|----------------|----------|
+| Argument | Type                                    | Required |
+| -------- | --------------------------------------- | -------- |
 | returns  | [`c_spell_book`](/classes/c_spell_book) |          |
 
 ```lua
@@ -260,10 +212,8 @@ local spell_book = obj:get_spell_book()
 
 ### get_buff_manager
 
-#### Arguments
-
-| Argument | Type             | Required |
-|----------|------------------|----------|
+| Argument | Type                                        | Required |
+| -------- | ------------------------------------------- | -------- |
 | returns  | [`c_buff_manager`](/classes/c_buff_manager) |          |
 
 ```lua
@@ -272,10 +222,8 @@ local buff_manager = obj:get_buff_manager()
 
 ### get_object_name
 
-#### Arguments
-
 | Argument | Type     | Required |
-|----------|----------|----------|
+| -------- | -------- | -------- |
 | returns  | `string` |          |
 
 ```lua
@@ -284,10 +232,8 @@ print("Name: " .. obj:get_object_name())
 
 ### get_ability_power
 
-#### Arguments
-
 | Argument | Type     | Required |
-|----------|----------|----------|
+| -------- | -------- | -------- |
 | returns  | `number` |          |
 
 ```lua
@@ -296,19 +242,15 @@ print("Ability power: " .. obj:get_ability_power())
 
 ### get_ai_manager
 
-#### Arguments
-
-| Argument | Type           | Required |
-|----------|----------------|----------|
+| Argument | Type                                    | Required |
+| -------- | --------------------------------------- | -------- |
 | returns  | [`c_ai_manager`](/classes/c_ai_manager) |          |
 
 ### get_hpbar_position
 
-#### Arguments
-
-| Argument | Type     | Required |
-|----------|----------|----------|
-| returns  | `vec2` |          |
+| Argument | Type                    | Required |
+| -------- | ----------------------- | -------- |
+| returns  | [`vec2`](/structs/vec2) |          |
 
 ```lua
 print("position: " .. obj:get_hpbar_position())

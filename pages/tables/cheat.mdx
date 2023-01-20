@@ -4,10 +4,8 @@
 
 ### on
 
-#### Arguments
-
 | Argument | Type       | Required |
-|----------|------------|----------|
+| -------- | ---------- | -------- |
 | name     | `string`   | +        |
 | callback | `function` | +        |
 
@@ -52,25 +50,22 @@ end)
 
 ### register_module
 
-#### Arguments
-
 | Argument | Type    | Required |
-|----------|---------|----------|
+| -------- | ------- | -------- |
 | module   | `table` | +        |
-
 
 module table
 
-| Key | Type  | Return type  | Required |
-| - | - | - | - |
-| champion_name | `string` | `void` | + |
-| get_priorities | `function` | `string` | + |
-| on_draw | `function` | `void` | + |
-| spell_q | `function` | `boolean` | + |
-| spell_w | `function` | `boolean` | + |
-| spell_e | `function` | `boolean` | + |
-| spell_r | `function` | `boolean` | + |
-| initialize | `function` | `void` | + |
+| Key            | Type       | Return type | Required |
+| -------------- | ---------- | ----------- | -------- |
+| champion_name  | `string`   | `void`      | +        |
+| get_priorities | `function` | `string`    | +        |
+| on_draw        | `function` | `void`      | +        |
+| spell_q        | `function` | `boolean`   | +        |
+| spell_w        | `function` | `boolean`   | +        |
+| spell_e        | `function` | `boolean`   | +        |
+| spell_r        | `function` | `boolean`   | +        |
+| initialize     | `function` | `void`      | +        |
 
 Data passed to all spell\_\* functions is of type [champion_module_spell_data_t](/docs/structs/champion_module_spell_data_t).
 
@@ -110,10 +105,8 @@ local registered = cheat.register_module({
 
 Get core module by champion name.
 
-#### Arguments
-
 | Argument      | Type                            | Required |
-|---------------|---------------------------------|----------|
+| ------------- | ------------------------------- | -------- |
 | champion_name | `string`                        | +        |
 | returns       | [`c_module`](/classes/c_module) |          |
 
@@ -151,13 +144,10 @@ cheat.register_module({
 
 Deprecated use `cheat.on`
 
-#### Arguments
-
 | Argument | Type       | Required |
-|----------|------------|----------|
+| -------- | ---------- | -------- |
 | name     | `string`   | +        |
 | callback | `function` | +        |
-
 
 ```lua
 cheat.register_callback(name, callback)
