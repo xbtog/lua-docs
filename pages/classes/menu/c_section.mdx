@@ -30,6 +30,12 @@ print(hovered)
 
 ### checkbox
 
+| Argument   | Type                                    | Required |
+| ---------- | --------------------------------------- | -------- |
+| label      | `string`                                | +        |
+| config_var | [`config_var_t`](/structs/config_var_t) | +        |
+| returns    | `c_checkbox`                            |          |
+
 ```lua /:checkbox/
 local window = menu.get_main_window()
 
@@ -44,6 +50,13 @@ misc_section:checkbox("Test component", config_var)
 ```
 
 ### select
+
+| Argument   | Type                                    | Required |
+| ---------- | --------------------------------------- | -------- |
+| label      | `string`                                | +        |
+| config_var | [`config_var_t`](/structs/config_var_t) | +        |
+| items      | `table<string>`                         | +        |
+| returns    | `c_select`                              |          |
 
 ```lua /:select/
 local window = menu.get_main_window()
@@ -64,6 +77,13 @@ misc_section:select("Select label", select_var, {
 
 ### multi_select
 
+| Argument    | Type                                           | Required |
+| ----------- | ---------------------------------------------- | -------- |
+| label       | `string`                                       | +        |
+| config_vars | [`table<config_var_t>`](/structs/config_var_t) | +        |
+| items       | `table<string>`                                | +        |
+| returns     | `c_multi_select`                               |          |
+
 ```lua /:multi_select/
 local window = menu.get_main_window()
 
@@ -80,6 +100,15 @@ misc_section:multi_select("Multi select label", {multi_select_var1, multi_select
 
 ### slider_int
 
+| Argument   | Type                                    | Required |
+| ---------- | --------------------------------------- | -------- |
+| label      | `string`                                | +        |
+| config_var | [`config_var_t`](/structs/config_var_t) | +        |
+| min        | `number`                                | +        |
+| max        | `number`                                | +        |
+| step       | `number`                                | +        |
+| returns    | `c_slider`                              |          |
+
 ```lua /:slider_int/
 local window = menu.get_main_window()
 
@@ -94,6 +123,15 @@ misc_section:slider_int("Slider int label", slider_int_var,  0  , 5  ,  1)
 ```
 
 ### slider_float
+
+| Argument   | Type                                    | Required |
+| ---------- | --------------------------------------- | -------- |
+| label      | `string`                                | +        |
+| config_var | [`config_var_t`](/structs/config_var_t) | +        |
+| min        | `number`                                | +        |
+| max        | `number`                                | +        |
+| step       | `number`                                | +        |
+| returns    | `c_slider`                              |          |
 
 ```lua /:slider_float/
 local window = menu.get_main_window()
@@ -110,6 +148,12 @@ misc_section:slider_float("Slider float label", slider_float_var,  0  , 5  ,  0.
 
 ### button
 
+| Argument | Type       | Required |
+| -------- | ---------- | -------- |
+| label    | `string`   | +        |
+| on_click | `function` | +        |
+| returns  | `c_button` |          |
+
 ```lua /:button/
 local window = menu.get_main_window()
 
@@ -124,6 +168,11 @@ end)
 ```
 
 ### add_conditional
+
+| Argument | Type            | Required |
+| -------- | --------------- | -------- |
+| on_click | `function`      | +        |
+| returns  | `c_conditional` |          |
 
 ```lua /:add_conditional/
 local window = menu.get_main_window()
