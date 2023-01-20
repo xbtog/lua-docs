@@ -1,5 +1,9 @@
 {
   "quick-start": "Getting started",
+  "tables": "Tables",
+  "classes": "Classes",
+  "structs": "Structs",
+  "enums": "Enums",
   "Home": {
     "type": "page",
     "href": "https://slotted.cc"
