@@ -139,38 +139,3 @@ cheat.register_module({
     end,
 })
 ```
-
-### ~~register_callback~~
-
-Deprecated use `cheat.on`
-
-| Argument | Type       | Required |
-| -------- | ---------- | -------- |
-| name     | `string`   | +        |
-| callback | `function` | +        |
-
-```lua
-cheat.register_callback(name, callback)
-
--- usage example
-cheat.register_callback("render", function()
-    local text = "Hello world!"
-    local size = g_render:get_text_size(text, nil, 16)
-    local screen = g_render:get_screen_size()
-
-    -- draw text in the upper right corner of the screen
-    g_render:text(vec2:new(screen.x - (size.x + 8), 4), color:new(255, 255, 255), text, nil, 16)
-end)
-
-cheat.register_callback("champion_create", function(champ)
-    print("Champion " .. champ.champion_name.text .. " was just created.")
-end)
-```
-
-#### Available callbacks
-
-- ~~`feature`~~
-- ~~`render`~~
-- ~~`pre_feature`~~
-- ~~`champion_create`~~
-- ~~`champion_delete`~~
