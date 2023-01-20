@@ -1,0 +1,15 @@
+# c_navigation
+
+## Functions
+
+### add_section
+
+```lua /add_section/
+local window = menu.get_main_window()
+
+local navigation = window:push_navigation("Script", 0)
+-- add section with name of "misc"
+local misc_section = navigation:add_section("misc")
+
+-- add items to the section
+```

@@ -1,0 +1,63 @@
+# c_window
+
+## Functions
+
+### push_navigation
+
+```lua /push_navigation/
+local window = menu.get_main_window()
+
+-- add a new navigation item with name "Script" and sorting index 0
+local navigation = window:push_navigation("Script", 0)
+```
+
+### find_navigation
+
+```lua /find_navigation/
+local window = menu.get_main_window()
+
+-- find navigation item with name "Script"
+local navigation = window:find_navigation("Script")
+```
+
+### get_height
+
+```lua /get_height/
+local window = menu.get_main_window()
+
+-- get the height of the window
+local height = window:get_height()
+
+print(height)
+```
+
+### get_width
+
+```lua /get_width/
+local window = menu.get_main_window()
+
+-- get the width of the window
+local width = window:get_width()
+
+print(width)
+```
+
+### is_opened
+
+```lua /is_opened/
+local window = menu.get_main_window()
+
+-- check if the window is opened
+local opened = window:is_opened()
+
+print(opened)
+```
+
+### set_position
+
+```lua /set_position/
+local window = menu.get_main_window()
+
+-- set the position of the window
+window:set_position(vec2(100, 100))
+```

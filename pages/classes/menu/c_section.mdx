@@ -1,0 +1,140 @@
+# c_section
+
+## Functions
+
+### get_height
+
+```lua /get_height/
+local window = menu.get_main_window()
+
+local navigation = window:push_navigation("Script, 0")
+local misc_section = navigation:add_section("misc")
+
+local height = misc_section:get_height()
+
+print(height)
+```
+
+### is_hovered
+
+```lua /is_hovered/
+local window = menu.get_main_window()
+
+local navigation = window:push_navigation("Script, 0")
+local misc_section = navigation:add_section("misc")
+
+local hovered = misc_section:is_hovered()
+
+print(hovered)
+```
+
+### checkbox
+
+```lua /:checkbox/
+local window = menu.get_main_window()
+
+local navigation = window:push_navigation("Script, 0")
+local misc_section = navigation:add_section("misc")
+
+-- add a config var for the checkboxes value
+local config_var = g_config:add_bool(false, "config_var_name")
+
+-- add a checkbox
+misc_section:checkbox("Test component", config_var)
+```
+
+### select
+
+```lua /:select/
+local window = menu.get_main_window()
+
+local navigation = window:push_navigation("Script, 0")
+local misc_section = navigation:add_section("misc")
+
+-- add a config var for the index of the selected item
+local select_var = g_config:add_int(0, "select_var_name")
+
+-- add select/dropdown
+misc_section:select("Select label", select_var, {
+  "Option 1",
+  "Option 2",
+  "Option 3",
+})
+```
+
+### multi_select
+
+```lua /:multi_select/
+local window = menu.get_main_window()
+
+local navigation = window:push_navigation("Script, 0")
+local misc_section = navigation:add_section("misc")
+
+-- add two config vars for the selected items (amount of selection options and config vars must match)
+local multi_select_var1 = g_config:add_bool(false, "multi_select_var1_name")
+local multi_select_var2 = g_config:add_bool(false, "multi_select_var2_name")
+
+-- add multi select
+misc_section:multi_select("Multi select label", {multi_select_var1, multi_select_var2}, {"option1", "option2"} )
+```
+
+### slider_int
+
+```lua /:slider_int/
+local window = menu.get_main_window()
+
+local navigation = window:push_navigation("Script, 0")
+local misc_section = navigation:add_section("misc")
+
+-- add int config var for the slider value
+local slider_int_var = g_config:add_int(0, "slider_int_var_name")
+
+-- add int slider
+misc_section:slider_int("Slider int label", slider_int_var,  0  , 5  ,  1)
+```
+
+### slider_float
+
+```lua /:slider_float/
+local window = menu.get_main_window()
+
+local navigation = window:push_navigation("Script, 0")
+local misc_section = navigation:add_section("misc")
+
+-- add float config var for the slider value
+local slider_float_var = g_config:add_float(0, "slider_float_var_name")
+
+-- add float slider
+misc_section:slider_float("Slider float label", slider_float_var,  0  , 5  ,  0.5)
+```
+
+### button
+
+```lua /:button/
+local window = menu.get_main_window()
+
+local navigation = window:push_navigation("Script, 0")
+local misc_section = navigation:add_section("misc")
+
+-- add a button
+misc_section:button("Button", function()
+    -- button click callback
+    print("Button pressed")
+end)
+```
+
+### add_conditional
+
+```lua /:add_conditional/
+local window = menu.get_main_window()
+
+local navigation = window:push_navigation("Script, 0")
+local misc_section = navigation:add_section("misc")
+
+-- make components only show under specific condition
+-- you can use a conditional like a section e.g. conditional:checkbox(...), ...
+local conditional = misc_section:add_conditional(function()
+    -- return true if the components should be shown
+    return true
+end)
+```
