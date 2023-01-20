@@ -12,7 +12,7 @@ const config: DocsThemeConfig = {
   },
   useNextSeoProps: () => {
     return {
-      title: "Slotted - LUA Documentation",
+      titleTemplate: "Slotted LUA Documentation - %s",
       description: "Slotted League Script LUA Documentation.",
     };
   },
