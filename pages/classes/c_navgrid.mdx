@@ -19,7 +19,7 @@ local collision_flag = g_navgrid:get_collision(g_local.position)
 | position | [`vec3`](/structs/vec3) | +        |
 
 ```lua /is_wall/
-local is_wall = g_navgrid:is_wall(g_local.position)
+local point_is_in_wall = g_navgrid:is_wall(g_local.position)
 ```
 
 ### is_bush
@@ -29,7 +29,7 @@ local is_wall = g_navgrid:is_wall(g_local.position)
 | position | [`vec3`](/structs/vec3) | +        |
 
 ```lua /is_bush/
-local is_bush = g_navgrid:is_bush(g_local.position)
+local in_bush = g_navgrid:is_bush(g_local.position)
 ```
 
 ### get_height
