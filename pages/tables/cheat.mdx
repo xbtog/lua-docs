@@ -46,6 +46,14 @@ cheat.on("renderer.draw", function()
         g_render:line_3d(g_local.position, target.position, color:new(255, 255, 255, 255), 1)
     end
 end)
+
+cheat.on("local.cast_spell", function(e) 
+    -- you can call e:cancel() to cancel casting
+    -- e.target = c_object
+    -- e.spell_slot = e_spell_slot
+    -- e.start_position = vec3
+    -- e.end_position = vec3
+end)
 ```
 
 ### register_module
