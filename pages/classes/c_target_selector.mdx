@@ -55,6 +55,8 @@ end
 
 ### is_forced
 
+Check wheter there is currently a forced target.
+
 | Argument | Type      | Required |
 | -------- | --------- | -------- |
 | returns  | `boolean` |          |
@@ -66,6 +68,10 @@ end
 ```
 
 ### is_bad_target
+
+<Callout type="warning" emoji="⚠️">
+  Needs to be called from features thread.
+</Callout>
 
 | Argument | Type                           | Required |
 | -------- | ------------------------------ | -------- |
@@ -80,22 +86,29 @@ end
 
 ### force_target
 
+Override default target. Returns `true` when successful.
+
 <Callout type="warning" emoji="⚠️">
   To reset forced target call force_target with nil or -1 as object argument
 </Callout>
 
-| Argument | Type      | Required |
-| -------- | --------- | -------- |
-| index    | `number`  | +        |
-| returns  | `boolean` |          |
+| Argument | Type                                        | Required |
+| -------- | ------------------------------------------- | -------- |
+| index    | `number` \| [`c_object`](/classes/c_object) | -        |
+| returns  | `boolean`                                   |          |
 
 ```lua /force_target/
 local target = features.target_selector:get_default_target()
 
+-- pass target index
 features.target_selector:force_target(target.index)
+-- or object instance
+features.target_selector:force_target(target)
 
 -- reset target
 features.target_selector:force_target(nil)
+-- or
+features.target_selector:force_target(-1)
 ```
 
 ### get_antigapclose_target
