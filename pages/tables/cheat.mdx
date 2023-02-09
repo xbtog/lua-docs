@@ -49,10 +49,12 @@ end)
 
 cheat.on("local.cast_spell", function(e) 
     -- you can call e:cancel() to cancel casting
-    -- e.target = c_object
+    -- e.target = c_object | nil
     -- e.spell_slot = e_spell_slot
-    -- e.start_position = vec3
-    -- e.end_position = vec3
+    -- e.start_position = vec3 | nil
+    -- e.end_position = vec3 | nil
+
+    -- either e.target or e.start_position or e.end_position are set
 end)
 ```
 
