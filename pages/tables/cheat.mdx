@@ -56,6 +56,15 @@ cheat.on("local.cast_spell", function(e)
 
     -- either e.target or e.start_position or e.end_position are set
 end)
+
+cheat.on("local.issue_order_attack", function(e)
+    -- attacks can be canceled with e:cancel()
+    -- e.target = c_object
+end)
+
+cheat.on("local.issue_order_move", function(e)
+    -- attacks can be canceled with e:cancel()
+end)
 ```
 
 ### register_module
