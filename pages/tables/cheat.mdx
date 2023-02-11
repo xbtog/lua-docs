@@ -25,6 +25,8 @@
 - `features.evade`
 - `features.target_selector`
 - `renderer.draw`
+- `features.orbwalker.on_spell_casted`
+- `features.orbwalker.on_auto_attacked`
 - ~~`champion.create`~~ (currently broken)
 - ~~`champion.delete`~~ (currently broken)
 
@@ -64,6 +66,12 @@ end)
 
 cheat.on("local.issue_order_move", function(e)
     -- attacks can be canceled with e:cancel()
+end)
+
+cheat.on("features.orbwalker.on_spell_casted", function(e)
+    -- e.target = c_objectt
+    -- e.spell_name = string
+    -- e.spell_slot = e_spell_slot
 end)
 ```
 
