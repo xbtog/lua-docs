@@ -32,6 +32,26 @@ local point_is_in_wall = g_navgrid:is_wall(g_local.position)
 local in_bush = g_navgrid:is_bush(g_local.position)
 ```
 
+### is_building
+
+| Argument | Type                    | Required |
+| -------- | ----------------------- | -------- |
+| position | [`vec3`](/structs/vec3) | +        |
+
+```lua /is_bush/
+local in_bush = g_navgrid:is_bush(g_local.position)
+```
+
+### is_bush
+
+| Argument | Type                    | Required |
+| -------- | ----------------------- | -------- |
+| position | [`vec3`](/structs/vec3) | +        |
+
+```lua /is_bush/
+local in_bush = g_navgrid:is_bush(g_local.position)
+```
+
 ### get_height
 
 | Argument | Type                    | Required |
