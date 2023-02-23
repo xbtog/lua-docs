@@ -4,9 +4,10 @@
 
 ### get_buff
 
-| Argument     | Type                                    | Required |
-| ------------ | --------------------------------------- | -------- |
-| object_index | `number`                                | +        |
+| Argument     | Type                        | Required |
+| ------------ | --------------------------- | -------- |
+| object_index | `number`                    | +        |
+| name         | `string`                    | +        |
 | returns      | [`c_buff`](/classes/c_buff) |          |
 
 ```lua /get_buff/
@@ -18,6 +19,8 @@ end
 ```
 
 ### has_buff_of_type
+
+Check if object as a buff of a specific type.
 
 | Argument     | Type                                | Required |
 | ------------ | ----------------------------------- | -------- |
@@ -35,12 +38,16 @@ end
 
 ### has_hard_cc
 
+Checks if the object has a hard stun, charm, fear, knockup, knockback, sleep or suppression.
+
 | Argument     | Type      | Required |
 | ------------ | --------- | -------- |
 | object_index | `number`  | +        |
 | returns      | `boolean` |          |
 
 ### is_immobile
+
+Is object immboile.
 
 | Argument     | Type      | Required |
 | ------------ | --------- | -------- |
@@ -49,6 +56,8 @@ end
 
 ### can_cast
 
+Check whether the object/champion can currently cast.
+
 | Argument     | Type      | Required |
 | ------------ | --------- | -------- |
 | object_index | `number`  | +        |
@@ -56,9 +65,11 @@ end
 
 ### get_all_buffs
 
-| Argument     | Type                                           | Required |
-| ------------ | ---------------------------------------------- | -------- |
-| object_index | `number`                                       | +        |
+This function returns all cached buffs for an object.
+
+| Argument     | Type                               | Required |
+| ------------ | ---------------------------------- | -------- |
+| object_index | `number`                           | +        |
 | returns      | [`table<c_buff>`](/classes/c_buff) |          |
 
 ```lua /get_all_buffs/
