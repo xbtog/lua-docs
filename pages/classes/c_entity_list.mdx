@@ -2,18 +2,9 @@
 
 ## Functions
 
-### force_update
-
-Force full update on next run
-
-```lua
--- force update the entity list
-features.entity_list:force_update()
-```
-
 ### get_enemies
 
-Get a list of all enemy champions
+Get a list of all enemy champions.
 
 | Argument | Type                                   | Required |
 | -------- | -------------------------------------- | -------- |
@@ -30,7 +21,7 @@ end
 
 ### get_allies
 
-Get a list of all ally champions
+Get a list of all ally champions.
 
 | Argument | Type                                   | Required |
 | -------- | -------------------------------------- | -------- |
@@ -38,11 +29,15 @@ Get a list of all ally champions
 
 ### get_enemy_turrests
 
+Get a list of all enemy turrets.
+
 | Argument | Type                                   | Required |
 | -------- | -------------------------------------- | -------- |
 | returns  | [`table<c_object>`](/classes/c_object) |          |
 
 ### get_ally_turrets
+
+Get a list of all ally turrets.
 
 | Argument | Type                                   | Required |
 | -------- | -------------------------------------- | -------- |
@@ -50,11 +45,15 @@ Get a list of all ally champions
 
 ### get_ally_minions
 
+Get a list of all ally minions.
+
 | Argument | Type                                   | Required |
 | -------- | -------------------------------------- | -------- |
 | returns  | [`table<c_object>`](/classes/c_object) |          |
 
 ### get_enemy_minions
+
+Get a list of all enemy minions.
 
 | Argument | Type                                   | Required |
 | -------- | -------------------------------------- | -------- |
@@ -62,11 +61,15 @@ Get a list of all ally champions
 
 ### get_ally_missiles
 
+Get a list of all ally missiles.
+
 | Argument | Type                                   | Required |
 | -------- | -------------------------------------- | -------- |
 | returns  | [`table<c_object>`](/classes/c_object) |          |
 
 ### get_enemy_missiles
+
+Get a list of all enemy missiles.
 
 | Argument | Type                                   | Required |
 | -------- | -------------------------------------- | -------- |
@@ -74,17 +77,23 @@ Get a list of all ally champions
 
 ### ally_uncategorized
 
+Get a list of all uncategorized ally objects.
+
 | Argument | Type                                   | Required |
 | -------- | -------------------------------------- | -------- |
 | returns  | [`table<c_object>`](/classes/c_object) |          |
 
 ### enemy_uncategorized
 
+Get a list of all uncategorized enemy objects.
+
 | Argument | Type                                   | Required |
 | -------- | -------------------------------------- | -------- |
 | returns  | [`table<c_object>`](/classes/c_object) |          |
 
 ### get_by_index
+
+Get an object by its index.
 
 | Argument | Type                            | Required |
 | -------- | ------------------------------- | -------- |
@@ -97,12 +106,16 @@ local local = features.entity_list:get_by_index(g_local.index)
 
 ### get_by_network_id
 
+Get an object by its network id.
+
 | Argument   | Type                            | Required |
 | ---------- | ------------------------------- | -------- |
 | network_id | `number`                        | +        |
 | returns    | [`c_object`](/classes/c_object) |          |
 
 ### get_all
+
+Get a list of all objects.
 
 | Argument | Type                                   | Required |
 | -------- | -------------------------------------- | -------- |

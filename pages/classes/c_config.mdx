@@ -27,6 +27,15 @@ print("Value is: " .. some_name:get_int()) -- prints 200
 | var_name | `string`                                | +        |
 | returns  | [`config_var_t`](/structs/config_var_t) |          |
 
+```lua
+local some_name = g_config:add_float(100, "some_name")
+
+-- set config var value to 200
+some_name:set_int(0.5)
+
+print("Value is: " .. some_name:get_float()) -- prints 0.5
+```
+
 ### add_bool
 
 | Argument | Type                                    | Required |
@@ -34,3 +43,12 @@ print("Value is: " .. some_name:get_int()) -- prints 200
 | value    | `boolean`                               | +        |
 | var_name | `string`                                | +        |
 | returns  | [`config_var_t`](/structs/config_var_t) |          |
+
+```lua
+local some_name = g_config:add_bool(false, "some_name")
+
+-- set config var value to 200
+some_name:set_bool(true)
+
+print("Value is: " .. some_name:get_bool()) -- prints true
+```

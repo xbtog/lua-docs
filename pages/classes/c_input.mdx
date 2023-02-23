@@ -4,6 +4,8 @@
 
 ### set_cursor_position
 
+Change the cursor position on screen.
+
 | Argument | Type                    | Required |
 | -------- | ----------------------- | -------- |
 | position | [`vec2`](/structs/vec2) | +        |
@@ -13,6 +15,8 @@ g_input:set_cursor_position(vec2:new(50, 50))
 ```
 
 ### get_cursor_position
+
+Get the current cursor position.
 
 | Argument | Type                    | Required |
 | -------- | ----------------------- | -------- |
@@ -26,6 +30,8 @@ print("vec2(" .. pos.x .. ", " .. pos.y .. " )")
 
 ### send_key_event
 
+Send a key event to the game.
+
 | Argument | Type                                | Required |
 | -------- | ----------------------------------- | -------- |
 | key      | [`e_key`](/enums/e_key)             | +        |
@@ -37,6 +43,8 @@ g_input:send_key_event(e_key.space, e_key_state.key_up)
 ```
 
 ### send_mouse_key_event
+
+Send a mouse key event to the game.
 
 | Argument     | Type                                      | Required |
 | ------------ | ----------------------------------------- | -------- |
@@ -50,6 +58,8 @@ g_input:send_mouse_key_event(e_mouse_button.left, e_key_state.key_up)
 
 ### issue_order_move
 
+Call leagues internal move command.
+
 | Argument | Type                    | Required |
 | -------- | ----------------------- | -------- |
 | position | [`vec3`](/structs/vec3) | +        |
@@ -60,6 +70,8 @@ g_input:issue_order_move(g_local.position)
 ```
 
 ### issue_order_attack
+
+Call leagues internal attack command.
 
 | Argument | Type                            | Required |
 | -------- | ------------------------------- | -------- |
@@ -82,6 +94,8 @@ end
 ```
 
 ### cast_spell
+
+Call leagues internal cast spell command.
 
 | Argument | Type                                  | Required |
 | -------- | ------------------------------------- | -------- |
@@ -118,6 +132,8 @@ end
 
 ### release_chargeable
 
+Release a chargable spell.
+
 | Argument | Type                                  | Required |
 | -------- | ------------------------------------- | -------- |
 | slot     | [`e_spell_slot`](/enums/e_spell_slot) | +        |
@@ -152,6 +168,8 @@ g_input:release_chargeable(e_spell_slot.q, g_local.position)
 
 ### is_key_pressed
 
+Check if a key is currently pressed.
+
 | Argument | Type                    | Required |
 | -------- | ----------------------- | -------- |
 | key      | [`e_key`](/enums/e_key) | +        |
@@ -167,26 +185,30 @@ end
 
 Block all cast spell calls until unblocked.
 
-| Argument | Type                    | Required |
-| -------- | ----------------------- | -------- |
-| should_block      | `boolean` | +        |
+| Argument     | Type      | Required |
+| ------------ | --------- | -------- |
+| should_block | `boolean` | +        |
 
 ### block_issue_order
 
 Block all issue order calls until unblocked.
 
-| Argument | Type                    | Required |
-| -------- | ----------------------- | -------- |
-| should_block      | `boolean` | +        |
+| Argument     | Type      | Required |
+| ------------ | --------- | -------- |
+| should_block | `boolean` | +        |
 
 ### is_cast_spell_blocked
 
-| Argument | Type                    | Required |
-| -------- | ----------------------- | -------- |
-| returns  | `boolean`               |          |
+Check if cast spell is currently blocked.
+
+| Argument | Type      | Required |
+| -------- | --------- | -------- |
+| returns  | `boolean` |          |
 
 ### is_issue_order_blocked
 
-| Argument | Type                    | Required |
-| -------- | ----------------------- | -------- |
-| returns  | `boolean`               |          |
+Check if issue order is currently blocked.
+
+| Argument | Type      | Required |
+| -------- | --------- | -------- |
+| returns  | `boolean` |          |
