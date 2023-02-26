@@ -29,3 +29,19 @@ Get next autoattack/spell onhit damage.
 | ------------ | -------- | -------- |
 | target_index | `number` | +        |
 | returns      | `number` |          |
+
+### get_real_health 
+
+| Argument     | Type     | Required |
+| ------------ | -------- | -------- |
+| target_index | `number` | +        |
+| damage_type | `number` | +        |
+| delay | `number` | +        |
+| predict_ally_damage | `number` | +        |
+| returns      | `number` |          |
+
+```lua
+--- damage_type = 0 -> true_damage
+--- damage_type = 1 -> physical_damage
+--- damage_type = 2 -> magic_damage
+```
