@@ -6,11 +6,12 @@
 
 Check whether a position is safe or not.
 
-| Argument      | Type                    | Required |
-| ------------- | ----------------------- | -------- |
-| position      | [`vec3`](/structs/vec3) | +        |
-| safe_distance | `boolean`               | +        |
-| returns       | `boolean`               |          |
+| Argument        | Type                    | Required |
+| --------------- | ----------------------- | -------- |
+| position        | [`vec3`](/structs/vec3) | +        |
+| safe_distance   | `boolean`               | +        |
+| radius_modifier | `number`                | -        |
+| returns         | `boolean`               |          |
 
 ```lua
 local in_safe_spot = features.evade:is_position_safe(g_local.position, true)
@@ -62,9 +63,11 @@ features.evade:disable_this_tick()
 
 Get a list of dangerous spells.
 
-| Argument | Type                                                   | Required |
-| -------- | ------------------------------------------------------ | -------- |
-| returns  | [`table<spell_instance_t>`](/structs/spell_instance_t) |          |
+| Argument             | Type                                                   | Required |
+| -------------------- | ------------------------------------------------------ | -------- |
+| allow_evade_logic    | `boolean`                                              | -        |
+| unit_bounding_radius | `number`                                               | -        |
+| returns              | [`table<spell_instance_t>`](/structs/spell_instance_t) |          |
 
 ```lua
 local dangerous_spells = features.evade:get_dangerous_spells()

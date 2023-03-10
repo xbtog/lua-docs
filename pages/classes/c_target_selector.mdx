@@ -21,6 +21,8 @@ if target ~= nil then
 end
 ```
 
+### get_secondary_target
+
 ### get_orbwalker_default_target
 
 Returns current orbwalker target only when in AA range.
@@ -73,10 +75,12 @@ end
   Needs to be called from features thread.
 </Callout>
 
-| Argument | Type                           | Required |
-| -------- | ------------------------------ | -------- |
-| index    | `number`                       | +        |
-| returns  | [`c_objet`](/classes/c_object) |          |
+| Argument         | Type       | Required |
+| ---------------- | ---------- | -------- |
+| index            | `number`   | +        |
+| ignore_dead      | `boolean`  | -        |
+| ignore_invisible | `boolean`  | -        |
+| returns          | ``boolean` |          |
 
 ```lua /is_bad_target/
 if features.target_selector:is_bad_target(0) then
