@@ -5,6 +5,7 @@
   "color": "color",
   "config_var_t": "config_var_t",
   "lstring": "lstring",
+  "missile_instance_t": "missile_instance_t",
   "polygon_t": "polygon_t",
   "prediction_result_t": "prediction_result_t",
   "rectangle_t": "rectangle_t",
