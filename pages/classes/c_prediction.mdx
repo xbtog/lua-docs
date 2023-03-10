@@ -107,3 +107,12 @@ local minions_in_line = features.prediction:count_minions_in_line(g_local.positi
 
 print("There are " .. minions_in_line .. " minions in line")
 ```
+
+### predict_minion_health
+
+| Argument                 | Type      | Required |
+| ------------------------ | --------- | -------- |
+| index                    | `number`  | +        |
+| delay                    | `number`  | +        |
+| predict_multiple_attacks | `boolean` | -        |
+| returns                  | `number`  |          |
