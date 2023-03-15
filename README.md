@@ -1,7 +1,5 @@
 # Slotted LUA Docs
 
-This is a template for creating documentation with [Nextra](https://nextra.site).
-
 ## Local Development
 
 First, run `pnpm i` to install the dependencies.
