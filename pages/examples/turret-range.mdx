@@ -11,7 +11,7 @@ cheat.on("renderer.draw", function()
         -- Check if turret valid
         if v ~= nil and not v:is_dead() and not v:is_invisible() then
             g_render:circle_3d(
-                --[[ position: --]] v.position,
+                --[[ position: --]]  v.position,
                 --[[ color: --]]     color:new(255, 255, 0),
                 --[[ radius: --]]    850.0,
                 --[[ flag: --]]      2,
