@@ -4,6 +4,8 @@
 
 ### on
 
+Register a callback.
+
 | Argument | Type       | Required |
 | -------- | ---------- | -------- |
 | name     | `string`   | +        |
@@ -50,22 +52,24 @@ end)
 
 ### register_module
 
+Register your own champion module.
+
 | Argument | Type    | Required |
 | -------- | ------- | -------- |
 | module   | `table` | +        |
 
-module table
+Module input table structure:
 
-| Key            | Type       | Return type | Required |
-| -------------- | ---------- | ----------- | -------- |
-| champion_name  | `string`   | `void`      | +        |
-| get_priorities | `function` | `string`    | +        |
-| on_draw        | `function` | `void`      | +        |
-| spell_q        | `function` | `boolean`   | +        |
-| spell_w        | `function` | `boolean`   | +        |
-| spell_e        | `function` | `boolean`   | +        |
-| spell_r        | `function` | `boolean`   | +        |
-| initialize     | `function` | `void`      | +        |
+| Key            | Type              | Return type | Required |
+| -------------- | ----------------- | ----------- | -------- |
+| champion_name  | `string`          | `void`      | +        |
+| get_priorities | `function`        | `string`    | +        |
+| on_draw        | `function`        | `void`      | +        |
+| spell_q        | `function(spell)` | `boolean`   | +        |
+| spell_w        | `function(spell)` | `boolean`   | +        |
+| spell_e        | `function(spell)` | `boolean`   | +        |
+| spell_r        | `function(spell)` | `boolean`   | +        |
+| initialize     | `function`        | `void`      | +        |
 
 Data passed to all spell\_\* functions is of type [champion_module_spell_data_t](/structs/champion_module_spell_data_t).
 
@@ -103,7 +107,7 @@ local registered = cheat.register_module({
 
 ### get_module_by_champion
 
-Get core module by champion name.
+Get core champion module by champion name.
 
 | Argument      | Type                            | Required |
 | ------------- | ------------------------------- | -------- |
@@ -139,3 +143,31 @@ cheat.register_module({
     end,
 })
 ```
+
+### get_resource_path
+
+Get the path of the resource folder.
+
+| Argument | Type     | Required |
+| -------- | -------- | -------- |
+| returns  | `string` |          |
+
+### get_local_attack_cast_delay
+
+| Argument | Type     | Required |
+| -------- | -------- | -------- |
+| returns  | `number` |          |
+
+### get_local_attack_delay
+
+| Argument | Type     | Required |
+| -------- | -------- | -------- |
+| returns  | `number` |          |
+
+### get_default_target_selector
+
+Get core target selector.
+
+| Argument | Type                | Required |
+| -------- | ------------------- | -------- |
+| returns  | `c_target_selector` |          |
