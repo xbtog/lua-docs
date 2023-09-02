@@ -4,10 +4,11 @@ export function Redirect() {
     const router = useRouter();
 
     useEffect(() => {
-        router.push("/quick-start");
+       location.href = "docs/quick-start"
     }, []);
 
     return <></>
+
 }
 
 <Redirect></Redirect>
