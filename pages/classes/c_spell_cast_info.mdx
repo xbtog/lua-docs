@@ -4,6 +4,7 @@
 
 - `slot:` [`e_spell_slot`](/enums/e_spell_slot)
 - `missile_index:` `number`
+- `missile_nid:` `number`
 - `start_position:` [`vec3`](/structs/vec3)
 - `end_position:` [`vec3`](/structs/vec3)
 - `windup_time:` `number`
@@ -11,6 +12,11 @@
 - `server_cast_time:` `number`
 - `end_time:` `number`
 - `start_time:` `number`
+- `is_autoattack:` `boolean`
+- `is_special_attack:` `boolean`
+- `was_autoattack_cast:` `boolean`
+- `was_autoattack_cast2:` `boolean`
+- `slot:` `number`
 
 ## Functions
 
@@ -23,3 +29,9 @@
 ```lua
 print("Target " .. spell_cast_info:get_target_index())
 ```
+
+### get_spell_info
+
+| Argument | Type           | Required |
+| -------- | -------------- | -------- |
+| returns  | `c_spell_info` |          |

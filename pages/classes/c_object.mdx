@@ -3,8 +3,8 @@
 ## Members
 
 - `index:` `number`
-- `next_object_index:` `number`
 - `team:` `number`
+- `name:` `lstring`
 - `network_id:` `number`
 - `framecount:` `number`
 - `position:` [`vec3`](/structs/vec3)
@@ -35,6 +35,17 @@
 - `champion_name:` [`lstring`](/structs/lstring)
 - `level:` `number`
 - `recalling_flag:` `number`
+- `shield:` `number`
+- `physical_shield:` `number`
+- `lethality:` `number`
+- `base_ap:` `number`
+- `total_armor:` `number`
+- `bonus_mr:` `number`
+- `armor_penetration_percent:` `number`
+- `flat_magic_penetration:` `number`
+- `magic_penetration_percent:` `number`
+- `direction:` [`vec3`](/structs/vec3)
+- `inventory:` [`c_inventory`](/classes/c_inventory)
 
 ## Functions
 
@@ -49,6 +60,15 @@ if obj:is_recalling() then
     print("Recalling")
 end
 ```
+
+### compare_flags
+
+| Argument     | Type                 | Required |
+| ------------ | -------------------- | -------- |
+| compare_flag | `e_object_type_flag` | +        |
+| returns      | `boolean`            |          |
+
+### get_unit_info_component
 
 ### is_local
 
@@ -116,6 +136,12 @@ end
 | -------- | --------- | -------- |
 | returns  | `boolean` |          |
 
+### is_turret
+
+| Argument | Type      | Required |
+| -------- | --------- | -------- |
+| returns  | `boolean` |          |
+
 ### is_building
 
 | Argument | Type      | Required |
@@ -159,6 +185,12 @@ end
 | returns  | `boolean` |          |
 
 ### is_enemy
+
+| Argument | Type      | Required |
+| -------- | --------- | -------- |
+| returns  | `boolean` |          |
+
+### is_zombie
 
 | Argument | Type      | Required |
 | -------- | --------- | -------- |
@@ -261,3 +293,275 @@ print("position: " .. obj:get_hpbar_position())
 ```lua
 print("bounding radius: " .. obj:get_bounding_radius())
 ```
+
+### get_missile_spell_info
+
+| Argument |      Type      | Required |
+| :------- | :------------: | -------: |
+| returns  | `c_spell_info` |          |
+
+### get_minion_type
+
+| Argument |   Type   | Required |
+| :------- | :------: | -------: |
+| returns  | `number` |          |
+
+### is_senna_minion
+
+| Argument |   Type    | Required |
+| :------- | :-------: | -------: |
+| returns  | `boolean` |          |
+
+### is_misc_minion
+
+| Argument |   Type    | Required |
+| :------- | :-------: | -------: |
+| returns  | `boolean` |          |
+
+### is_plant
+
+| Argument |   Type    | Required |
+| :------- | :-------: | -------: |
+| returns  | `boolean` |          |
+
+### is_zyra_plant
+
+| Argument |   Type    | Required |
+| :------- | :-------: | -------: |
+| returns  | `boolean` |          |
+
+### is_barrel
+
+| Argument |   Type    | Required |
+| :------- | :-------: | -------: |
+| returns  | `boolean` |          |
+
+### is_feather
+
+| Argument |   Type    | Required |
+| :------- | :-------: | -------: |
+| returns  | `boolean` |          |
+
+### is_jarvan_flag
+
+| Argument |   Type    | Required |
+| :------- | :-------: | -------: |
+| returns  | `boolean` |          |
+
+### is_sand_soldier
+
+| Argument |   Type    | Required |
+| :------- | :-------: | -------: |
+| returns  | `boolean` |          |
+
+### is_tentacle
+
+| Argument |   Type    | Required |
+| :------- | :-------: | -------: |
+| returns  | `boolean` |          |
+
+### is_windwall
+
+| Argument |   Type    | Required |
+| :------- | :-------: | -------: |
+| returns  | `boolean` |          |
+
+### is_spore
+
+| Argument |   Type    | Required |
+| :------- | :-------: | -------: |
+| returns  | `boolean` |          |
+
+### is_minion_only_autoattackable
+
+| Argument |   Type    | Required |
+| :------- | :-------: | -------: |
+| returns  | `boolean` |          |
+
+### has_special_minion_health
+
+| Argument |   Type    | Required |
+| :------- | :-------: | -------: |
+| returns  | `boolean` |          |
+
+### is_turret_object
+
+| Argument |   Type    | Required |
+| :------- | :-------: | -------: |
+| returns  | `boolean` |          |
+
+### is_turret_attackable
+
+| Argument |   Type    | Required |
+| :------- | :-------: | -------: |
+| returns  | `boolean` |          |
+
+### is_ward
+
+| Argument |   Type    | Required |
+| :------- | :-------: | -------: |
+| returns  | `boolean` |          |
+
+### is_untargetable_minion
+
+| Argument |   Type    | Required |
+| :------- | :-------: | -------: |
+| returns  | `boolean` |          |
+
+### is_lane_minion
+
+| Argument |   Type    | Required |
+| :------- | :-------: | -------: |
+| returns  | `boolean` |          |
+
+### is_jungle_monster
+
+| Argument |   Type    | Required |
+| :------- | :-------: | -------: |
+| returns  | `boolean` |          |
+
+### is_major_monster
+
+| Argument |   Type    | Required |
+| :------- | :-------: | -------: |
+| returns  | `boolean` |          |
+
+### is_normal_minion
+
+| Argument |   Type    | Required |
+| :------- | :-------: | -------: |
+| returns  | `boolean` |          |
+
+### is_main_camp_monster
+
+| Argument |   Type    | Required |
+| :------- | :-------: | -------: |
+| returns  | `boolean` |          |
+
+### get_monster_priority
+
+| Argument |   Type   | Required |
+| :------- | :------: | -------: |
+| returns  | `number` |          |
+
+### get_name
+
+| Argument |   Type   | Required |
+| :------- | :------: | -------: |
+| returns  | `string` |          |
+
+### get_alternative_name
+
+| Argument |   Type   | Required |
+| :------- | :------: | -------: |
+| returns  | `string` |          |
+
+### get_particle_direction
+
+| Argument |          Type           | Required |
+| :------- | :---------------------: | -------: |
+| returns  | [`vec3`](/structs/vec3) |          |
+
+### get_particle_source_index
+
+| Argument |   Type   | Required |
+| :------- | :------: | -------: |
+| returns  | `number` |          |
+
+### get_particle_target_index
+
+| Argument |   Type   | Required |
+| :------- | :------: | -------: |
+| returns  | `number` |          |
+
+### get_kills
+
+| Argument |   Type   | Required |
+| :------- | :------: | -------: |
+| returns  | `number` |          |
+
+### get_ward_type
+
+| Argument |     Type      | Required |
+| :------- | :-----------: | -------: |
+| returns  | `e_ward_type` |          |
+
+### get_history_position
+
+| Argument     |   Type   | Required |
+| :----------- | :------: | -------: |
+| history_tick | `number` |          |
+| returns      |  `vec3`  |          |
+
+### get_history_position_time
+
+| Argument     |   Type   | Required |
+| :----------- | :------: | -------: |
+| history_tick | `number` |          |
+| returns      | `number` |          |
+
+### get_experience
+
+| Argument |   Type   | Required |
+| :------- | :------: | -------: |
+| returns  | `number` |          |
+
+### get_lethality
+
+| Argument |   Type   | Required |
+| :------- | :------: | -------: |
+| returns  | `number` |          |
+
+### get_base_ms
+
+| Argument |   Type   | Required |
+| :------- | :------: | -------: |
+| returns  | `number` |          |
+
+### is_invulnerable
+
+| Argument |   Type    | Required |
+| :------- | :-------: | -------: |
+| returns  | `boolean` |          |
+
+### is_bad_minion
+
+| Argument |   Type    | Required |
+| :------- | :-------: | -------: |
+| returns  | `boolean` |          |
+
+### get_owner_index
+
+| Argument |   Type   | Required |
+| :------- | :------: | -------: |
+| returns  | `number` |          |
+
+### get_vision_score
+
+| Argument |   Type   | Required |
+| :------- | :------: | -------: |
+| returns  | `number` |          |
+
+### get_random_position
+
+| Argument |          Type           | Required |
+| :------- | :---------------------: | -------: |
+| returns  | [`vec3`](/structs/vec3) |          |
+
+### get_missile_spawn_time
+
+| Argument |   Type   | Required |
+| :------- | :------: | -------: |
+| returns  | `number` |          |
+
+### get_missile_target_index
+
+| Argument |   Type   | Required |
+| :------- | :------: | -------: |
+| returns  | `number` |          |
+
+### get_entity_info
+
+| Argument |                   Type                    | Required |
+| :------- | :---------------------------------------: | -------: |
+| returns  | [`c_entity_info`](/classes/c_entity_info) |          |
