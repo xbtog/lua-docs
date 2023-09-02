@@ -1,9 +1,14 @@
 # Turret Range
 
 ```lua filename="turret-range.lua"
+-- Register draw callback
 cheat.on("renderer.draw", function()
+    -- Get all enemy turrets
     local turrets = features.entity_list:get_enemy_turrets()
+
+    -- Draw circle around each turret
     for i, v in ipairs(turrets) do
+        -- Check if turret valid
         if v ~= nil and not v:is_dead() and not v:is_invisible() then
             g_render:circle_3d(
                 --[[ position: --]] v.position,
