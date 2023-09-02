@@ -4,7 +4,7 @@
 
 - `index:` `number`
 - `team:` `number`
-- `name:` `lstring`
+- `name:` [`lstring`](/structs/lstring)
 - `network_id:` `number`
 - `framecount:` `number`
 - `position:` [`vec3`](/structs/vec3)
@@ -63,10 +63,10 @@ end
 
 ### compare_flags
 
-| Argument     | Type                 | Required |
-| ------------ | -------------------- | -------- |
-| compare_flag | `e_object_type_flag` | +        |
-| returns      | `boolean`            |          |
+| Argument     | Type                                              | Required |
+| ------------ | ------------------------------------------------- | -------- |
+| compare_flag | [`e_object_type_flag`](/enums/e_object_type_flag) | +        |
+| returns      | `boolean`                                         |          |
 
 ### get_unit_info_component
 
@@ -296,9 +296,9 @@ print("bounding radius: " .. obj:get_bounding_radius())
 
 ### get_missile_spell_info
 
-| Argument |      Type      | Required |
-| :------- | :------------: | -------: |
-| returns  | `c_spell_info` |          |
+| Argument |                  Type                   | Required |
+| :------- | :-------------------------------------: | -------: |
+| returns  | [`c_spell_info`](/classes/c_spell_info) |          |
 
 ### get_minion_type
 
@@ -482,16 +482,16 @@ print("bounding radius: " .. obj:get_bounding_radius())
 
 ### get_ward_type
 
-| Argument |     Type      | Required |
-| :------- | :-----------: | -------: |
-| returns  | `e_ward_type` |          |
+| Argument |                Type                 | Required |
+| :------- | :---------------------------------: | -------: |
+| returns  | [`e_ward_type`](/enums/e_ward_type) |          |
 
 ### get_history_position
 
-| Argument     |   Type   | Required |
-| :----------- | :------: | -------: |
-| history_tick | `number` |          |
-| returns      |  `vec3`  |          |
+| Argument     |          Type           | Required |
+| :----------- | :---------------------: | -------: |
+| history_tick |        `number`         |          |
+| returns      | [`vec3`](/structs/vec3) |          |
 
 ### get_history_position_time
 
