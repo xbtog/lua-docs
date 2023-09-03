@@ -1,15 +1,27 @@
-import React, { useEffect } from "react";
-import { DocsThemeConfig } from "nextra-theme-docs";
 import { useRouter } from "next/router";
+import { DocsThemeConfig } from "nextra-theme-docs";
+import { useEffect } from "react";
 
 let initialAnalyticsPost = false;
 const config: DocsThemeConfig = {
   logo: <span>Slotted Docs</span>,
-  editLink: false as any,
+  // editLink: false as any,
   feedback: false as any,
   footer: {
     text: `© ${new Date().getFullYear()} slotted.cc`,
   },
+  project: {
+    link: "https://github.com/xbtog/lua-docs",
+  },
+  docsRepositoryBase: "https://github.com/xbtog/lua-docs/tree/main/",
+  // banner: {
+  //   key: "2.0-release",
+  //   text: (
+  //     <a href="https://nextra.site" target="_blank">
+  //       🎉 Nextra 2.0 is released. Read more →
+  //     </a>
+  //   ),
+  // },
   useNextSeoProps: () => {
     return {
       titleTemplate: "Slotted LUA Documentation - %s",

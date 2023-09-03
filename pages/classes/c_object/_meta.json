@@ -1,0 +1,16 @@
+{
+  "c_ai_manager": "c_ai_manager",
+  "c_base_item": "c_base_item",
+  "c_buff": "c_buff",
+  "c_buff_manager": "c_buff_manager",
+  "c_inventory": "c_inventory",
+  "c_inventory_slot": "c_inventory_slot",
+  "c_item_data": "c_item_data",
+  "c_spell_book": "c_spell_book",
+  "c_spell_cast_info": "c_spell_cast_info",
+  "c_spell_data": "c_spell_data",
+  "c_spell_details": "c_spell_details",
+  "c_spell_info": "c_spell_info",
+  "c_spell_slot": "c_spell_slot",
+  "c_unit_info_component": "c_unit_info_component"
+}

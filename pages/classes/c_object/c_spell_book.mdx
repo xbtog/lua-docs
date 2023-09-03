@@ -1,0 +1,34 @@
+# c_spell_book
+
+## Functions
+
+### get_spell_slot
+
+| Argument | Type                                             | Required |
+| -------- | ------------------------------------------------ | -------- |
+| slot     | [`e_spell_slot`](/enums/e_spell_slot)            | +        |
+| returns  | [`c_spell_slot`](/classes/c_object/c_spell_slot) |          |
+
+```lua /get_spell_slot/
+local spell_book = g_local:get_spell_book()
+local q_slot = spell_book:get_spell_slot(e_spell_slot.q)
+
+if q_slot ~= nil then
+  print("QSlot at level " .. q_slot.level)
+end
+```
+
+### get_spell_cast_info
+
+| Argument | Type                                                               | Required |
+| -------- | ------------------------------------------------------------------ | -------- |
+| returns  | [`c_spell_cast_info  \| nil`](/classes/c_object/c_spell_cast_info) |          |
+
+```lua /get_spell_cast_info/
+local spell_book = g_local:get_spell_book()
+local cast_info = spell_book:get_spell_cast_info()
+
+if cast_info ~= nil then
+  print("Slot casted: " .. cast_info.slot)
+end
+```

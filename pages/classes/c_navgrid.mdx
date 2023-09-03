@@ -1,5 +1,15 @@
 # c_navgrid
 
+## Members
+
+- `min_grid_pos:` [`vec3`](/structs/vec3)
+- `max_grid_pos:` [`vec3`](/structs/vec3)
+- `collision_map:` `number`
+- `sampled_heights:` `number`
+- `x_cell_count:` `number`
+- `y_cell_count:` `number`
+- `cell_size:` `number`
+
 ## Functions
 
 ### get_collision
@@ -50,6 +60,36 @@ local in_building = g_navgrid:is_building(g_local.position)
 
 ```lua /is_river/
 local in_river = g_navgrid:is_river(g_local.position)
+```
+
+### is_bush
+
+| Argument | Type                    | Required |
+| -------- | ----------------------- | -------- |
+| position | [`vec3`](/structs/vec3) | +        |
+
+```lua
+local is_bush = g_navgrid:is_bush(g_local.position)
+```
+
+### is_river
+
+| Argument | Type                    | Required |
+| -------- | ----------------------- | -------- |
+| position | [`vec3`](/structs/vec3) | +        |
+
+```lua
+local is_river = g_navgrid:is_river(g_local.position)
+```
+
+### is_building
+
+| Argument | Type                    | Required |
+| -------- | ----------------------- | -------- |
+| position | [`vec3`](/structs/vec3) | +        |
+
+```lua
+local is_building = g_navgrid:is_building(g_local.position)
 ```
 
 ### get_height

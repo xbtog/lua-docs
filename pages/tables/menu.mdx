@@ -4,11 +4,13 @@
 
 ### get_main_window
 
-| Argument | Type       | Required |
-| -------- | ---------- | -------- |
-| returns  | `c_window` |          |
+| Argument | Type                                 | Required |
+| -------- | ------------------------------------ | -------- |
+| returns  | [`c_window`](/classes/menu/c_window) |          |
 
-```lua /menu.get_main_window/
+Full example for create a custom menu navigation with sections and components:
+
+```lua showLineNumbers filename="menu.lua" /menu.get_main_window/
 local window = menu.get_main_window()
 
 local navigation = window:push_navigation("Script, 0")

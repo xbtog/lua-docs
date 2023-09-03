@@ -4,6 +4,8 @@
 
 ### on
 
+Register a callback.
+
 | Argument | Type       | Required |
 | -------- | ---------- | -------- |
 | name     | `string`   | +        |
@@ -13,9 +15,11 @@
 
 - `lua.load`
 - `lua.unload`
-- `local.cast_spell` (c_input.cast_spell hook)
-- `local.issue_order_attack` (c_input.issue_order_attack hook)
-- `local.issue_order_move` (c_input.issue_order_move hook)
+- `local.cast_spell`
+- `local.issue_order_attack`
+- `local.issue_order_move`
+- `champion.create`
+- `champion.delete`
 - `features.pre_run`
 - `features.run`
 - `features.orbwalker`
@@ -25,10 +29,6 @@
 - `features.evade`
 - `features.target_selector`
 - `renderer.draw`
-- `features.orbwalker.on_spell_casted`
-- `features.orbwalker.on_auto_attacked`
-- ~~`champion.create`~~ (currently broken)
-- ~~`champion.delete`~~ (currently broken)
 
 ```lua /cheat.on/
 -- Cancel all issue_order_move calls. Also works with "local.cast_spell", "local.issue_order_attack"
@@ -48,51 +48,28 @@ cheat.on("renderer.draw", function()
         g_render:line_3d(g_local.position, target.position, color:new(255, 255, 255, 255), 1)
     end
 end)
-
-cheat.on("local.cast_spell", function(e) 
-    -- you can call e:cancel() to cancel casting
-    -- e.target = c_object | nil
-    -- e.spell_slot = e_spell_slot
-    -- e.start_position = vec3 | nil
-    -- e.end_position = vec3 | nil
-
-    -- either e.target or e.start_position or e.end_position are set
-end)
-
-cheat.on("local.issue_order_attack", function(e)
-    -- attacks can be canceled with e:cancel()
-    -- e.target = c_object
-end)
-
-cheat.on("local.issue_order_move", function(e)
-    -- attacks can be canceled with e:cancel()
-end)
-
-cheat.on("features.orbwalker.on_spell_casted", function(e)
-    -- e.target = c_objectt
-    -- e.spell_name = string
-    -- e.spell_slot = e_spell_slot
-end)
 ```
 
 ### register_module
+
+Register your own champion module.
 
 | Argument | Type    | Required |
 | -------- | ------- | -------- |
 | module   | `table` | +        |
 
-module table
+Module input table structure:
 
-| Key            | Type       | Return type | Required |
-| -------------- | ---------- | ----------- | -------- |
-| champion_name  | `string`   | `void`      | +        |
-| get_priorities | `function` | `string`    | +        |
-| on_draw        | `function` | `void`      | +        |
-| spell_q        | `function` | `boolean`   | +        |
-| spell_w        | `function` | `boolean`   | +        |
-| spell_e        | `function` | `boolean`   | +        |
-| spell_r        | `function` | `boolean`   | +        |
-| initialize     | `function` | `void`      | +        |
+| Key            | Type              | Return type | Required |
+| -------------- | ----------------- | ----------- | -------- |
+| champion_name  | `string`          | `void`      | +        |
+| get_priorities | `function`        | `string`    | +        |
+| on_draw        | `function`        | `void`      | +        |
+| spell_q        | `function(spell)` | `boolean`   | +        |
+| spell_w        | `function(spell)` | `boolean`   | +        |
+| spell_e        | `function(spell)` | `boolean`   | +        |
+| spell_r        | `function(spell)` | `boolean`   | +        |
+| initialize     | `function`        | `void`      | +        |
 
 Data passed to all spell\_\* functions is of type [champion_module_spell_data_t](/structs/champion_module_spell_data_t).
 
@@ -130,7 +107,7 @@ local registered = cheat.register_module({
 
 ### get_module_by_champion
 
-Get core module by champion name.
+Get core champion module by champion name.
 
 | Argument      | Type                            | Required |
 | ------------- | ------------------------------- | -------- |
@@ -169,20 +146,28 @@ cheat.register_module({
 
 ### get_resource_path
 
-| Argument      | Type                            | Required |
-| ------------- | ------------------------------- | -------- |
-| returns       | `string` |          | 
+Get the path of the resource folder.
 
-Get base path to resource folder.
+| Argument | Type     | Required |
+| -------- | -------- | -------- |
+| returns  | `string` |          |
 
 ### get_local_attack_cast_delay
 
-| Argument      | Type                            | Required |
-| ------------- | ------------------------------- | -------- |
-| returns       | `number` |          | 
+| Argument | Type     | Required |
+| -------- | -------- | -------- |
+| returns  | `number` |          |
 
 ### get_local_attack_delay
 
-| Argument      | Type                            | Required |
-| ------------- | ------------------------------- | -------- |
-| returns       | `number` |          | 
+| Argument | Type     | Required |
+| -------- | -------- | -------- |
+| returns  | `number` |          |
+
+### get_default_target_selector
+
+Get core target selector.
+
+| Argument | Type                | Required |
+| -------- | ------------------- | -------- |
+| returns  | `c_target_selector` |          |
