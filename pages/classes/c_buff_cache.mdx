@@ -4,10 +4,10 @@
 
 ### get_buff
 
-| Argument     | Type                                    | Required |
-| ------------ | --------------------------------------- | -------- |
-| object_index | `number`                                | +        |
-| returns      | [`c_buff`](/classes/c_buff) |          |
+| Argument     | Type                                 | Required |
+| ------------ | ------------------------------------ | -------- |
+| object_index | `number`                             | +        |
+| returns      | [`c_buff`](/classes/c_object/c_buff) |          |
 
 ```lua /get_buff/
 local buff = features.buff_cache:get_buff(g_local.index, "asheqcastready")
@@ -56,10 +56,10 @@ end
 
 ### get_all_buffs
 
-| Argument     | Type                                           | Required |
-| ------------ | ---------------------------------------------- | -------- |
-| object_index | `number`                                       | +        |
-| returns      | [`table<c_buff>`](/classes/c_buff) |          |
+| Argument     | Type                                        | Required |
+| ------------ | ------------------------------------------- | -------- |
+| object_index | `number`                                    | +        |
+| returns      | [`table<c_buff>`](/classes/c_object/c_buff) |          |
 
 ```lua /get_all_buffs/
 local buffs = features.buff_cache:get_all_buffs(g_local.index)

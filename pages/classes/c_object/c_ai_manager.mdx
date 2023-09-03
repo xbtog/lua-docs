@@ -2,11 +2,19 @@
 
 ## Members
 
-- `is_moving:` `bool`
+- `velocity:` [`vec3`](/structs/vec3)
+- `is_dashing:` `boolean`
+- `dash_speed:` `number`
+- `is_moving:` `boolean`
 - `next_path_node:` `number`
 - `path_start:` [`vec3`](/structs/vec3)
 - `path_end:` [`vec3`](/structs/vec3)
-- `dash_speed:` `number`
-- `is_dashing:` `bool`
-- `velocity:` `number`
 - `path:` [`table<vec3>`](/structs/vec3)
+
+## Functions
+
+### get_path_end_position
+
+| Argument |           Type           | Required |
+| :------- | :----------------------: | -------: |
+| returns  | [`vec3`](/structst/vec3) |          |

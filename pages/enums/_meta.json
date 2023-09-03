@@ -1,10 +1,12 @@
 {
   "e_buff_type": "e_buff_type",
   "e_hitchance": "e_hitchance",
-    "e_key": "e_key",
-    "e_key_state": "e_key_state",
+  "e_key": "e_key",
+  "e_key_state": "e_key_state",
   "e_mouse_button": "e_mouse_button",
+  "e_object_type_flags": "e_object_type_flag",
   "e_orbwalker_mode": "e_orbwalker_mode",
+  "e_special_spell": "e_special_spell",
   "e_spell_flag": "e_spell_flag",
   "e_spell_slot": "e_spell_slot"
 }
