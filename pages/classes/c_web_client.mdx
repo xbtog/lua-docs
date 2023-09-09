@@ -4,11 +4,11 @@
 
 ### get
 
-| Argument | Type                                                                                                     | Required |
-| -------- | -------------------------------------------------------------------------------------------------------- | -------- |
-| url      | `string`                                                                                                 |          |
-| options  | {timeout: number \| nil, body: string \| table \| nil, useragent: string \| nil, headers: table \| nil } |          |
-| returns  | [`c_response`](/classes/c_web_client/c_response)                                                         |          |
+| Argument | Type                                                                                                       | Required |
+| -------- | ---------------------------------------------------------------------------------------------------------- | -------- |
+| url      | `string`                                                                                                   |          |
+| options  | `{timeout: number \| nil, body: string \| table \| nil, useragent: string \| nil, headers: table \| nil }` |          |
+| returns  | [`c_response`](/classes/c_web_client/c_response)                                                           |          |
 
 ```lua
 local web_client = c_web_client.new()
@@ -20,12 +20,12 @@ local json_table = response:json()
 
 ### async_get
 
-| Argument | Type                                                                                                     | Required |
-| -------- | -------------------------------------------------------------------------------------------------------- | -------- |
-| url      | `string`                                                                                                 |          |
-| options  | {timeout: number \| nil, body: string \| table \| nil, useragent: string \| nil, headers: table \| nil } |          |
-| callback | `function`                                                                                               |          |
-| returns  | [`c_response`](/classes/c_web_client/c_response)                                                         |          |
+| Argument | Type                                                                                                       | Required |
+| -------- | ---------------------------------------------------------------------------------------------------------- | -------- |
+| url      | `string`                                                                                                   |          |
+| options  | `{timeout: number \| nil, body: string \| table \| nil, useragent: string \| nil, headers: table \| nil }` |          |
+| callback | `function(response: c_response)`                                                                           |          |
+| returns  | [`c_response`](/classes/c_web_client/c_response)                                                           |          |
 
 ```lua
 local web_client = c_web_client.new()
@@ -37,102 +37,102 @@ end)
 
 ### post
 
-| Argument | Type                                                                                                     | Required |
-| -------- | -------------------------------------------------------------------------------------------------------- | -------- |
-| url      | `string`                                                                                                 |          |
-| options  | {timeout: number \| nil, body: string \| table \| nil, useragent: string \| nil, headers: table \| nil } |          |
-| returns  | [`c_response`](/classes/c_web_client/c_response)                                                         |          |
+| Argument | Type                                                                                                       | Required |
+| -------- | ---------------------------------------------------------------------------------------------------------- | -------- |
+| url      | `string`                                                                                                   |          |
+| options  | `{timeout: number \| nil, body: string \| table \| nil, useragent: string \| nil, headers: table \| nil }` |          |
+| returns  | [`c_response`](/classes/c_web_client/c_response)                                                           |          |
 
 ### async_post
 
-| Argument | Type                                                                                                     | Required |
-| -------- | -------------------------------------------------------------------------------------------------------- | -------- |
-| url      | `string`                                                                                                 |          |
-| options  | {timeout: number \| nil, body: string \| table \| nil, useragent: string \| nil, headers: table \| nil } |          |
-| callback | `function`                                                                                               |          |
-| returns  | [`c_response`](/classes/c_web_client/c_response)                                                         |          |
+| Argument | Type                                                                                                       | Required |
+| -------- | ---------------------------------------------------------------------------------------------------------- | -------- |
+| url      | `string`                                                                                                   |          |
+| options  | `{timeout: number \| nil, body: string \| table \| nil, useragent: string \| nil, headers: table \| nil }` |          |
+| callback | `function(response: c_response)`                                                                           |          |
+| returns  | [`c_response`](/classes/c_web_client/c_response)                                                           |          |
 
 ### put
 
-| Argument | Type                                                                                                     | Required |
-| -------- | -------------------------------------------------------------------------------------------------------- | -------- |
-| url      | `string`                                                                                                 |          |
-| options  | {timeout: number \| nil, body: string \| table \| nil, useragent: string \| nil, headers: table \| nil } |          |
-| returns  | [`c_response`](/classes/c_web_client/c_response)                                                         |          |
+| Argument | Type                                                                                                       | Required |
+| -------- | ---------------------------------------------------------------------------------------------------------- | -------- |
+| url      | `string`                                                                                                   |          |
+| options  | `{timeout: number \| nil, body: string \| table \| nil, useragent: string \| nil, headers: table \| nil }` |          |
+| returns  | [`c_response`](/classes/c_web_client/c_response)                                                           |          |
 
 ### async_put
 
-| Argument | Type                                                                                                     | Required |
-| -------- | -------------------------------------------------------------------------------------------------------- | -------- |
-| url      | `string`                                                                                                 |          |
-| options  | {timeout: number \| nil, body: string \| table \| nil, useragent: string \| nil, headers: table \| nil } |          |
-| callback | `function`                                                                                               |          |
-| returns  | [`c_response`](/classes/c_web_client/c_response)                                                         |          |
+| Argument | Type                                                                                                       | Required |
+| -------- | ---------------------------------------------------------------------------------------------------------- | -------- |
+| url      | `string`                                                                                                   |          |
+| options  | `{timeout: number \| nil, body: string \| table \| nil, useragent: string \| nil, headers: table \| nil }` |          |
+| callback | `function(response: c_response)`                                                                           |          |
+| returns  | [`c_response`](/classes/c_web_client/c_response)                                                           |          |
 
 ### delete
 
-| Argument | Type                                                                                                     | Required |
-| -------- | -------------------------------------------------------------------------------------------------------- | -------- |
-| url      | `string`                                                                                                 |          |
-| options  | {timeout: number \| nil, body: string \| table \| nil, useragent: string \| nil, headers: table \| nil } |          |
-| returns  | [`c_response`](/classes/c_web_client/c_response)                                                         |          |
+| Argument | Type                                                                                                       | Required |
+| -------- | ---------------------------------------------------------------------------------------------------------- | -------- |
+| url      | `string`                                                                                                   |          |
+| options  | `{timeout: number \| nil, body: string \| table \| nil, useragent: string \| nil, headers: table \| nil }` |          |
+| returns  | [`c_response`](/classes/c_web_client/c_response)                                                           |          |
 
 ### async_delete
 
-| Argument | Type                                                                                                     | Required |
-| -------- | -------------------------------------------------------------------------------------------------------- | -------- |
-| url      | `string`                                                                                                 |          |
-| options  | {timeout: number \| nil, body: string \| table \| nil, useragent: string \| nil, headers: table \| nil } |          |
-| callback | `function`                                                                                               |          |
-| returns  | [`c_response`](/classes/c_web_client/c_response)                                                         |          |
+| Argument | Type                                                                                                       | Required |
+| -------- | ---------------------------------------------------------------------------------------------------------- | -------- |
+| url      | `string`                                                                                                   |          |
+| options  | `{timeout: number \| nil, body: string \| table \| nil, useragent: string \| nil, headers: table \| nil }` |          |
+| callback | `function(response: c_response)`                                                                           |          |
+| returns  | [`c_response`](/classes/c_web_client/c_response)                                                           |          |
 
 ### patch
 
-| Argument | Type                                                                                                     | Required |
-| -------- | -------------------------------------------------------------------------------------------------------- | -------- |
-| url      | `string`                                                                                                 |          |
-| options  | {timeout: number \| nil, body: string \| table \| nil, useragent: string \| nil, headers: table \| nil } |          |
-| returns  | [`c_response`](/classes/c_web_client/c_response)                                                         |          |
+| Argument | Type                                                                                                       | Required |
+| -------- | ---------------------------------------------------------------------------------------------------------- | -------- |
+| url      | `string`                                                                                                   |          |
+| options  | `{timeout: number \| nil, body: string \| table \| nil, useragent: string \| nil, headers: table \| nil }` |          |
+| returns  | [`c_response`](/classes/c_web_client/c_response)                                                           |          |
 
 ### async_patch
 
-| Argument | Type                                                                                                     | Required |
-| -------- | -------------------------------------------------------------------------------------------------------- | -------- |
-| url      | `string`                                                                                                 |          |
-| options  | {timeout: number \| nil, body: string \| table \| nil, useragent: string \| nil, headers: table \| nil } |          |
-| callback | `function`                                                                                               |          |
-| returns  | [`c_response`](/classes/c_web_client/c_response)                                                         |          |
+| Argument | Type                                                                                                       | Required |
+| -------- | ---------------------------------------------------------------------------------------------------------- | -------- |
+| url      | `string`                                                                                                   |          |
+| options  | `{timeout: number \| nil, body: string \| table \| nil, useragent: string \| nil, headers: table \| nil }` |          |
+| callback | `function(response: c_response)`                                                                           |          |
+| returns  | [`c_response`](/classes/c_web_client/c_response)                                                           |          |
 
 ### head
 
-| Argument | Type                                                                                                     | Required |
-| -------- | -------------------------------------------------------------------------------------------------------- | -------- |
-| url      | `string`                                                                                                 |          |
-| options  | {timeout: number \| nil, body: string \| table \| nil, useragent: string \| nil, headers: table \| nil } |          |
-| returns  | [`c_response`](/classes/c_web_client/c_response)                                                         |          |
+| Argument | Type                                                                                                       | Required |
+| -------- | ---------------------------------------------------------------------------------------------------------- | -------- |
+| url      | `string`                                                                                                   |          |
+| options  | `{timeout: number \| nil, body: string \| table \| nil, useragent: string \| nil, headers: table \| nil }` |          |
+| returns  | [`c_response`](/classes/c_web_client/c_response)                                                           |          |
 
 ### async_head
 
-| Argument | Type                                                                                                     | Required |
-| -------- | -------------------------------------------------------------------------------------------------------- | -------- |
-| url      | `string`                                                                                                 |          |
-| options  | {timeout: number \| nil, body: string \| table \| nil, useragent: string \| nil, headers: table \| nil } |          |
-| callback | `function`                                                                                               |          |
-| returns  | [`c_response`](/classes/c_web_client/c_response)                                                         |          |
+| Argument | Type                                                                                                       | Required |
+| -------- | ---------------------------------------------------------------------------------------------------------- | -------- |
+| url      | `string`                                                                                                   |          |
+| options  | `{timeout: number \| nil, body: string \| table \| nil, useragent: string \| nil, headers: table \| nil }` |          |
+| callback | `function(response: c_response)`                                                                           |          |
+| returns  | [`c_response`](/classes/c_web_client/c_response)                                                           |          |
 
 ### options
 
-| Argument | Type                                                                                                     | Required |
-| -------- | -------------------------------------------------------------------------------------------------------- | -------- |
-| url      | `string`                                                                                                 |          |
-| options  | {timeout: number \| nil, body: string \| table \| nil, useragent: string \| nil, headers: table \| nil } |          |
-| returns  | [`c_response`](/classes/c_web_client/c_response)                                                         |          |
+| Argument | Type                                                                                                       | Required |
+| -------- | ---------------------------------------------------------------------------------------------------------- | -------- |
+| url      | `string`                                                                                                   |          |
+| options  | `{timeout: number \| nil, body: string \| table \| nil, useragent: string \| nil, headers: table \| nil }` |          |
+| returns  | [`c_response`](/classes/c_web_client/c_response)                                                           |          |
 
 ### async_options
 
-| Argument | Type                                                                                                     | Required |
-| -------- | -------------------------------------------------------------------------------------------------------- | -------- |
-| url      | `string`                                                                                                 |          |
-| options  | {timeout: number \| nil, body: string \| table \| nil, useragent: string \| nil, headers: table \| nil } |          |
-| callback | `function`                                                                                               |          |
-| returns  | [`c_response`](/classes/c_web_client/c_response)                                                         |          |
+| Argument | Type                                                                                                       | Required |
+| -------- | ---------------------------------------------------------------------------------------------------------- | -------- |
+| url      | `string`                                                                                                   |          |
+| options  | `{timeout: number \| nil, body: string \| table \| nil, useragent: string \| nil, headers: table \| nil }` |          |
+| callback | `function(response: c_response)`                                                                           |          |
+| returns  | [`c_response`](/classes/c_web_client/c_response)                                                           |          |
