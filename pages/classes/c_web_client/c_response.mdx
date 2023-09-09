@@ -1,0 +1,26 @@
+# c_response
+
+## Members
+
+- `success:` `boolean`
+- `status:` `number`
+
+## Functions
+
+### json
+
+Parse the response as JSON.
+
+```lua
+local json = response:json()
+
+print(json["error"])
+```
+
+### text
+
+Get the response as text.
+
+```lua
+local text = response:text()
+```

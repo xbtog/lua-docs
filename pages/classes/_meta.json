@@ -14,5 +14,6 @@
   "c_renderer": "c_renderer",
   "c_tactical_map": "c_tactical_map",
   "c_target_selector": "c_target_selector",
-  "c_threading": "c_threading"
+  "c_threading": "c_threading",
+  "c_web_client": "c_web_client"
 }
