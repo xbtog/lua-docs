@@ -1,19 +1,11 @@
 {
-  "c_buff_cache": "c_buff_cache",
   "c_config": "c_config",
-  "c_entity_list": "c_entity_list",
-  "c_evade": "c_evade",
   "c_hud_manager": "c_hud_manager",
   "c_input": "c_input",
   "c_menu_gui": "c_menu_gui",
-  "c_module": "c_module",
   "c_navgrid": "c_navgrid",
   "c_object": "c_object",
-  "c_orbwalker": "c_orbwalker",
-  "c_prediction": "c_prediction",
   "c_renderer": "c_renderer",
   "c_tactical_map": "c_tactical_map",
-  "c_target_selector": "c_target_selector",
-  "c_threading": "c_threading",
   "c_web_client": "c_web_client"
 }
