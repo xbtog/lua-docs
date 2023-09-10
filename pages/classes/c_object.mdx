@@ -62,16 +62,16 @@ end
 
 ### compare_flags
 
-| Argument     | Type                                              | Required |
-| ------------ | ------------------------------------------------- | -------- |
-| compare_flag | [`e_object_type_flag`](/enums/e_object_type_flag) | +        |
-| returns      | `boolean`                                         |          |
+| Argument     | Type                                                | Required |
+| ------------ | --------------------------------------------------- | -------- |
+| compare_flag | [`e_object_type_flags`](/enums/e_object_type_flags) | +        |
+| returns      | `boolean`                                           |          |
 
 ### get_unit_info_component
 
-| Argument | Type                                                      | Required |
-| -------- | --------------------------------------------------------- | -------- |
-| returns  | [`c_unit_info_component`](/classes/c_unit_info_component) |          |
+| Argument | Type                                                               | Required |
+| -------- | ------------------------------------------------------------------ | -------- |
+| returns  | [`c_unit_info_component`](/classes/c_object/c_unit_info_component) |          |
 
 ### is_local
 
@@ -236,9 +236,9 @@ print("Bonus attack damage: " .. obj:get_bonus_attack_damage())
 
 ### get_spell_book
 
-| Argument | Type                                    | Required |
-| -------- | --------------------------------------- | -------- |
-| returns  | [`c_spell_book`](/classes/c_spell_book) |          |
+| Argument | Type                                             | Required |
+| -------- | ------------------------------------------------ | -------- |
+| returns  | [`c_spell_book`](/classes/c_object/c_spell_book) |          |
 
 ```lua
 local spell_book = obj:get_spell_book()
@@ -246,9 +246,9 @@ local spell_book = obj:get_spell_book()
 
 ### get_buff_manager
 
-| Argument | Type                                        | Required |
-| -------- | ------------------------------------------- | -------- |
-| returns  | [`c_buff_manager`](/classes/c_buff_manager) |          |
+| Argument | Type                                                 | Required |
+| -------- | ---------------------------------------------------- | -------- |
+| returns  | [`c_buff_manager`](/classes/c_object/c_buff_manager) |          |
 
 ```lua
 local buff_manager = obj:get_buff_manager()
@@ -276,9 +276,9 @@ print("Ability power: " .. obj:get_ability_power())
 
 ### get_ai_manager
 
-| Argument | Type                                    | Required |
-| -------- | --------------------------------------- | -------- |
-| returns  | [`c_ai_manager`](/classes/c_ai_manager) |          |
+| Argument | Type                                             | Required |
+| -------- | ------------------------------------------------ | -------- |
+| returns  | [`c_ai_manager`](/classes/c_object/c_ai_manager) |          |
 
 ### get_hpbar_position
 
@@ -298,9 +298,9 @@ print("bounding radius: " .. obj:get_bounding_radius())
 
 ### get_missile_spell_info
 
-| Argument |                  Type                   | Required |
-| :------- | :-------------------------------------: | -------: |
-| returns  | [`c_spell_info`](/classes/c_spell_info) |          |
+| Argument |                       Type                       | Required |
+| :------- | :----------------------------------------------: | -------: |
+| returns  | [`c_spell_info`](/classes/c_object/c_spell_info) |          |
 
 ### get_minion_type
 
@@ -564,6 +564,6 @@ print("bounding radius: " .. obj:get_bounding_radius())
 
 ### get_entity_info
 
-| Argument |                   Type                    | Required |
-| :------- | :---------------------------------------: | -------: |
-| returns  | [`c_entity_info`](/classes/c_entity_info) |          |
+| Argument |                        Type                        | Required |
+| :------- | :------------------------------------------------: | -------: |
+| returns  | [`c_entity_info`](/classes/c_object/c_entity_info) |          |
