@@ -1,18 +1,11 @@
 {
-  "arc_t": "arc_t",
   "champion_module_spell_data_t": "champion_module_spell_data_t",
-  "circle_t": "circle_t",
   "color": "color",
   "config_var_t": "config_var_t",
   "lstring": "lstring",
+  "math": "math",
   "missile_instance_t": "missile_instance_t",
-  "polygon_t": "polygon_t",
   "prediction_result_t": "prediction_result_t",
-  "rectangle_t": "rectangle_t",
-  "ring_t": "ring_t",
-  "sector_t": "sector_t",
   "spell_instance_t": "spell_instance_t",
-  "texture_t": "texture_t",
-  "vec2": "vec2",
-  "vec3": "vec3"
+  "texture_t": "texture_t"
 }

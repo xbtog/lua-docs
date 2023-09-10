@@ -1,0 +1,10 @@
+{
+  "arc_t": "arc_t",
+  "circle_t": "circle_t",
+  "polygon_t": "polygon_t",
+  "rectangle_t": "rectangle_t",
+  "ring_t": "ring_t",
+  "sector_t": "sector_t",
+  "vec2": "vec2",
+  "vec3": "vec3"
+}

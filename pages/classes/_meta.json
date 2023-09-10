@@ -7,5 +7,7 @@
   "c_object": "c_object",
   "c_renderer": "c_renderer",
   "c_tactical_map": "c_tactical_map",
-  "c_web_client": "c_web_client"
+  "c_web_client": "c_web_client",
+  "features": "features",
+  "menu": "menu"
 }
