@@ -14,6 +14,10 @@ const config: DocsThemeConfig = {
     link: "https://github.com/xbtog/lua-docs",
   },
   docsRepositoryBase: "https://github.com/xbtog/lua-docs/tree/main/",
+  toc: {
+    backToTop: true,
+    float: true,
+  },
   // banner: {
   //   key: "2.0-release",
   //   text: (
