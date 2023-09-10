@@ -6,25 +6,25 @@
 
 ## Members
 
-- `direction:` [`vec3`](/structs/vec3)
-- `perpendicular:` [`vec3`](/structs/vec3)
-- `r_end:` [`vec3`](/structs/vec3)
-- `r_start:` [`vec3`](/structs/vec3)
+- `direction:` [`vec3`](/structs/math/vec3)
+- `perpendicular:` [`vec3`](/structs/math/vec3)
+- `r_end:` [`vec3`](/structs/math/vec3)
+- `r_start:` [`vec3`](/structs/math/vec3)
 - `width:` `number`
 
 ## Functions
 
 ### to_polygon
 
-| Argument       | Type                              | Required |
-| -------------- | --------------------------------- | -------- |
-| offset         | `number`                          | +        |
-| override_width | `number`                          | +        |
-| returns        | [`polygon_t`](/structs/polygon_t) |          |
+| Argument       | Type                                   | Required |
+| -------------- | -------------------------------------- | -------- |
+| offset         | `number`                               | +        |
+| override_width | `number`                               | +        |
+| returns        | [`polygon_t`](/structs/math/polygon_t) |          |
 
 ### intersection
 
-| Argument | Type                            | Required |
-| -------- | ------------------------------- | -------- |
-| circle   | [`circle_t`](/structs/circle_t) | +        |
-| returns  | [`table<vec3>`](/structs/vec3)  |          |
+| Argument | Type                                 | Required |
+| -------- | ------------------------------------ | -------- |
+| circle   | [`circle_t`](/structs/math/circle_t) | +        |
+| returns  | [`table<vec3>`](/structs/math/vec3)  |          |

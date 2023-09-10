@@ -6,12 +6,12 @@
 
 Check whether a position is safe or not.
 
-| Argument        | Type                    | Required |
-| --------------- | ----------------------- | -------- |
-| position        | [`vec3`](/structs/vec3) | +        |
-| safe_distance   | `boolean`               | +        |
-| radius_modifier | `number`                | -        |
-| returns         | `boolean`               |          |
+| Argument        | Type                         | Required |
+| --------------- | ---------------------------- | -------- |
+| position        | [`vec3`](/structs/math/vec3) | +        |
+| safe_distance   | `boolean`                    | +        |
+| radius_modifier | `number`                     | -        |
+| returns         | `boolean`                    |          |
 
 ```lua
 local in_safe_spot = features.evade:is_position_safe(g_local.position, true)
@@ -39,9 +39,9 @@ end
 
 Get a safe position to move to.
 
-| Argument | Type                    | Required |
-| -------- | ----------------------- | -------- |
-| returns  | [`vec3`](/structs/vec3) |          |
+| Argument | Type                         | Required |
+| -------- | ---------------------------- | -------- |
+| returns  | [`vec3`](/structs/math/vec3) |          |
 
 ```lua
 local safe_position = features.evade:get_safe_position()

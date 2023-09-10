@@ -8,26 +8,26 @@ arc_t.new(start_position, end_position, hitbox)
 
 ## Members
 
-- `end:` [`vec3`](/structs/vec3)
+- `end:` [`vec3`](/structs/math/vec3)
 - `hitbox:` `number`
-- `start:` [`vec3`](/structs/vec3)
+- `start:` [`vec3`](/structs/math/vec3)
 - `distance:` `number`
 
 ## Functions
 
 ### circle_circle_intersection
 
-| Argument | Type                           | Required |
-| -------- | ------------------------------ | -------- |
-| center1  | [`vec3`](/structs/vec3)        | +        |
-| center2  | [`vec3`](/structs/vec3)        | +        |
-| radius1  | `number`                       | +        |
-| radius2  | `number`                       | +        |
-| returns  | [`table<vec3>`](/structs/vec3) |          |
+| Argument | Type                                | Required |
+| -------- | ----------------------------------- | -------- |
+| center1  | [`vec3`](/structs/math/vec3)        | +        |
+| center2  | [`vec3`](/structsmath//vec3)        | +        |
+| radius1  | `number`                            | +        |
+| radius2  | `number`                            | +        |
+| returns  | [`table<vec3>`](/structs/math/vec3) |          |
 
 ### to_polygon
 
-| Argument | Type                              | Required |
-| -------- | --------------------------------- | -------- |
-| center   | `number`                          | +        |
-| returns  | [`polygon_t`](/structs/polygon_t) |          |
+| Argument | Type                                   | Required |
+| -------- | -------------------------------------- | -------- |
+| center   | `number`                               | +        |
+| returns  | [`polygon_t`](/structs/math/polygon_t) |          |

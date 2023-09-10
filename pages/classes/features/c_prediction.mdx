@@ -11,7 +11,7 @@
 | projectile_speed | `number`                                              | +        |
 | projectile_width | `number`                                              | +        |
 | delay            | `number`                                              | +        |
-| source_position  | [`vec3`](/structs/vec3)                               | +        |
+| source_position  | [`vec3`](/structs/math/vec3)                          | +        |
 | extend           | `boolean`                                             |          |
 | returns          | [`prediction_result_t`](/structs/prediction_result_t) |          |
 
@@ -30,11 +30,11 @@ end
 
 ### predict_default
 
-| Argument     | Type                    | Required |
-| ------------ | ----------------------- | -------- |
-| target_index | `number`                | +        |
-| time         | `number`                | +        |
-| returns      | [`vec3`](/structs/vec3) |          |
+| Argument     | Type                         | Required |
+| ------------ | ---------------------------- | -------- |
+| target_index | `number`                     | +        |
+| time         | `number`                     | +        |
+| returns      | [`vec3`](/structs/math/vec3) |          |
 
 ```lua /predict_default/
 local target = features.target_selector:get_default_target()
@@ -62,13 +62,13 @@ print("Predicted health is " .. predicted)
 
 ### minion_in_line
 
-| Argument           | Type                    | Required |
-| ------------------ | ----------------------- | -------- |
-| start_pos          | [`vec3`](/structs/vec3) | +        |
-| end_pos            | [`vec3`](/structs/vec3) | +        |
-| projectile_width   | `number`                | +        |
-| ignored_network_id | `number`                | +        |
-| returns            | `boolean`               |          |
+| Argument           | Type                         | Required |
+| ------------------ | ---------------------------- | -------- |
+| start_pos          | [`vec3`](/structs/math/vec3) | +        |
+| end_pos            | [`vec3`](/structs/math/vec3) | +        |
+| projectile_width   | `number`                     | +        |
+| ignored_network_id | `number`                     | +        |
+| returns            | `boolean`                    |          |
 
 ```lua /minion_in_line/
 local target = features.target_selector:get_default_target()
@@ -88,13 +88,13 @@ end
 
 ### count_minions_in_line
 
-| Argument           | Type                    | Required |
-| ------------------ | ----------------------- | -------- |
-| start_pos          | [`vec3`](/structs/vec3) | +        |
-| end_pos            | [`vec3`](/structs/vec3) | +        |
-| projectile_width   | `number`                | +        |
-| ignored_network_id | `number`                | +        |
-| returns            | `number`                |          |
+| Argument           | Type                         | Required |
+| ------------------ | ---------------------------- | -------- |
+| start_pos          | [`vec3`](/structs/math/vec3) | +        |
+| end_pos            | [`vec3`](/structs/math/vec3) | +        |
+| projectile_width   | `number`                     | +        |
+| ignored_network_id | `number`                     | +        |
+| returns            | `number`                     |          |
 
 ```lua /count_minions_in_line/
 local target = features.target_selector:get_default_target()

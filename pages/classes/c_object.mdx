@@ -6,7 +6,7 @@
 - `team:` `number`
 - `name:` `string`
 - `network_id:` `number`
-- `position:` [`vec3`](/structs/vec3)
+- `position:` [`vec3`](/structs/math/vec3)
 - `targetable_flag:` `number`
 - `selectable_flag:` `number`
 - `mana:` `number`
@@ -41,7 +41,7 @@
 - `gold:` `number`
 - `total_gold:` `number`
 - `max_gold:` `number`
-- `direction:` [`vec3`](/structs/vec3)
+- `direction:` [`vec3`](/structs/math/vec3)
 - `champion_name:` [`lstring`](/structs/lstring)
 - `level:` `number`
 - `inventory:` [`c_inventory`](/classes/c_object/c_inventory)
@@ -282,9 +282,9 @@ print("Ability power: " .. obj:get_ability_power())
 
 ### get_hpbar_position
 
-| Argument | Type                    | Required |
-| -------- | ----------------------- | -------- |
-| returns  | [`vec2`](/structs/vec2) |          |
+| Argument | Type                         | Required |
+| -------- | ---------------------------- | -------- |
+| returns  | [`vec2`](/structs/math/vec2) |          |
 
 ```lua
 print("position: " .. obj:get_hpbar_position())
@@ -460,9 +460,9 @@ print("bounding radius: " .. obj:get_bounding_radius())
 
 ### get_particle_direction
 
-| Argument |          Type           | Required |
-| :------- | :---------------------: | -------: |
-| returns  | [`vec3`](/structs/vec3) |          |
+| Argument |             Type             | Required |
+| :------- | :--------------------------: | -------: |
+| returns  | [`vec3`](/structs/math/vec3) |          |
 
 ### get_particle_source_index
 
@@ -490,10 +490,10 @@ print("bounding radius: " .. obj:get_bounding_radius())
 
 ### get_history_position
 
-| Argument     |          Type           | Required |
-| :----------- | :---------------------: | -------: |
-| history_tick |        `number`         |          |
-| returns      | [`vec3`](/structs/vec3) |          |
+| Argument     |             Type             | Required |
+| :----------- | :--------------------------: | -------: |
+| history_tick |           `number`           |          |
+| returns      | [`vec3`](/structs/math/vec3) |          |
 
 ### get_history_position_time
 
@@ -546,9 +546,9 @@ print("bounding radius: " .. obj:get_bounding_radius())
 
 ### get_random_position
 
-| Argument |          Type           | Required |
-| :------- | :---------------------: | -------: |
-| returns  | [`vec3`](/structs/vec3) |          |
+| Argument |             Type             | Required |
+| :------- | :--------------------------: | -------: |
+| returns  | [`vec3`](/structs/math/vec3) |          |
 
 ### get_missile_spawn_time
 
