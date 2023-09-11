@@ -13,7 +13,14 @@
 ```lua
 local web_client = c_web_client.new()
 
-local response = web_client:get("https://example.com", {useragent = "useragent", headers = {{"content-type", "application/json"}} ,timeout = 30 --[[ 30 seconds --]] })
+local response = web_client:get(
+    "https://example.com",
+    {
+        useragent = "useragent",
+        headers = {{"content-type", "application/json"}},
+        timeout = 30 --[[ 30 seconds --]] 
+    }
+)
 
 local json_table = response:json()
 ```
