@@ -2,57 +2,57 @@
 
 ## Members
 
-- `index:` `number`
-- `team:` `number`
-- `name:` `string`
-- `network_id:` `number`
+- `index:` `number{:lua}`
+- `team:` `number{:lua}`
+- `name:` `string{:lua}`
+- `network_id:` `number{:lua}`
 - `position:` [`vec3`](/structs/math/vec3)
-- `targetable_flag:` `number`
-- `selectable_flag:` `number`
-- `mana:` `number`
-- `max_mana:` `number`
-- `mana_enabled:` `number`
-- `recalling_flag:` `number`
-- `health:` `number`
-- `max_health:` `number`
-- `shield:` `number`
-- `physical_shield:` `number`
-- `magic_shield:` `number`
-- `lethality:` `number`
-- `bonus_attack:` `number`
-- `base_ap:` `number`
-- `modifier:` `number`
-- `bonus_attack_speed:` `number`
-- `life_steal:` `number`
-- `attack_speed:` `number`
-- `base_attack:` `number`
-- `crit_chance:` `number`
-- `total_armor:` `number`
-- `bonus_armor:` `number`
-- `total_mr:` `number`
-- `bonus_mr:` `number`
-- `base_health_regen:` `number`
-- `total_health_regen:` `number`
-- `movement_speed:` `number`
-- `attack_range:` `number`
-- `armor_penetration_percent:` `number`
-- `flat_magic_penetration:` `number`
-- `magic_penetration_percent:` `number`
-- `gold:` `number`
-- `total_gold:` `number`
-- `max_gold:` `number`
+- `targetable_flag:` `number{:lua}`
+- `selectable_flag:` `number{:lua}`
+- `mana:` `number{:lua}`
+- `max_mana:` `number{:lua}`
+- `mana_enabled:` `number{:lua}`
+- `recalling_flag:` `number{:lua}`
+- `health:` `number{:lua}`
+- `max_health:` `number{:lua}`
+- `shield:` `number{:lua}`
+- `physical_shield:` `number{:lua}`
+- `magic_shield:` `number{:lua}`
+- `lethality:` `number{:lua}`
+- `bonus_attack:` `number{:lua}`
+- `base_ap:` `number{:lua}`
+- `modifier:` `number{:lua}`
+- `bonus_attack_speed:` `number{:lua}`
+- `life_steal:` `number{:lua}`
+- `attack_speed:` `number{:lua}`
+- `base_attack:` `number{:lua}`
+- `crit_chance:` `number{:lua}`
+- `total_armor:` `number{:lua}`
+- `bonus_armor:` `number{:lua}`
+- `total_mr:` `number{:lua}`
+- `bonus_mr:` `number{:lua}`
+- `base_health_regen:` `number{:lua}`
+- `total_health_regen:` `number{:lua}`
+- `movement_speed:` `number{:lua}`
+- `attack_range:` `number{:lua}`
+- `armor_penetration_percent:` `number{:lua}`
+- `flat_magic_penetration:` `number{:lua}`
+- `magic_penetration_percent:` `number{:lua}`
+- `gold:` `number{:lua}`
+- `total_gold:` `number{:lua}`
+- `max_gold:` `number{:lua}`
 - `direction:` [`vec3`](/structs/math/vec3)
 - `champion_name:` [`lstring`](/structs/lstring)
-- `level:` `number`
+- `level:` `number{:lua}`
 - `inventory:` [`c_inventory`](/classes/c_object/c_inventory)
 
 ## Functions
 
 ### is_recalling
 
-| Argument | Type      | Required |
-| -------- | --------- | -------- |
-| returns  | `boolean` |          |
+| Argument | Type            | Required |
+| -------- | --------------- | -------- |
+| returns  | `boolean{:lua}` |          |
 
 ```lua
 if obj:is_recalling() then
@@ -65,7 +65,7 @@ end
 | Argument     | Type                                                | Required |
 | ------------ | --------------------------------------------------- | -------- |
 | compare_flag | [`e_object_type_flags`](/enums/e_object_type_flags) | +        |
-| returns      | `boolean`                                           |          |
+| returns      | `boolean{:lua}`                                     |          |
 
 ### get_unit_info_component
 
@@ -75,9 +75,9 @@ end
 
 ### is_local
 
-| Argument | Type      | Required |
-| -------- | --------- | -------- |
-| returns  | `boolean` |          |
+| Argument | Type            | Required |
+| -------- | --------------- | -------- |
+| returns  | `boolean{:lua}` |          |
 
 ```lua
 if obj:is_local() then
@@ -87,9 +87,9 @@ end
 
 ### is_game_object
 
-| Argument | Type      | Required |
-| -------- | --------- | -------- |
-| returns  | `boolean` |          |
+| Argument | Type            | Required |
+| -------- | --------------- | -------- |
+| returns  | `boolean{:lua}` |          |
 
 [//]: # "### is_dead_object"
 [//]: #
@@ -104,111 +104,111 @@ end
 
 ### is_neutral_camp
 
-| Argument | Type      | Required |
-| -------- | --------- | -------- |
-| returns  | `boolean` |          |
+| Argument | Type            | Required |
+| -------- | --------------- | -------- |
+| returns  | `boolean{:lua}` |          |
 
 ### is_ai_base_common
 
-| Argument | Type      | Required |
-| -------- | --------- | -------- |
-| returns  | `boolean` |          |
+| Argument | Type            | Required |
+| -------- | --------------- | -------- |
+| returns  | `boolean{:lua}` |          |
 
 ### is_attackable_unit
 
-| Argument | Type      | Required |
-| -------- | --------- | -------- |
-| returns  | `boolean` |          |
+| Argument | Type            | Required |
+| -------- | --------------- | -------- |
+| returns  | `boolean{:lua}` |          |
 
 ### is_ai
 
-| Argument | Type      | Required |
-| -------- | --------- | -------- |
-| returns  | `boolean` |          |
+| Argument | Type            | Required |
+| -------- | --------------- | -------- |
+| returns  | `boolean{:lua}` |          |
 
 ### is_minion
 
-| Argument | Type      | Required |
-| -------- | --------- | -------- |
-| returns  | `boolean` |          |
+| Argument | Type            | Required |
+| -------- | --------------- | -------- |
+| returns  | `boolean{:lua}` |          |
 
 ### is_hero
 
-| Argument | Type      | Required |
-| -------- | --------- | -------- |
-| returns  | `boolean` |          |
+| Argument | Type            | Required |
+| -------- | --------------- | -------- |
+| returns  | `boolean{:lua}` |          |
 
 ### is_turret
 
-| Argument | Type      | Required |
-| -------- | --------- | -------- |
-| returns  | `boolean` |          |
+| Argument | Type            | Required |
+| -------- | --------------- | -------- |
+| returns  | `boolean{:lua}` |          |
 
 ### is_building
 
-| Argument | Type      | Required |
-| -------- | --------- | -------- |
-| returns  | `boolean` |          |
+| Argument | Type            | Required |
+| -------- | --------------- | -------- |
+| returns  | `boolean{:lua}` |          |
 
 ### is_missile
 
-| Argument | Type      | Required |
-| -------- | --------- | -------- |
-| returns  | `boolean` |          |
+| Argument | Type            | Required |
+| -------- | --------------- | -------- |
+| returns  | `boolean{:lua}` |          |
 
 ### is_invisible
 
-| Argument | Type      | Required |
-| -------- | --------- | -------- |
-| returns  | `boolean` |          |
+| Argument | Type            | Required |
+| -------- | --------------- | -------- |
+| returns  | `boolean{:lua}` |          |
 
 ### is_visible
 
-| Argument | Type      | Required |
-| -------- | --------- | -------- |
-| returns  | `boolean` |          |
+| Argument | Type            | Required |
+| -------- | --------------- | -------- |
+| returns  | `boolean{:lua}` |          |
 
 ### is_targetable
 
-| Argument | Type      | Required |
-| -------- | --------- | -------- |
-| returns  | `boolean` |          |
+| Argument | Type            | Required |
+| -------- | --------------- | -------- |
+| returns  | `boolean{:lua}` |          |
 
 ### is_alive
 
-| Argument | Type      | Required |
-| -------- | --------- | -------- |
-| returns  | `boolean` |          |
+| Argument | Type            | Required |
+| -------- | --------------- | -------- |
+| returns  | `boolean{:lua}` |          |
 
 ### is_dead
 
-| Argument | Type      | Required |
-| -------- | --------- | -------- |
-| returns  | `boolean` |          |
+| Argument | Type            | Required |
+| -------- | --------------- | -------- |
+| returns  | `boolean{:lua}` |          |
 
 ### is_enemy
 
-| Argument | Type      | Required |
-| -------- | --------- | -------- |
-| returns  | `boolean` |          |
+| Argument | Type            | Required |
+| -------- | --------------- | -------- |
+| returns  | `boolean{:lua}` |          |
 
 ### is_zombie
 
-| Argument | Type      | Required |
-| -------- | --------- | -------- |
-| returns  | `boolean` |          |
+| Argument | Type            | Required |
+| -------- | --------------- | -------- |
+| returns  | `boolean{:lua}` |          |
 
 ### is_ally
 
-| Argument | Type      | Required |
-| -------- | --------- | -------- |
-| returns  | `boolean` |          |
+| Argument | Type            | Required |
+| -------- | --------------- | -------- |
+| returns  | `boolean{:lua}` |          |
 
 ### dist_to_local
 
-| Argument | Type     | Required |
-| -------- | -------- | -------- |
-| returns  | `number` |          |
+| Argument | Type           | Required |
+| -------- | -------------- | -------- |
+| returns  | `number{:lua}` |          |
 
 ```lua
 print("Dist to local: " .. obj:dist_to_local())
@@ -216,9 +216,9 @@ print("Dist to local: " .. obj:dist_to_local())
 
 ### get_attack_damage
 
-| Argument | Type     | Required |
-| -------- | -------- | -------- |
-| returns  | `number` |          |
+| Argument | Type           | Required |
+| -------- | -------------- | -------- |
+| returns  | `number{:lua}` |          |
 
 ```lua
 print("Attack damage: " .. obj:get_attack_damage())
@@ -226,9 +226,9 @@ print("Attack damage: " .. obj:get_attack_damage())
 
 ### get_bonus_attack_damage
 
-| Argument | Type     | Required |
-| -------- | -------- | -------- |
-| returns  | `number` |          |
+| Argument | Type           | Required |
+| -------- | -------------- | -------- |
+| returns  | `number{:lua}` |          |
 
 ```lua
 print("Bonus attack damage: " .. obj:get_bonus_attack_damage())
@@ -256,9 +256,9 @@ local buff_manager = obj:get_buff_manager()
 
 ### get_object_name
 
-| Argument | Type     | Required |
-| -------- | -------- | -------- |
-| returns  | `string` |          |
+| Argument | Type           | Required |
+| -------- | -------------- | -------- |
+| returns  | `string{:lua}` |          |
 
 ```lua
 print("Name: " .. obj:get_object_name())
@@ -266,9 +266,9 @@ print("Name: " .. obj:get_object_name())
 
 ### get_ability_power
 
-| Argument | Type     | Required |
-| -------- | -------- | -------- |
-| returns  | `number` |          |
+| Argument | Type           | Required |
+| -------- | -------------- | -------- |
+| returns  | `number{:lua}` |          |
 
 ```lua
 print("Ability power: " .. obj:get_ability_power())
@@ -304,159 +304,159 @@ print("bounding radius: " .. obj:get_bounding_radius())
 
 ### get_minion_type
 
-| Argument |   Type   | Required |
-| :------- | :------: | -------: |
-| returns  | `number` |          |
+| Argument |      Type      | Required |
+| :------- | :------------: | -------: |
+| returns  | `number{:lua}` |          |
 
 ### is_senna_minion
 
-| Argument |   Type    | Required |
-| :------- | :-------: | -------: |
-| returns  | `boolean` |          |
+| Argument |      Type       | Required |
+| :------- | :-------------: | -------: |
+| returns  | `boolean{:lua}` |          |
 
 ### is_misc_minion
 
-| Argument |   Type    | Required |
-| :------- | :-------: | -------: |
-| returns  | `boolean` |          |
+| Argument |      Type       | Required |
+| :------- | :-------------: | -------: |
+| returns  | `boolean{:lua}` |          |
 
 ### is_plant
 
-| Argument |   Type    | Required |
-| :------- | :-------: | -------: |
-| returns  | `boolean` |          |
+| Argument |      Type       | Required |
+| :------- | :-------------: | -------: |
+| returns  | `boolean{:lua}` |          |
 
 ### is_zyra_plant
 
-| Argument |   Type    | Required |
-| :------- | :-------: | -------: |
-| returns  | `boolean` |          |
+| Argument |      Type       | Required |
+| :------- | :-------------: | -------: |
+| returns  | `boolean{:lua}` |          |
 
 ### is_barrel
 
-| Argument |   Type    | Required |
-| :------- | :-------: | -------: |
-| returns  | `boolean` |          |
+| Argument |      Type       | Required |
+| :------- | :-------------: | -------: |
+| returns  | `boolean{:lua}` |          |
 
 ### is_feather
 
-| Argument |   Type    | Required |
-| :------- | :-------: | -------: |
-| returns  | `boolean` |          |
+| Argument |      Type       | Required |
+| :------- | :-------------: | -------: |
+| returns  | `boolean{:lua}` |          |
 
 ### is_jarvan_flag
 
-| Argument |   Type    | Required |
-| :------- | :-------: | -------: |
-| returns  | `boolean` |          |
+| Argument |      Type       | Required |
+| :------- | :-------------: | -------: |
+| returns  | `boolean{:lua}` |          |
 
 ### is_sand_soldier
 
-| Argument |   Type    | Required |
-| :------- | :-------: | -------: |
-| returns  | `boolean` |          |
+| Argument |      Type       | Required |
+| :------- | :-------------: | -------: |
+| returns  | `boolean{:lua}` |          |
 
 ### is_tentacle
 
-| Argument |   Type    | Required |
-| :------- | :-------: | -------: |
-| returns  | `boolean` |          |
+| Argument |      Type       | Required |
+| :------- | :-------------: | -------: |
+| returns  | `boolean{:lua}` |          |
 
 ### is_windwall
 
-| Argument |   Type    | Required |
-| :------- | :-------: | -------: |
-| returns  | `boolean` |          |
+| Argument |      Type       | Required |
+| :------- | :-------------: | -------: |
+| returns  | `boolean{:lua}` |          |
 
 ### is_spore
 
-| Argument |   Type    | Required |
-| :------- | :-------: | -------: |
-| returns  | `boolean` |          |
+| Argument |      Type       | Required |
+| :------- | :-------------: | -------: |
+| returns  | `boolean{:lua}` |          |
 
 ### is_minion_only_autoattackable
 
-| Argument |   Type    | Required |
-| :------- | :-------: | -------: |
-| returns  | `boolean` |          |
+| Argument |      Type       | Required |
+| :------- | :-------------: | -------: |
+| returns  | `boolean{:lua}` |          |
 
 ### has_special_minion_health
 
-| Argument |   Type    | Required |
-| :------- | :-------: | -------: |
-| returns  | `boolean` |          |
+| Argument |      Type       | Required |
+| :------- | :-------------: | -------: |
+| returns  | `boolean{:lua}` |          |
 
 ### is_turret_object
 
-| Argument |   Type    | Required |
-| :------- | :-------: | -------: |
-| returns  | `boolean` |          |
+| Argument |      Type       | Required |
+| :------- | :-------------: | -------: |
+| returns  | `boolean{:lua}` |          |
 
 ### is_turret_attackable
 
-| Argument |   Type    | Required |
-| :------- | :-------: | -------: |
-| returns  | `boolean` |          |
+| Argument |      Type       | Required |
+| :------- | :-------------: | -------: |
+| returns  | `boolean{:lua}` |          |
 
 ### is_ward
 
-| Argument |   Type    | Required |
-| :------- | :-------: | -------: |
-| returns  | `boolean` |          |
+| Argument |      Type       | Required |
+| :------- | :-------------: | -------: |
+| returns  | `boolean{:lua}` |          |
 
 ### is_untargetable_minion
 
-| Argument |   Type    | Required |
-| :------- | :-------: | -------: |
-| returns  | `boolean` |          |
+| Argument |      Type       | Required |
+| :------- | :-------------: | -------: |
+| returns  | `boolean{:lua}` |          |
 
 ### is_lane_minion
 
-| Argument |   Type    | Required |
-| :------- | :-------: | -------: |
-| returns  | `boolean` |          |
+| Argument |      Type       | Required |
+| :------- | :-------------: | -------: |
+| returns  | `boolean{:lua}` |          |
 
 ### is_jungle_monster
 
-| Argument |   Type    | Required |
-| :------- | :-------: | -------: |
-| returns  | `boolean` |          |
+| Argument |      Type       | Required |
+| :------- | :-------------: | -------: |
+| returns  | `boolean{:lua}` |          |
 
 ### is_major_monster
 
-| Argument |   Type    | Required |
-| :------- | :-------: | -------: |
-| returns  | `boolean` |          |
+| Argument |      Type       | Required |
+| :------- | :-------------: | -------: |
+| returns  | `boolean{:lua}` |          |
 
 ### is_normal_minion
 
-| Argument |   Type    | Required |
-| :------- | :-------: | -------: |
-| returns  | `boolean` |          |
+| Argument |      Type       | Required |
+| :------- | :-------------: | -------: |
+| returns  | `boolean{:lua}` |          |
 
 ### is_main_camp_monster
 
-| Argument |   Type    | Required |
-| :------- | :-------: | -------: |
-| returns  | `boolean` |          |
+| Argument |      Type       | Required |
+| :------- | :-------------: | -------: |
+| returns  | `boolean{:lua}` |          |
 
 ### get_monster_priority
 
-| Argument |   Type   | Required |
-| :------- | :------: | -------: |
-| returns  | `number` |          |
+| Argument |      Type      | Required |
+| :------- | :------------: | -------: |
+| returns  | `number{:lua}` |          |
 
 ### get_name
 
-| Argument |   Type   | Required |
-| :------- | :------: | -------: |
-| returns  | `string` |          |
+| Argument |      Type      | Required |
+| :------- | :------------: | -------: |
+| returns  | `string{:lua}` |          |
 
 ### get_alternative_name
 
-| Argument |   Type   | Required |
-| :------- | :------: | -------: |
-| returns  | `string` |          |
+| Argument |      Type      | Required |
+| :------- | :------------: | -------: |
+| returns  | `string{:lua}` |          |
 
 ### get_particle_direction
 
@@ -466,21 +466,21 @@ print("bounding radius: " .. obj:get_bounding_radius())
 
 ### get_particle_source_index
 
-| Argument |   Type   | Required |
-| :------- | :------: | -------: |
-| returns  | `number` |          |
+| Argument |      Type      | Required |
+| :------- | :------------: | -------: |
+| returns  | `number{:lua}` |          |
 
 ### get_particle_target_index
 
-| Argument |   Type   | Required |
-| :------- | :------: | -------: |
-| returns  | `number` |          |
+| Argument |      Type      | Required |
+| :------- | :------------: | -------: |
+| returns  | `number{:lua}` |          |
 
 ### get_kills
 
-| Argument |   Type   | Required |
-| :------- | :------: | -------: |
-| returns  | `number` |          |
+| Argument |      Type      | Required |
+| :------- | :------------: | -------: |
+| returns  | `number{:lua}` |          |
 
 ### get_ward_type
 
@@ -492,57 +492,57 @@ print("bounding radius: " .. obj:get_bounding_radius())
 
 | Argument     |             Type             | Required |
 | :----------- | :--------------------------: | -------: |
-| history_tick |           `number`           |          |
+| history_tick |        `number{:lua}`        |          |
 | returns      | [`vec3`](/structs/math/vec3) |          |
 
 ### get_history_position_time
 
-| Argument     |   Type   | Required |
-| :----------- | :------: | -------: |
-| history_tick | `number` |          |
-| returns      | `number` |          |
+| Argument     |      Type      | Required |
+| :----------- | :------------: | -------: |
+| history_tick | `number{:lua}` |          |
+| returns      | `number{:lua}` |          |
 
 ### get_experience
 
-| Argument |   Type   | Required |
-| :------- | :------: | -------: |
-| returns  | `number` |          |
+| Argument |      Type      | Required |
+| :------- | :------------: | -------: |
+| returns  | `number{:lua}` |          |
 
 ### get_lethality
 
-| Argument |   Type   | Required |
-| :------- | :------: | -------: |
-| returns  | `number` |          |
+| Argument |      Type      | Required |
+| :------- | :------------: | -------: |
+| returns  | `number{:lua}` |          |
 
 ### get_base_ms
 
-| Argument |   Type   | Required |
-| :------- | :------: | -------: |
-| returns  | `number` |          |
+| Argument |      Type      | Required |
+| :------- | :------------: | -------: |
+| returns  | `number{:lua}` |          |
 
 ### is_invulnerable
 
-| Argument |   Type    | Required |
-| :------- | :-------: | -------: |
-| returns  | `boolean` |          |
+| Argument |      Type       | Required |
+| :------- | :-------------: | -------: |
+| returns  | `boolean{:lua}` |          |
 
 ### is_bad_minion
 
-| Argument |   Type    | Required |
-| :------- | :-------: | -------: |
-| returns  | `boolean` |          |
+| Argument |      Type       | Required |
+| :------- | :-------------: | -------: |
+| returns  | `boolean{:lua}` |          |
 
 ### get_owner_index
 
-| Argument |   Type   | Required |
-| :------- | :------: | -------: |
-| returns  | `number` |          |
+| Argument |      Type      | Required |
+| :------- | :------------: | -------: |
+| returns  | `number{:lua}` |          |
 
 ### get_vision_score
 
-| Argument |   Type   | Required |
-| :------- | :------: | -------: |
-| returns  | `number` |          |
+| Argument |      Type      | Required |
+| :------- | :------------: | -------: |
+| returns  | `number{:lua}` |          |
 
 ### get_random_position
 
@@ -552,15 +552,15 @@ print("bounding radius: " .. obj:get_bounding_radius())
 
 ### get_missile_spawn_time
 
-| Argument |   Type   | Required |
-| :------- | :------: | -------: |
-| returns  | `number` |          |
+| Argument |      Type      | Required |
+| :------- | :------------: | -------: |
+| returns  | `number{:lua}` |          |
 
 ### get_missile_target_index
 
-| Argument |   Type   | Required |
-| :------- | :------: | -------: |
-| returns  | `number` |          |
+| Argument |      Type      | Required |
+| :------- | :------------: | -------: |
+| returns  | `number{:lua}` |          |
 
 ### get_entity_info
 

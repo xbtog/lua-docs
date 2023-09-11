@@ -8,10 +8,10 @@ Calculates the actual damage when taking armor / magic resist into account.
 
 | Argument        | Type      | Required |
 | --------------- | --------- | -------- |
-| raw_damage      | `number`  | +        |
-| target_index    | `number`  | +        |
-| physical_damage | `boolean` | +        |
-| returns         | `number`  |          |
+| raw_damage      | `number{:lua}`  | +        |
+| target_index    | `number{:lua}`  | +        |
+| physical_damage | `boolean{:lua}` | +        |
+| returns         | `number{:lua}`  |          |
 
 ### get_aa_damage
 
@@ -19,9 +19,9 @@ Get local player next autoattack damage.
 
 | Argument     | Type      | Required |
 | ------------ | --------- | -------- |
-| target_index | `number`  | +        |
-| on_hit       | `boolean` | +        |
-| returns      | `number`  |          |
+| target_index | `number{:lua}`  | +        |
+| on_hit       | `boolean{:lua}` | +        |
+| returns      | `number{:lua}`  |          |
 
 ### get_on_hit_damage
 
@@ -29,18 +29,18 @@ Get next autoattack/spell onhit damage.
 
 | Argument     | Type     | Required |
 | ------------ | -------- | -------- |
-| target_index | `number` | +        |
-| returns      | `number` |          |
+| target_index | `number{:lua}` | +        |
+| returns      | `number{:lua}` |          |
 
 ### get_real_health 
 
-| Argument     | Type     | Required |
-| ------------ | -------- | -------- |
-| target_index | `number` | +        |
-| damage_type | `number` | +        |
-| delay | `number` | +        |
-| predict_ally_damage | `boolean` | +        |
-| returns      | `number` |          |
+| Argument            | Type            | Required |
+|---------------------|-----------------|----------|
+| target_index        | `number{:lua}`  | +        |
+| damage_type         | `number{:lua}`  | +        |
+| delay               | `number{:lua}`  | +        |
+| predict_ally_damage | `boolean{:lua}` | +        |
+| returns             | `number{:lua}`  |          |
 
 ```lua
 --- damage_type = 0 -> true_damage

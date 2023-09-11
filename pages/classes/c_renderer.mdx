@@ -15,7 +15,7 @@ import { Callout } from "nextra-theme-docs";
 | start_pos | [`vec2`](/structs/math/vec2) | +        |
 | end_pos   | [`vec2`](/structs/math/vec2) | +        |
 | color     | [`color`](/structs/color)    | +        |
-| thickness | `number`                     | +        |
+| thickness | `number{:lua}`               | +        |
 
 ```lua
 local target = features.target_selector:get_default_target()
@@ -40,7 +40,7 @@ end
 | start_pos | [`vec3`](/structs/math/vec3) | +        |
 | end_pos   | [`vec3`](/structs/math/vec3) | +        |
 | color     | [`color`](/structs/color)    | +        |
-| thickness | `number`                     | +        |
+| thickness | `number{:lua}`               | +        |
 
 ```lua
 local target = features.target_selector:get_default_target()
@@ -58,8 +58,8 @@ end
 | start     | [`vec2`](/structs/math/vec2) | +        |
 | size      | [`vec2`](/structs/math/vec2) | +        |
 | color     | [`color`](/structs/color)    | +        |
-| rounding  | `number`                     | +        |
-| thickness | `number`                     | +        |
+| rounding  | `number{:lua}`               | +        |
+| thickness | `number{:lua}`               | +        |
 
 ### filled_box
 
@@ -68,7 +68,7 @@ end
 | start    | [`vec2`](/structs/math/vec2) | +        |
 | size     | [`vec2`](/structs/math/vec2) | +        |
 | color    | [`color`](/structs/color)    | +        |
-| rounding | `number`                     | +        |
+| rounding | `number{:lua}`               | +        |
 
 ### circle
 
@@ -76,8 +76,8 @@ end
 | -------- | ---------------------------- | -------- |
 | position | [`vec2`](/structs/math/vec2) | +        |
 | color    | [`color`](/structs/color)    | +        |
-| radius   | `number`                     | +        |
-| segments | `number`                     | +        |
+| radius   | `number{:lua}`               | +        |
+| segments | `number{:lua}`               | +        |
 
 ### filled_circle
 
@@ -85,8 +85,8 @@ end
 | -------- | ---------------------------- | -------- |
 | position | [`vec2`](/structs/math/vec2) | +        |
 | color    | [`color`](/structs/color)    | +        |
-| radius   | `number`                     | +        |
-| segments | `number`                     | +        |
+| radius   | `number{:lua}`               | +        |
+| segments | `number{:lua}`               | +        |
 
 ### circle_3d
 
@@ -98,10 +98,10 @@ end
 | --------- | ---------------------------- | -------- |
 | position  | [`vec3`](/structs/math/vec3) | +        |
 | color     | [`color`](/structs/color)    | +        |
-| radius    | `number`                     | +        |
-| flags     | `number`                     | +        |
-| segments  | `number`                     | +        |
-| thickness | `number`                     | +        |
+| radius    | `number{:lua}`               | +        |
+| flags     | `number{:lua}`               | +        |
+| segments  | `number{:lua}`               | +        |
+| thickness | `number{:lua}`               | +        |
 
 ```lua /circle_3d/
 local target = features.target_selector:get_default_target()
@@ -125,7 +125,7 @@ end
 | right     | [`vec2`](/structs/math/vec2) | +        |
 | bottom    | [`vec2`](/structs/math/vec2) | +        |
 | color     | [`color`](/structs/color)    | +        |
-| thickness | `number`                     | +        |
+| thickness | `number{:lua}`               | +        |
 
 ### filled_triangle
 
@@ -138,9 +138,9 @@ end
 
 ### load_texture_from_file
 
-| Argument  | Type     | Required |
-| --------- | -------- | -------- |
-| file_path | `string` | +        |
+| Argument  | Type           | Required |
+| --------- | -------------- | -------- |
+| file_path | `string{:lua}` | +        |
 
 ```lua
 local texture = g_render:load_texture_from_file("C:\\Users\\user\\Desktop\\texture.png")
@@ -184,9 +184,9 @@ print("Screen size: " .. size.x .. "x" .. size.y)
 | --------- | ---------------------------- | -------- |
 | position  | [`vec3`](/structs/math/vec3) | +        |
 | color     | [`color`](/structs/color)    | +        |
-| radius    | `number`                     | +        |
-| segments  | `number`                     | -        |
-| thickness | `number`                     | -        |
+| radius    | `number{:lua}`               | +        |
+| segments  | `number{:lua}`               | -        |
+| thickness | `number{:lua}`               | -        |
 
 ```lua
 -- Draw cicle on minimap at local player position
@@ -199,9 +199,9 @@ g_render:cicle_minimap(g_local.position, color:new(255, 255, 255), 15)
 | -------- | ---------------------------- | -------- |
 | position | [`vec2`](/structs/math/vec2) | +        |
 | color    | [`color`](/structs/color)    | +        |
-| text     | `string`                     | +        |
-| font     | `string`                     | +        |
-| size     | `number`                     | +        |
+| text     | `string{:lua}`               | +        |
+| font     | `string{:lua}`               | +        |
+| size     | `number{:lua}`               | +        |
 
 ```lua
 -- uses fallback font when font = nil or not found
@@ -210,11 +210,11 @@ g_render:text(vec2:new(50, 50), color:new(255, 255, 255), "Hello world!", nil, 2
 
 ### get_text_size
 
-| Argument | Type     | Required |
-| -------- | -------- | -------- |
-| text     | `string` | +        |
-| font     | `string` | +        |
-| size     | `number` | +        |
+| Argument | Type           | Required |
+| -------- | -------------- | -------- |
+| text     | `string{:lua}` | +        |
+| font     | `string{:lua}` | +        |
+| size     | `number{:lua}` | +        |
 
 ```lua
 local size = g_render:get_text_size("Hello world!", nil, 20)

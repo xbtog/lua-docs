@@ -8,8 +8,8 @@ Register a callback.
 
 | Argument | Type       | Required |
 | -------- | ---------- | -------- |
-| name     | `string`   | +        |
-| callback | `function` | +        |
+| name     | `string{:lua}`   | +        |
+| callback | `function{:lua}` | +        |
 
 #### Available callbacks
 
@@ -56,20 +56,20 @@ Register your own champion module.
 
 | Argument | Type    | Required |
 | -------- | ------- | -------- |
-| module   | `table` | +        |
+| module   | `table{:lua}` | +        |
 
 Module input table structure:
 
-| Key            | Type              | Return type | Required |
-| -------------- | ----------------- | ----------- | -------- |
-| champion_name  | `string`          | `void`      | +        |
-| get_priorities | `function`        | `string`    | +        |
-| on_draw        | `function`        | `void`      | +        |
-| spell_q        | `function(spell)` | `boolean`   | +        |
-| spell_w        | `function(spell)` | `boolean`   | +        |
-| spell_e        | `function(spell)` | `boolean`   | +        |
-| spell_r        | `function(spell)` | `boolean`   | +        |
-| initialize     | `function`        | `void`      | +        |
+| Key            | Type              | Return type       | Required |
+| -------------- | ----------------- |-------------------| -------- |
+| champion_name  | `string{:lua}`          | `nil{:lua}`       | +        |
+| get_priorities | `function{:lua}`        | `string{:lua}`    | +        |
+| on_draw        | `function{:lua}`        | `nil{:lua}`       | +        |
+| spell_q        | `function(spell){:lua}` | `boolean{:lua}`   | +        |
+| spell_w        | `function(spell){:lua}` | `boolean{:lua}`   | +        |
+| spell_e        | `function(spell){:lua}` | `boolean{:lua}`   | +        |
+| spell_r        | `function(spell){:lua}` | `boolean{:lua}`   | +        |
+| initialize     | `function{:lua}`        | `nil{:lua}`                | +        |
 
 Data passed to all spell\_\* functions is of type [champion_module_spell_data_t](/structs/champion_module_spell_data_t).
 
@@ -111,7 +111,7 @@ Get core champion module by champion name.
 
 | Argument      | Type                                     | Required |
 | ------------- | ---------------------------------------- | -------- |
-| champion_name | `string`                                 | +        |
+| champion_name | `string{:lua}`                                 | +        |
 | returns       | [`c_module`](/classes/features/c_module) |          |
 
 ```lua /cheat.get_module_by_champion/
@@ -150,19 +150,19 @@ Get the path of the resource folder.
 
 | Argument | Type     | Required |
 | -------- | -------- | -------- |
-| returns  | `string` |          |
+| returns  | `string{:lua}` |          |
 
 ### get_local_attack_cast_delay
 
 | Argument | Type     | Required |
 | -------- | -------- | -------- |
-| returns  | `number` |          |
+| returns  | `number{:lua}` |          |
 
 ### get_local_attack_delay
 
 | Argument | Type     | Required |
 | -------- | -------- | -------- |
-| returns  | `number` |          |
+| returns  | `number{:lua}` |          |
 
 ### get_default_target_selector
 
@@ -170,4 +170,4 @@ Get core target selector.
 
 | Argument | Type                | Required |
 | -------- | ------------------- | -------- |
-| returns  | `c_target_selector` |          |
+| returns  | [`c_target_selector`](/classes/features/c_target_selector) |          |

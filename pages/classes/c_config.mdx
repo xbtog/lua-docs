@@ -6,8 +6,8 @@
 
 | Argument | Type                                    | Required |
 | -------- | --------------------------------------- | -------- |
-| value    | `number`                                | +        |
-| var_name | `string`                                | +        |
+| value    | `number{:lua}`                                | +        |
+| var_name | `string{:lua}`                                | +        |
 | returns  | [`config_var_t`](/structs/config_var_t) |          |
 
 ```lua
@@ -23,8 +23,8 @@ print("Value is: " .. some_name:get_int()) -- prints 200
 
 | Argument | Type                                    | Required |
 | -------- | --------------------------------------- | -------- |
-| value    | `number`                                | +        |
-| var_name | `string`                                | +        |
+| value    | `number{:lua}`                                | +        |
+| var_name | `string{:lua}`                                | +        |
 | returns  | [`config_var_t`](/structs/config_var_t) |          |
 
 ```lua
@@ -40,8 +40,8 @@ print("Value is: " .. some_name:get_float()) -- prints 0.5
 
 | Argument | Type                                    | Required |
 | -------- | --------------------------------------- | -------- |
-| value    | `boolean`                               | +        |
-| var_name | `string`                                | +        |
+| value    | `boolean{:lua}`                               | +        |
+| var_name | `string{:lua}`                                | +        |
 | returns  | [`config_var_t`](/structs/config_var_t) |          |
 
 ```lua

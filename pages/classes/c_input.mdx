@@ -63,7 +63,7 @@ Call leagues internal move command.
 | Argument | Type                         | Required |
 | -------- | ---------------------------- | -------- |
 | position | [`vec3`](/structs/math/vec3) | +        |
-| returns  | `boolean`                    |          |
+| returns  | `boolean{:lua}`              |          |
 
 ```lua
 g_input:issue_order_move(g_local.position)
@@ -76,14 +76,14 @@ Call leagues internal attack command.
 | Argument | Type                            | Required |
 | -------- | ------------------------------- | -------- |
 | object   | [`c_object`](/classes/c_object) | +        |
-| returns  | `boolean`                       |          |
+| returns  | `boolean{:lua}`                 |          |
 
 or
 
-| Argument   | Type      | Required |
-| ---------- | --------- | -------- |
-| network_id | `number`  | +        |
-| returns    | `boolean` |          |
+| Argument   | Type            | Required |
+| ---------- | --------------- | -------- |
+| network_id | `number{:lua}`  | +        |
+| returns    | `boolean{:lua}` |          |
 
 ```lua /issue_order_attack/
 local target = features.target_selector:get_default_target()
@@ -102,7 +102,7 @@ Call leagues internal cast spell command.
 | slot     | [`e_spell_slot`](/enums/e_spell_slot) | +        |
 | object   | [`c_object`](/classes/c_object)       | +        |
 | end      | [`vec3`](/structs/math/vec3)          | +        |
-| returns  | `boolean`                             |          |
+| returns  | `boolean{:lua}`                       |          |
 
 or
 
@@ -111,7 +111,7 @@ or
 | slot     | [`e_spell_slot`](/enums/e_spell_slot) | +        |
 | position | [`vec3`](/structs/math/vec3)          | +        |
 | end      | [`vec3`](/structs/math/vec3)          | +        |
-| returns  | `boolean`                             |          |
+| returns  | `boolean{:lua}`                       |          |
 
 or
 
@@ -120,7 +120,7 @@ or
 | slot       | [`e_spell_slot`](/enums/e_spell_slot) | +        |
 | network_id | `number`                              | +        |
 | end        | [`vec3`](/structs/math/vec3)          | +        |
-| returns    | `boolean`                             |          |
+| returns    | `boolean{:lua}`                       |          |
 
 ```lua /cast_spell/
 local target = features.target_selector:get_default_target()
@@ -138,7 +138,7 @@ Release a chargable spell.
 | -------- | ------------------------------------- | -------- |
 | slot     | [`e_spell_slot`](/enums/e_spell_slot) | +        |
 | position | [`vec3`](/structs/math/vec3)          | +        |
-| returns  | `boolean`                             |          |
+| returns  | `boolean{:lua}`                       |          |
 
 ```lua /release_chargeable/
 local cast_start = -1.0
@@ -173,7 +173,7 @@ Check if a key is currently pressed.
 | Argument | Type                    | Required |
 | -------- | ----------------------- | -------- |
 | key      | [`e_key`](/enums/e_key) | +        |
-| returns  | `boolean`               |          |
+| returns  | `boolean{:lua}`         |          |
 
 ```lua
 if g_input:is_key_pressed(e_key.space) then
@@ -183,40 +183,40 @@ end
 
 ### block_cast_spell
 
-Block all cast spell calls until `block_cast_spell` is called again with `should_block = false`.
+Block all cast spell calls until `block_cast_spell{:lua}` is called again with `should_block = false{:lua}`.
 
-| Argument     | Type      | Required |
-| ------------ | --------- | -------- |
-| should_block | `boolean` | +        |
+| Argument     | Type            | Required |
+| ------------ | --------------- | -------- |
+| should_block | `boolean{:lua}` | +        |
 
 ### block_issue_order
 
-Block all issue order calls until `block_issue_order` is called again with `should_block = false`.
+Block all issue order calls until `block_issue_order{:lua}` is called again with `should_block = false{:lua}`.
 
-| Argument     | Type      | Required |
-| ------------ | --------- | -------- |
-| should_block | `boolean` | +        |
+| Argument     | Type            | Required |
+| ------------ | --------------- | -------- |
+| should_block | `boolean{:lua}` | +        |
 
 ### is_cast_spell_blocked
 
 Check if cast spell is currently blocked.
 
-| Argument | Type      | Required |
-| -------- | --------- | -------- |
-| returns  | `boolean` |          |
+| Argument | Type            | Required |
+| -------- | --------------- | -------- |
+| returns  | `boolean{:lua}` |          |
 
 ### is_issue_order_blocked
 
 Check if issue order is currently blocked.
 
-| Argument | Type      | Required |
-| -------- | --------- | -------- |
-| returns  | `boolean` |          |
+| Argument | Type            | Required |
+| -------- | --------------- | -------- |
+| returns  | `boolean{:lua}` |          |
 
 ### get_cursor_position_game
 
 Get the current cursor position in game.
 
-| Argument | Type   | Required |
-| -------- | ------ | -------- |
-| returns  | `vec3` |          |
+| Argument | Type                         | Required |
+| -------- | ---------------------------- | -------- |
+| returns  | [`vec3`](/structs/math/vec3) |          |
