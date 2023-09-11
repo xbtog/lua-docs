@@ -2,17 +2,27 @@
 
 ## Members
 
-- `x:` `number`
-- `y:` `number`
-- `z:` `number`
+- `x:` `number{:lua}`
+- `y:` `number{:lua}`
+- `z:` `number{:lua}`
+
+## Operators
+
+### `+{:lua}`
+
+### `-{:lua}`
+
+### `*{:lua}`
+
+### `/{:lua}`
 
 ## Functions
 
 ### length
 
-| Argument | Type     | Required |
-| -------- | -------- | -------- |
-| returns  | `number` |          |
+| Argument | Type           | Required |
+| -------- | -------------- | -------- |
+| returns  | `number{:lua}` |          |
 
 ```lua
 vec:length()
@@ -20,9 +30,9 @@ vec:length()
 
 ### length2d
 
-| Argument | Type     | Required |
-| -------- | -------- | -------- |
-| returns  | `number` |          |
+| Argument | Type           | Required |
+| -------- | -------------- | -------- |
+| returns  | `number{:lua}` |          |
 
 ```lua
 vec:length2d()
@@ -33,7 +43,7 @@ vec:length2d()
 | Argument | Type                         | Required |
 | -------- | ---------------------------- | -------- |
 | other    | [`vec3`](/structs/math/vec3) | +        |
-| returns  | `number`                     |          |
+| returns  | `number{:lua}`               |          |
 
 ```lua
 vec3.new(1, 1):dist_to(vec3.new(2, 2))
@@ -44,7 +54,7 @@ vec3.new(1, 1):dist_to(vec3.new(2, 2))
 | Argument | Type                         | Required |
 | -------- | ---------------------------- | -------- |
 | other    | [`vec3`](/structs/math/vec3) | +        |
-| returns  | `number`                     |          |
+| returns  | `number{:lua}`               |          |
 
 ```lua
 vec:dot(other)
@@ -55,10 +65,10 @@ vec:dot(other)
 | Argument | Type                         | Required |
 | -------- | ---------------------------- | -------- |
 | other    | [`vec3`](/structs/math/vec3) | +        |
-| returns  | `number`                     |          |
+| returns  | `number{:lua}`               |          |
 
 ```lua
-vec:cross(other): number
+vec:cross(other)
 ```
 
 ### normalized
@@ -68,7 +78,7 @@ vec:cross(other): number
 | returns  | [`vec3`](/structs/math/vec3) |          |
 
 ```lua
-vec:normalized(): vec3
+vec:normalized()
 ```
 
 ### angle_between
@@ -76,7 +86,7 @@ vec:normalized(): vec3
 | Argument | Type                         | Required |
 | -------- | ---------------------------- | -------- |
 | other    | [`vec3`](/structs/math/vec3) | +        |
-| returns  | `number`                     |          |
+| returns  | `number{:lua}`               |          |
 
 ```lua
 vec:angle_between(other)
@@ -86,7 +96,7 @@ vec:angle_between(other)
 
 | Argument | Type                         | Required |
 | -------- | ---------------------------- | -------- |
-| angle    | `number`                     | +        |
+| angle    | `number{:lua}`               | +        |
 | returns  | [`vec3`](/structs/math/vec3) |          |
 
 ```lua
@@ -98,7 +108,7 @@ vec:rotated(angle)
 | Argument | Type                         | Required |
 | -------- | ---------------------------- | -------- |
 | to       | [`vec3`](/structs/math/vec3) | +        |
-| distance | `number`                     | +        |
+| distance | `number{:lua}`               | +        |
 | returns  | [`vec3`](/structs/math/vec3) |          |
 
 ```lua
@@ -106,6 +116,8 @@ vec:extend(to, distance)
 ```
 
 ### to_screen
+
+Get position on screen
 
 | Argument | Type                                | Required |
 | -------- | ----------------------------------- | -------- |
@@ -116,6 +128,8 @@ vec:to_screen()
 ```
 
 ### to_minimap
+
+Get position on minimap
 
 | Argument | Type                                | Required |
 | -------- | ----------------------------------- | -------- |
