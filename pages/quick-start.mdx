@@ -2,41 +2,42 @@
 
 ## Getting started with LUA scripting
 
-import { Steps } from 'nextra/components'
+import {Steps} from 'nextra/components'
 
 <Steps>
     ### Get a text editor
 
-    | Editor             | Link                                                    |
+    | Editor | Link |
     | ------------------ | ------------------------------------------------------- |
     | Visual Studio Code | [code.visualstudio.com](https://code.visualstudio.com/) |
-    | Sublime Text       | [sublimetext.com](https://www.sublimetext.com/)         |
-    | Notepad++          | [notepad-plus-plus.org](https://notepad-plus-plus.org/) |
+    | Sublime Text | [sublimetext.com](https://www.sublimetext.com/) |
+    | Notepad++ | [notepad-plus-plus.org](https://notepad-plus-plus.org/) |
 
     ### Install a plugin for enabling LUA support in your editor
 
     For Visual Studio code you can use [EmmyLua](https://github.com/EmmyLua/VSCode-EmmyLua).
-    
+
     ### Download our LUA SDK
 
-    If you have git installed, the LUA SDK will be automatically downloaded and updated to `<lua-folder>/types`.
+    If you have git installed, the LUA SDK will be automatically downloaded and updated to `
+    <lua-folder>/types`.
 
-    You can manually download the SDK for your LUA api [here](https://github.com/xbtog/lua-sdk).
+        You can manually download the SDK for your LUA api [here](https://github.com/xbtog/lua-sdk).
 
-    ### Register your first callback
+        ### Register your first callback
 
-    ```lua
-    cheat.on("renderer.draw", function()
-    print("hello from render callback")
-    end)
-    ```
+        ```lua
+        cheat.on("renderer.draw", function()
+        print("hello from render callback")
+        end)
+        ```
 
-    ### Ues LUA libraries from other developers
+        ### Ues LUA libraries from other developers
 
-    ```lua
-    -- example
-    -- loads "extra_math" fron <lua_folder>/lib
-        local extra_math = require("extra_math") 
-    ```
-        
+        ```lua
+        -- example
+        -- loads "extra_math" fron <lua-folder>/lib
+            local extra_math = require("extra_math")
+            ```
+
 </Steps>

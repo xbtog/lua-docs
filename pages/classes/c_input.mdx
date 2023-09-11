@@ -183,7 +183,7 @@ end
 
 ### block_cast_spell
 
-Block all cast spell calls until unblocked.
+Block all cast spell calls until `block_cast_spell` is called again with `should_block = false`.
 
 | Argument     | Type      | Required |
 | ------------ | --------- | -------- |
@@ -191,7 +191,7 @@ Block all cast spell calls until unblocked.
 
 ### block_issue_order
 
-Block all issue order calls until unblocked.
+Block all issue order calls until `block_issue_order` is called again with `should_block = false`.
 
 | Argument     | Type      | Required |
 | ------------ | --------- | -------- |
@@ -214,6 +214,8 @@ Check if issue order is currently blocked.
 | returns  | `boolean` |          |
 
 ### get_cursor_position_game
+
+Get the current cursor position in game.
 
 | Argument | Type   | Required |
 | -------- | ------ | -------- |
