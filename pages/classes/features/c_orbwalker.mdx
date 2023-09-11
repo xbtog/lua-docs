@@ -164,11 +164,78 @@ end
 ### get_previous_attack_time
 
 | Argument | Type     | Required |
-| -------- | -------- | -------- |
+|----------|----------|----------|
 | returns  | `number` |          |
 
 ### get_cast_spell_time
 
 | Argument | Type     | Required |
-| -------- | -------- | -------- |
+|----------|----------|----------|
 | returns  | `number` |          |
+
+### override_target
+
+| Argument       | Type      | Required |
+|----------------|-----------|----------|
+| target_index   | `number`  | +        |
+| require_attack | `boolean` | -        |
+| returns        | `boolean` |          |
+
+### is_unit_headshottable
+
+| Argument       | Type      | Required |
+|----------------|-----------|----------|
+| target_index   | `number`  | +        |
+| returns        | `boolean` |          |
+
+### get_target_autospacing_position
+
+| Argument | Type                         | Required |
+|----------|------------------------------|----------|
+| returns  | [`vec3`](/structs/math/vec3) |          |
+
+### get_last_target_index
+
+| Argument | Type     | Required |
+|----------|----------|----------|
+| returns  | `number` |          |
+
+### is_hard_crowdcontrolled
+
+| Argument       | Type      | Required |
+|----------------|-----------|----------|
+| returns        | `boolean` |          |
+
+### get_support_limiter_active
+
+| Argument       | Type      | Required |
+|----------------|-----------|----------|
+| returns        | `boolean` |          |
+
+### set_last_attack_time
+
+| Argument | Type     | Required |
+|----------|----------|----------|
+| time     | `number` | +        |
+
+### set_last_cast
+
+### get_aa_missile_speed
+
+| Argument | Type                            | Required |
+|----------|---------------------------------|----------|
+| target   | [`c_object`](/classes/c_object) | +        |
+| returns  | `boolean`                       |          |
+
+### get_spellfarm_target_index
+
+| Argument | Type            | Required |
+|----------|-----------------|----------|
+| returns  | `number \| nil` |          |
+
+### should_attack_target
+
+| Argument | Type       | Required |
+|----------|------------|----------|
+| target   | `c_object` | +        |
+| returns  | `boolean`  |          |

@@ -4,6 +4,8 @@
 
 ### is_feature_thread
 
+Check if current callback is running on the feature thread.
+
 ```lua
 if g_threading:is_feature_thread() then
     print("is feature thread")
@@ -11,3 +13,5 @@ end
 ```
 
 ### is_render_thread
+
+Check if current callback is running on the render thread.
