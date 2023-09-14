@@ -48,7 +48,7 @@ end)
 | -------- | ---------------------------------------------------------------------------------------------------------------- | -------- |
 | url      | `string{:lua}`                                                                                                   |          |
 | options  | `{timeout: number \| nil, body: string \| table \| nil, useragent: string \| nil, headers: table \| nil }{:lua}` |          |
-| returns  | [`c_response`](/classes/c_web_client/c_response)                                                                 |          |
+| returns  | [`c_response{:lua}`](/classes/c_web_client/c_response)                                                           |          |
 
 ### async_post
 
@@ -57,7 +57,7 @@ end)
 | url      | `string{:lua}`                                                                                                   |          |
 | options  | `{timeout: number \| nil, body: string \| table \| nil, useragent: string \| nil, headers: table \| nil }{:lua}` |          |
 | callback | `function(response: c_response){:lua}`                                                                           |          |
-| returns  | [`c_response`](/classes/c_web_client/c_response)                                                                 |          |
+| returns  | [`c_response{:lua}`](/classes/c_web_client/c_response)                                                           |          |
 
 ### put
 
@@ -65,7 +65,7 @@ end)
 | -------- | ---------------------------------------------------------------------------------------------------------------- | -------- |
 | url      | `string{:lua}`                                                                                                   |          |
 | options  | `{timeout: number \| nil, body: string \| table \| nil, useragent: string \| nil, headers: table \| nil }{:lua}` |          |
-| returns  | [`c_response`](/classes/c_web_client/c_response)                                                                 |          |
+| returns  | [`c_response{:lua}`](/classes/c_web_client/c_response)                                                           |          |
 
 ### async_put
 
@@ -74,7 +74,7 @@ end)
 | url      | `string{:lua}`                                                                                                   |          |
 | options  | `{timeout: number \| nil, body: string \| table \| nil, useragent: string \| nil, headers: table \| nil }{:lua}` |          |
 | callback | `function(response: c_response){:lua}`                                                                           |          |
-| returns  | [`c_response`](/classes/c_web_client/c_response)                                                                 |          |
+| returns  | [`c_response{:lua}`](/classes/c_web_client/c_response)                                                           |          |
 
 ### delete
 
@@ -82,7 +82,7 @@ end)
 | -------- | ---------------------------------------------------------------------------------------------------------------- | -------- |
 | url      | `string{:lua}`                                                                                                   |          |
 | options  | `{timeout: number \| nil, body: string \| table \| nil, useragent: string \| nil, headers: table \| nil }{:lua}` |          |
-| returns  | [`c_response`](/classes/c_web_client/c_response)                                                                 |          |
+| returns  | [`c_response{:lua}`](/classes/c_web_client/c_response)                                                           |          |
 
 ### async_delete
 
@@ -91,7 +91,7 @@ end)
 | url      | `string{:lua}`                                                                                                   |          |
 | options  | `{timeout: number \| nil, body: string \| table \| nil, useragent: string \| nil, headers: table \| nil }{:lua}` |          |
 | callback | `function(response: c_response){:lua}`                                                                           |          |
-| returns  | [`c_response`](/classes/c_web_client/c_response)                                                                 |          |
+| returns  | [`c_response{:lua}`](/classes/c_web_client/c_response)                                                           |          |
 
 ### patch
 
@@ -99,7 +99,7 @@ end)
 | -------- | ---------------------------------------------------------------------------------------------------------------- | -------- |
 | url      | `string{:lua}`                                                                                                   |          |
 | options  | `{timeout: number \| nil, body: string \| table \| nil, useragent: string \| nil, headers: table \| nil }{:lua}` |          |
-| returns  | [`c_response`](/classes/c_web_client/c_response)                                                                 |          |
+| returns  | [`c_response{:lua}`](/classes/c_web_client/c_response)                                                           |          |
 
 ### async_patch
 
@@ -108,7 +108,7 @@ end)
 | url      | `string{:lua}`                                                                                                   |          |
 | options  | `{timeout: number \| nil, body: string \| table \| nil, useragent: string \| nil, headers: table \| nil }{:lua}` |          |
 | callback | `function(response: c_response){:lua}`                                                                           |          |
-| returns  | [`c_response`](/classes/c_web_client/c_response)                                                                 |          |
+| returns  | [`c_response{:lua}`](/classes/c_web_client/c_response)                                                           |          |
 
 ### head
 
@@ -116,7 +116,7 @@ end)
 | -------- | ---------------------------------------------------------------------------------------------------------------- | -------- |
 | url      | `string{:lua}`                                                                                                   |          |
 | options  | `{timeout: number \| nil, body: string \| table \| nil, useragent: string \| nil, headers: table \| nil }{:lua}` |          |
-| returns  | [`c_response`](/classes/c_web_client/c_response)                                                                 |          |
+| returns  | [`c_response{:lua}`](/classes/c_web_client/c_response)                                                           |          |
 
 ### async_head
 
@@ -125,7 +125,7 @@ end)
 | url      | `string{:lua}`                                                                                                   |          |
 | options  | `{timeout: number \| nil, body: string \| table \| nil, useragent: string \| nil, headers: table \| nil }{:lua}` |          |
 | callback | `function(response: c_response){:lua}`                                                                           |          |
-| returns  | [`c_response`](/classes/c_web_client/c_response)                                                                 |          |
+| returns  | [`c_response{:lua}`](/classes/c_web_client/c_response)                                                           |          |
 
 ### options
 
@@ -133,7 +133,7 @@ end)
 | -------- | ---------------------------------------------------------------------------------------------------------------- | -------- |
 | url      | `string{:lua}`                                                                                                   |          |
 | options  | `{timeout: number \| nil, body: string \| table \| nil, useragent: string \| nil, headers: table \| nil }{:lua}` |          |
-| returns  | [`c_response`](/classes/c_web_client/c_response)                                                                 |          |
+| returns  | [`c_response{:lua}`](/classes/c_web_client/c_response)                                                           |          |
 
 ### async_options
 
@@ -142,4 +142,4 @@ end)
 | url      | `string{:lua}`                                                                                                   |          |
 | options  | `{timeout: number \| nil, body: string \| table \| nil, useragent: string \| nil, headers: table \| nil }{:lua}` |          |
 | callback | `function(response: c_response){:lua}`                                                                           |          |
-| returns  | [`c_response`](/classes/c_web_client/c_response)                                                                 |          |
+| returns  | [`c_response{:lua}`](/classes/c_web_client/c_response)                                                           |          |

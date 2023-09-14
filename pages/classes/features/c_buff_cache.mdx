@@ -4,10 +4,10 @@
 
 ### get_buff
 
-| Argument     | Type                                 | Required |
-| ------------ | ------------------------------------ | -------- |
-| object_index | `number`                             | +        |
-| returns      | [`c_buff`](/classes/c_object/c_buff) |          |
+| Argument     | Type                                       | Required |
+| ------------ | ------------------------------------------ | -------- |
+| object_index | `number{:lua}`                             | +        |
+| returns      | [`c_buff{:lua}`](/classes/c_object/c_buff) |          |
 
 ```lua /get_buff/
 local buff = features.buff_cache:get_buff(g_local.index, "asheqcastready")
@@ -19,11 +19,11 @@ end
 
 ### has_buff_of_type
 
-| Argument     | Type                                | Required |
-| ------------ | ----------------------------------- | -------- |
-| object_index | `number`                            | +        |
-| type         | [`e_buff_type`](/enums/e_buff_type) | +        |
-| returns      | `boolean`                           |          |
+| Argument     | Type                                      | Required |
+| ------------ | ----------------------------------------- | -------- |
+| object_index | `number{:lua}`                            | +        |
+| type         | [`e_buff_type{:lua}`](/enums/e_buff_type) | +        |
+| returns      | `boolean{:lua}`                           |          |
 
 ```lua /has_buff_of_type/
 local is_blind = features.buff_cache:has_buff_of_type(g_local.index, e_buff_type.blind)
@@ -35,31 +35,31 @@ end
 
 ### has_hard_cc
 
-| Argument     | Type      | Required |
-| ------------ | --------- | -------- |
-| object_index | `number`  | +        |
-| returns      | `boolean` |          |
+| Argument     | Type            | Required |
+| ------------ | --------------- | -------- |
+| object_index | `number{:lua}`  | +        |
+| returns      | `boolean{:lua}` |          |
 
 ### is_immobile
 
-| Argument     | Type      | Required |
-| ------------ | --------- | -------- |
-| object_index | `number`  | +        |
-| returns      | `boolean` |          |
+| Argument     | Type            | Required |
+| ------------ | --------------- | -------- |
+| object_index | `number{:lua}`  | +        |
+| returns      | `boolean{:lua}` |          |
 
 ### can_cast
 
-| Argument     | Type      | Required |
-| ------------ | --------- | -------- |
-| object_index | `number`  | +        |
-| returns      | `boolean` |          |
+| Argument     | Type            | Required |
+| ------------ | --------------- | -------- |
+| object_index | `number{:lua}`  | +        |
+| returns      | `boolean{:lua}` |          |
 
 ### get_all_buffs
 
-| Argument     | Type                                        | Required |
-| ------------ | ------------------------------------------- | -------- |
-| object_index | `number`                                    | +        |
-| returns      | [`table<c_buff>`](/classes/c_object/c_buff) |          |
+| Argument     | Type                                              | Required |
+| ------------ | ------------------------------------------------- | -------- |
+| object_index | `number{:lua}`                                    | +        |
+| returns      | [`table<c_buff>{:lua}`](/classes/c_object/c_buff) |          |
 
 ```lua /get_all_buffs/
 local buffs = features.buff_cache:get_all_buffs(g_local.index)

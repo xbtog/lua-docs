@@ -6,7 +6,7 @@
 - `team:` `number{:lua}`
 - `name:` `string{:lua}`
 - `network_id:` `number{:lua}`
-- `position:` [`vec3`](/structs/math/vec3)
+- `position:` [`vec3{:lua}`](/structs/math/vec3)
 - `targetable_flag:` `number{:lua}`
 - `selectable_flag:` `number{:lua}`
 - `mana:` `number{:lua}`
@@ -41,10 +41,10 @@
 - `gold:` `number{:lua}`
 - `total_gold:` `number{:lua}`
 - `max_gold:` `number{:lua}`
-- `direction:` [`vec3`](/structs/math/vec3)
-- `champion_name:` [`lstring`](/structs/lstring)
+- `direction:` [`vec3{:lua}`](/structs/math/vec3)
+- `champion_name:` [`lstring{:lua}`](/structs/lstring)
 - `level:` `number{:lua}`
-- `inventory:` [`c_inventory`](/classes/c_object/c_inventory)
+- `inventory:` [`c_inventory{:lua}`](/classes/c_object/c_inventory)
 
 ## Functions
 
@@ -62,16 +62,16 @@ end
 
 ### compare_flags
 
-| Argument     | Type                                                | Required |
-| ------------ | --------------------------------------------------- | -------- |
-| compare_flag | [`e_object_type_flags`](/enums/e_object_type_flags) | +        |
-| returns      | `boolean{:lua}`                                     |          |
+| Argument     | Type                                                      | Required |
+| ------------ | --------------------------------------------------------- | -------- |
+| compare_flag | [`e_object_type_flags{:lua}`](/enums/e_object_type_flags) | +        |
+| returns      | `boolean{:lua}`                                           |          |
 
 ### get_unit_info_component
 
-| Argument | Type                                                               | Required |
-| -------- | ------------------------------------------------------------------ | -------- |
-| returns  | [`c_unit_info_component`](/classes/c_object/c_unit_info_component) |          |
+| Argument | Type                                                                     | Required |
+| -------- | ------------------------------------------------------------------------ | -------- |
+| returns  | [`c_unit_info_component{:lua}`](/classes/c_object/c_unit_info_component) |          |
 
 ### is_local
 
@@ -236,9 +236,9 @@ print("Bonus attack damage: " .. obj:get_bonus_attack_damage())
 
 ### get_spell_book
 
-| Argument | Type                                             | Required |
-| -------- | ------------------------------------------------ | -------- |
-| returns  | [`c_spell_book`](/classes/c_object/c_spell_book) |          |
+| Argument | Type                                                   | Required |
+| -------- | ------------------------------------------------------ | -------- |
+| returns  | [`c_spell_book{:lua}`](/classes/c_object/c_spell_book) |          |
 
 ```lua
 local spell_book = obj:get_spell_book()
@@ -246,9 +246,9 @@ local spell_book = obj:get_spell_book()
 
 ### get_buff_manager
 
-| Argument | Type                                                 | Required |
-| -------- | ---------------------------------------------------- | -------- |
-| returns  | [`c_buff_manager`](/classes/c_object/c_buff_manager) |          |
+| Argument | Type                                                       | Required |
+| -------- | ---------------------------------------------------------- | -------- |
+| returns  | [`c_buff_manager{:lua}`](/classes/c_object/c_buff_manager) |          |
 
 ```lua
 local buff_manager = obj:get_buff_manager()
@@ -276,15 +276,15 @@ print("Ability power: " .. obj:get_ability_power())
 
 ### get_ai_manager
 
-| Argument | Type                                             | Required |
-| -------- | ------------------------------------------------ | -------- |
-| returns  | [`c_ai_manager`](/classes/c_object/c_ai_manager) |          |
+| Argument | Type                                                   | Required |
+| -------- | ------------------------------------------------------ | -------- |
+| returns  | [`c_ai_manager{:lua}`](/classes/c_object/c_ai_manager) |          |
 
 ### get_hpbar_position
 
-| Argument | Type                         | Required |
-| -------- | ---------------------------- | -------- |
-| returns  | [`vec2`](/structs/math/vec2) |          |
+| Argument | Type                               | Required |
+| -------- | ---------------------------------- | -------- |
+| returns  | [`vec2{:lua}`](/structs/math/vec2) |          |
 
 ```lua
 print("position: " .. obj:get_hpbar_position())
@@ -298,9 +298,9 @@ print("bounding radius: " .. obj:get_bounding_radius())
 
 ### get_missile_spell_info
 
-| Argument |                       Type                       | Required |
-| :------- | :----------------------------------------------: | -------: |
-| returns  | [`c_spell_info`](/classes/c_object/c_spell_info) |          |
+| Argument |                          Type                          | Required |
+| :------- | :----------------------------------------------------: | -------: |
+| returns  | [`c_spell_info{:lua}`](/classes/c_object/c_spell_info) |          |
 
 ### get_minion_type
 
@@ -460,9 +460,9 @@ print("bounding radius: " .. obj:get_bounding_radius())
 
 ### get_particle_direction
 
-| Argument |             Type             | Required |
-| :------- | :--------------------------: | -------: |
-| returns  | [`vec3`](/structs/math/vec3) |          |
+| Argument |                Type                | Required |
+| :------- | :--------------------------------: | -------: |
+| returns  | [`vec3{:lua}`](/structs/math/vec3) |          |
 
 ### get_particle_source_index
 
@@ -484,16 +484,16 @@ print("bounding radius: " .. obj:get_bounding_radius())
 
 ### get_ward_type
 
-| Argument |                Type                 | Required |
-| :------- | :---------------------------------: | -------: |
-| returns  | [`e_ward_type`](/enums/e_ward_type) |          |
+| Argument |                   Type                    | Required |
+| :------- | :---------------------------------------: | -------: |
+| returns  | [`e_ward_type{:lua}`](/enums/e_ward_type) |          |
 
 ### get_history_position
 
-| Argument     |             Type             | Required |
-| :----------- | :--------------------------: | -------: |
-| history_tick |        `number{:lua}`        |          |
-| returns      | [`vec3`](/structs/math/vec3) |          |
+| Argument     |                Type                | Required |
+| :----------- | :--------------------------------: | -------: |
+| history_tick |           `number{:lua}`           |          |
+| returns      | [`vec3{:lua}`](/structs/math/vec3) |          |
 
 ### get_history_position_time
 
@@ -546,9 +546,9 @@ print("bounding radius: " .. obj:get_bounding_radius())
 
 ### get_random_position
 
-| Argument |             Type             | Required |
-| :------- | :--------------------------: | -------: |
-| returns  | [`vec3`](/structs/math/vec3) |          |
+| Argument |                Type                | Required |
+| :------- | :--------------------------------: | -------: |
+| returns  | [`vec3{:lua}`](/structs/math/vec3) |          |
 
 ### get_missile_spawn_time
 
@@ -564,6 +564,6 @@ print("bounding radius: " .. obj:get_bounding_radius())
 
 ### get_entity_info
 
-| Argument |                        Type                        | Required |
-| :------- | :------------------------------------------------: | -------: |
-| returns  | [`c_entity_info`](/classes/c_object/c_entity_info) |          |
+| Argument |                           Type                           | Required |
+| :------- | :------------------------------------------------------: | -------: |
+| returns  | [`c_entity_info{:lua}`](/classes/c_object/c_entity_info) |          |

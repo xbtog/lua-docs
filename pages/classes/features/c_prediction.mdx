@@ -4,18 +4,18 @@
 
 ### predict
 
-| Argument         | Type                                                  | Required |
-| ---------------- | ----------------------------------------------------- | -------- |
-| target_index     | `number`                                              | +        |
-| projectile_range | `number`                                              | +        |
-| projectile_speed | `number`                                              | +        |
-| projectile_width | `number`                                              | +        |
-| delay            | `number`                                              | +        |
-| source_position  | [`vec3`](/structs/math/vec3)                          | -        |
-| extend           | `boolean`                                             | -        |
-| flags            | `number`                                              | -        |
-| spell_type       | `e_spell_flag`                                        | -        |
-| returns          | [`prediction_result_t`](/structs/prediction_result_t) |          |
+| Argument         | Type                                                        | Required |
+| ---------------- | ----------------------------------------------------------- | -------- |
+| target_index     | `number{:lua}`                                              | +        |
+| projectile_range | `number{:lua}`                                              | +        |
+| projectile_speed | `number{:lua}`                                              | +        |
+| projectile_width | `number{:lua}`                                              | +        |
+| delay            | `number{:lua}`                                              | +        |
+| source_position  | [`vec3{:lua}`](/structs/math/vec3)                          | -        |
+| extend           | `boolean{:lua}`                                             | -        |
+| flags            | `number{:lua}`                                              | -        |
+| spell_type       | `e_spell_flag{:lua}`                                        | -        |
+| returns          | [`prediction_result_t{:lua}`](/structs/prediction_result_t) |          |
 
 ```lua /:predict/
 -- Example data from https://forum.slotted.cc/threads/168/
@@ -32,11 +32,11 @@ end
 
 ### predict_default
 
-| Argument     | Type                         | Required |
-| ------------ | ---------------------------- | -------- |
-| target_index | `number`                     | +        |
-| time         | `number`                     | +        |
-| returns      | [`vec3`](/structs/math/vec3) |          |
+| Argument     | Type                               | Required |
+| ------------ | ---------------------------------- | -------- |
+| target_index | `number{:lua}`                     | +        |
+| time         | `number{:lua}`                     | +        |
+| returns      | [`vec3{:lua}`](/structs/math/vec3) |          |
 
 ```lua /predict_default/
 local target = features.target_selector:get_default_target()
@@ -49,12 +49,12 @@ end
 
 ### predict_health
 
-| Argument         | Type                           | Required |
-| ---------------- | ------------------------------ | -------- |
-| object           | [`c_objet`](/classes/c_object) | +        |
-| time             | `number`                       | +        |
-| multiple_attacks | `boolean`                      | -        |
-| returns          | `number`                       |          |
+| Argument         | Type                                 | Required |
+| ---------------- | ------------------------------------ | -------- |
+| object           | [`c_objet{:lua}`](/classes/c_object) | +        |
+| time             | `number{:lua}`                       | +        |
+| multiple_attacks | `boolean{:lua}`                      | -        |
+| returns          | `number{:lua}`                       |          |
 
 ```lua
 local predicted = features.prediction:predict_health(minion, 0.25)
@@ -64,13 +64,13 @@ print("Predicted health is " .. predicted)
 
 ### minion_in_line
 
-| Argument           | Type                         | Required |
-| ------------------ | ---------------------------- | -------- |
-| start_pos          | [`vec3`](/structs/math/vec3) | +        |
-| end_pos            | [`vec3`](/structs/math/vec3) | +        |
-| projectile_width   | `number`                     | +        |
-| ignored_network_id | `number`                     | +        |
-| returns            | `boolean`                    |          |
+| Argument           | Type                               | Required |
+| ------------------ | ---------------------------------- | -------- |
+| start_pos          | [`vec3{:lua}`](/structs/math/vec3) | +        |
+| end_pos            | [`vec3{:lua}`](/structs/math/vec3) | +        |
+| projectile_width   | `number{:lua}`                     | +        |
+| ignored_network_id | `number{:lua}`                     | +        |
+| returns            | `boolean{:lua}`                    |          |
 
 ```lua /minion_in_line/
 local target = features.target_selector:get_default_target()
@@ -90,13 +90,13 @@ end
 
 ### count_minions_in_line
 
-| Argument           | Type                         | Required |
-| ------------------ | ---------------------------- | -------- |
-| start_pos          | [`vec3`](/structs/math/vec3) | +        |
-| end_pos            | [`vec3`](/structs/math/vec3) | +        |
-| projectile_width   | `number`                     | +        |
-| ignored_network_id | `number`                     | +        |
-| returns            | `number`                     |          |
+| Argument           | Type                               | Required |
+| ------------------ | ---------------------------------- | -------- |
+| start_pos          | [`vec3{:lua}`](/structs/math/vec3) | +        |
+| end_pos            | [`vec3{:lua}`](/structs/math/vec3) | +        |
+| projectile_width   | `number{:lua}`                     | +        |
+| ignored_network_id | `number{:lua}`                     | +        |
+| returns            | `number{:lua}`                     |          |
 
 ```lua /count_minions_in_line/
 local target = features.target_selector:get_default_target()
@@ -112,9 +112,9 @@ print("There are " .. minions_in_line .. " minions in line")
 
 ### predict_minion_health
 
-| Argument                 | Type      | Required |
-| ------------------------ | --------- | -------- |
-| index                    | `number`  | +        |
-| delay                    | `number`  | +        |
-| predict_multiple_attacks | `boolean` | -        |
-| returns                  | `number`  |          |
+| Argument                 | Type            | Required |
+| ------------------------ | --------------- | -------- |
+| index                    | `number{:lua}`  | +        |
+| delay                    | `number{:lua}`  | +        |
+| predict_multiple_attacks | `boolean{:lua}` | -        |
+| returns                  | `number{:lua}`  |          |

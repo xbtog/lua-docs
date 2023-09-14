@@ -10,12 +10,12 @@ import { Callout } from "nextra-theme-docs";
 
 ### line
 
-| Argument  | Type                         | Required |
-| --------- | ---------------------------- | -------- |
-| start_pos | [`vec2`](/structs/math/vec2) | +        |
-| end_pos   | [`vec2`](/structs/math/vec2) | +        |
-| color     | [`color`](/structs/color)    | +        |
-| thickness | `number{:lua}`               | +        |
+| Argument  | Type                               | Required |
+| --------- | ---------------------------------- | -------- |
+| start_pos | [`vec2{:lua}`](/structs/math/vec2) | +        |
+| end_pos   | [`vec2{:lua}`](/structs/math/vec2) | +        |
+| color     | [`color{:lua}`](/structs/color)    | +        |
+| thickness | `number{:lua}`                     | +        |
 
 ```lua
 local target = features.target_selector:get_default_target()
@@ -35,12 +35,12 @@ end
   This function can have a big impact on fps when called too often.
 </Callout>
 
-| Argument  | Type                         | Required |
-| --------- | ---------------------------- | -------- |
-| start_pos | [`vec3`](/structs/math/vec3) | +        |
-| end_pos   | [`vec3`](/structs/math/vec3) | +        |
-| color     | [`color`](/structs/color)    | +        |
-| thickness | `number{:lua}`               | +        |
+| Argument  | Type                               | Required |
+| --------- | ---------------------------------- | -------- |
+| start_pos | [`vec3{:lua}`](/structs/math/vec3) | +        |
+| end_pos   | [`vec3{:lua}`](/structs/math/vec3) | +        |
+| color     | [`color{:lua}`](/structs/color)    | +        |
+| thickness | `number{:lua}`                     | +        |
 
 ```lua
 local target = features.target_selector:get_default_target()
@@ -53,40 +53,40 @@ end
 
 ### box
 
-| Argument  | Type                         | Required |
-| --------- | ---------------------------- | -------- |
-| start     | [`vec2`](/structs/math/vec2) | +        |
-| size      | [`vec2`](/structs/math/vec2) | +        |
-| color     | [`color`](/structs/color)    | +        |
-| rounding  | `number{:lua}`               | +        |
-| thickness | `number{:lua}`               | +        |
+| Argument  | Type                               | Required |
+| --------- | ---------------------------------- | -------- |
+| start     | [`vec2{:lua}`](/structs/math/vec2) | +        |
+| size      | [`vec2{:lua}`](/structs/math/vec2) | +        |
+| color     | [`color{:lua}`](/structs/color)    | +        |
+| rounding  | `number{:lua}`                     | +        |
+| thickness | `number{:lua}`                     | +        |
 
 ### filled_box
 
-| Argument | Type                         | Required |
-| -------- | ---------------------------- | -------- |
-| start    | [`vec2`](/structs/math/vec2) | +        |
-| size     | [`vec2`](/structs/math/vec2) | +        |
-| color    | [`color`](/structs/color)    | +        |
-| rounding | `number{:lua}`               | +        |
+| Argument | Type                               | Required |
+| -------- | ---------------------------------- | -------- |
+| start    | [`vec2{:lua}`](/structs/math/vec2) | +        |
+| size     | [`vec2{:lua}`](/structs/math/vec2) | +        |
+| color    | [`color{:lua}`](/structs/color)    | +        |
+| rounding | `number{:lua}`                     | +        |
 
 ### circle
 
-| Argument | Type                         | Required |
-| -------- | ---------------------------- | -------- |
-| position | [`vec2`](/structs/math/vec2) | +        |
-| color    | [`color`](/structs/color)    | +        |
-| radius   | `number{:lua}`               | +        |
-| segments | `number{:lua}`               | +        |
+| Argument | Type                               | Required |
+| -------- | ---------------------------------- | -------- |
+| position | [`vec2{:lua}`](/structs/math/vec2) | +        |
+| color    | [`color{:lua}`](/structs/color)    | +        |
+| radius   | `number{:lua}`                     | +        |
+| segments | `number{:lua}`                     | +        |
 
 ### filled_circle
 
-| Argument | Type                         | Required |
-| -------- | ---------------------------- | -------- |
-| position | [`vec2`](/structs/math/vec2) | +        |
-| color    | [`color`](/structs/color)    | +        |
-| radius   | `number{:lua}`               | +        |
-| segments | `number{:lua}`               | +        |
+| Argument | Type                               | Required |
+| -------- | ---------------------------------- | -------- |
+| position | [`vec2{:lua}`](/structs/math/vec2) | +        |
+| color    | [`color{:lua}`](/structs/color)    | +        |
+| radius   | `number{:lua}`                     | +        |
+| segments | `number{:lua}`                     | +        |
 
 ### circle_3d
 
@@ -94,14 +94,14 @@ end
   This function can have a big impact on fps when called too often.
 </Callout>
 
-| Argument  | Type                         | Required |
-| --------- | ---------------------------- | -------- |
-| position  | [`vec3`](/structs/math/vec3) | +        |
-| color     | [`color`](/structs/color)    | +        |
-| radius    | `number{:lua}`               | +        |
-| flags     | `number{:lua}`               | +        |
-| segments  | `number{:lua}`               | +        |
-| thickness | `number{:lua}`               | +        |
+| Argument  | Type                               | Required |
+| --------- | ---------------------------------- | -------- |
+| position  | [`vec3{:lua}`](/structs/math/vec3) | +        |
+| color     | [`color{:lua}`](/structs/color)    | +        |
+| radius    | `number{:lua}`                     | +        |
+| flags     | `number{:lua}`                     | +        |
+| segments  | `number{:lua}`                     | +        |
+| thickness | `number{:lua}`                     | +        |
 
 ```lua /circle_3d/
 local target = features.target_selector:get_default_target()
@@ -119,22 +119,22 @@ end
 
 ### triangle
 
-| Argument  | Type                         | Required |
-| --------- | ---------------------------- | -------- |
-| left      | [`vec2`](/structs/math/vec2) | +        |
-| right     | [`vec2`](/structs/math/vec2) | +        |
-| bottom    | [`vec2`](/structs/math/vec2) | +        |
-| color     | [`color`](/structs/color)    | +        |
-| thickness | `number{:lua}`               | +        |
+| Argument  | Type                               | Required |
+| --------- | ---------------------------------- | -------- |
+| left      | [`vec2{:lua}`](/structs/math/vec2) | +        |
+| right     | [`vec2{:lua}`](/structs/math/vec2) | +        |
+| bottom    | [`vec2{:lua}`](/structs/math/vec2) | +        |
+| color     | [`color{:lua}`](/structs/color)    | +        |
+| thickness | `number{:lua}`                     | +        |
 
 ### filled_triangle
 
-| Argument | Type                         | Required |
-| -------- | ---------------------------- | -------- |
-| left     | [`vec2`](/structs/math/vec2) | +        |
-| right    | [`vec2`](/structs/math/vec2) | +        |
-| bottom   | [`vec2`](/structs/math/vec2) | +        |
-| color    | [`color`](/structs/color)    | +        |
+| Argument | Type                               | Required |
+| -------- | ---------------------------------- | -------- |
+| left     | [`vec2{:lua}`](/structs/math/vec2) | +        |
+| right    | [`vec2{:lua}`](/structs/math/vec2) | +        |
+| bottom   | [`vec2{:lua}`](/structs/math/vec2) | +        |
+| color    | [`color{:lua}`](/structs/color)    | +        |
 
 ### load_texture_from_file
 
@@ -152,11 +152,11 @@ end
 
 ### image
 
-| Argument | Type                              | Required |
-| -------- | --------------------------------- | -------- |
-| position | [`vec2`](/structs/math/vec2)      | +        |
-| size     | [`vec2`](/structs/math/vec2)      | +        |
-| texture  | [`texture_t`](/structs/texture_t) | +        |
+| Argument | Type                                    | Required |
+| -------- | --------------------------------------- | -------- |
+| position | [`vec2{:lua}`](/structs/math/vec2)      | +        |
+| size     | [`vec2{:lua}`](/structs/math/vec2)      | +        |
+| texture  | [`texture_t{:lua}`](/structs/texture_t) | +        |
 
 ```lua /image/
 local texture = g_render:load_texture_from_file("C:\\Users\\user\\Desktop\\texture.png")
@@ -168,9 +168,9 @@ end
 
 ### get_screensize
 
-| Argument | Type                         | Required |
-| -------- | ---------------------------- | -------- |
-| returns  | [`vec2`](/structs/math/vec2) |          |
+| Argument | Type                               | Required |
+| -------- | ---------------------------------- | -------- |
+| returns  | [`vec2{:lua}`](/structs/math/vec2) |          |
 
 ```lua
 local size = g_render:get_screensize()
@@ -180,13 +180,13 @@ print("Screen size: " .. size.x .. "x" .. size.y)
 
 ### circle_minimap
 
-| Argument  | Type                         | Required |
-| --------- | ---------------------------- | -------- |
-| position  | [`vec3`](/structs/math/vec3) | +        |
-| color     | [`color`](/structs/color)    | +        |
-| radius    | `number{:lua}`               | +        |
-| segments  | `number{:lua}`               | -        |
-| thickness | `number{:lua}`               | -        |
+| Argument  | Type                               | Required |
+| --------- | ---------------------------------- | -------- |
+| position  | [`vec3{:lua}`](/structs/math/vec3) | +        |
+| color     | [`color{:lua}`](/structs/color)    | +        |
+| radius    | `number{:lua}`                     | +        |
+| segments  | `number{:lua}`                     | -        |
+| thickness | `number{:lua}`                     | -        |
 
 ```lua
 -- Draw cicle on minimap at local player position
@@ -195,13 +195,13 @@ g_render:cicle_minimap(g_local.position, color:new(255, 255, 255), 15)
 
 ### text
 
-| Argument | Type                         | Required |
-| -------- | ---------------------------- | -------- |
-| position | [`vec2`](/structs/math/vec2) | +        |
-| color    | [`color`](/structs/color)    | +        |
-| text     | `string{:lua}`               | +        |
-| font     | `string{:lua}`               | +        |
-| size     | `number{:lua}`               | +        |
+| Argument | Type                               | Required |
+| -------- | ---------------------------------- | -------- |
+| position | [`vec2{:lua}`](/structs/math/vec2) | +        |
+| color    | [`color{:lua}`](/structs/color)    | +        |
+| text     | `string{:lua}`                     | +        |
+| font     | `string{:lua}`                     | +        |
+| size     | `number{:lua}`                     | +        |
 
 ```lua
 -- uses fallback font when font = nil or not found

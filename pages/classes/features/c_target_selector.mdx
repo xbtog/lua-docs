@@ -8,9 +8,9 @@ import { Callout } from "nextra-theme-docs";
 
 Returns current orbwalker target (forced target when current target is overridden).
 
-| Argument | Type                           | Required |
-| -------- | ------------------------------ | -------- |
-| returns  | [`c_objet`](/classes/c_object) |          |
+| Argument | Type                                 | Required |
+| -------- | ------------------------------------ | -------- |
+| returns  | [`c_objet{:lua}`](/classes/c_object) |          |
 
 ```lua /get_default_target/
 local target = features.target_selector:get_default_target()
@@ -27,9 +27,9 @@ end
 
 Returns current orbwalker target only when in AA range.
 
-| Argument | Type                           | Required |
-| -------- | ------------------------------ | -------- |
-| returns  | [`c_objet`](/classes/c_object) |          |
+| Argument | Type                                 | Required |
+| -------- | ------------------------------------ | -------- |
+| returns  | [`c_objet{:lua}`](/classes/c_object) |          |
 
 ```lua /get_orbwalker_default_target/
 local target = features.target_selector:get_orbwalker_default_target()
@@ -42,9 +42,9 @@ end
 
 ### get_forced_target
 
-| Argument | Type                           | Required |
-| -------- | ------------------------------ | -------- |
-| returns  | [`c_objet`](/classes/c_object) |          |
+| Argument | Type                                 | Required |
+| -------- | ------------------------------------ | -------- |
+| returns  | [`c_objet{:lua}`](/classes/c_object) |          |
 
 ```lua /get_forced_target/
 local target = features.target_selector:get_forced_target()
@@ -59,9 +59,9 @@ end
 
 Check wheter there is currently a forced target.
 
-| Argument | Type      | Required |
-| -------- | --------- | -------- |
-| returns  | `boolean` |          |
+| Argument | Type            | Required |
+| -------- | --------------- | -------- |
+| returns  | `boolean{:lua}` |          |
 
 ```lua /is_forced/
 if features.target_selector:is_forced() then
@@ -75,12 +75,12 @@ end
   Needs to be called from features thread.
 </Callout>
 
-| Argument         | Type       | Required |
-| ---------------- | ---------- | -------- |
-| index            | `number`   | +        |
-| ignore_dead      | `boolean`  | -        |
-| ignore_invisible | `boolean`  | -        |
-| returns          | ``boolean` |          |
+| Argument         | Type            | Required |
+| ---------------- | --------------- | -------- |
+| index            | `number{:lua}`  | +        |
+| ignore_dead      | `boolean{:lua}` | -        |
+| ignore_invisible | `boolean{:lua}` | -        |
+| returns          | `boolean{:lua}` |          |
 
 ```lua /is_bad_target/
 if features.target_selector:is_bad_target(0) then
@@ -96,10 +96,10 @@ Override default target. Returns `true` when successful.
   To reset forced target call force_target with nil or -1 as object argument
 </Callout>
 
-| Argument | Type                                        | Required |
-| -------- | ------------------------------------------- | -------- |
-| index    | `number` \| [`c_object`](/classes/c_object) | -        |
-| returns  | `boolean`                                   |          |
+| Argument | Type                                                    | Required |
+| -------- | ------------------------------------------------------- | -------- |
+| index    | `number{:lua}` \| [`c_object{:lua}`](/classes/c_object) | -        |
+| returns  | `boolean{:lua}`                                         |          |
 
 ```lua /force_target/
 local target = features.target_selector:get_default_target()
@@ -117,10 +117,10 @@ features.target_selector:force_target(-1)
 
 ### get_antigapclose_target
 
-| Argument        | Type                           | Required |
-| --------------- | ------------------------------ | -------- |
-| danger_distance | `number`                       | +        |
-| returns         | [`c_objet`](/classes/c_object) |          |
+| Argument        | Type                                 | Required |
+| --------------- | ------------------------------------ | -------- |
+| danger_distance | `number{:lua}`                       | +        |
+| returns         | [`c_objet{:lua}`](/classes/c_object) |          |
 
 ```lua /get_antigapclose_target/
 local target = features.target_selector:get_antigapclose_target(400)

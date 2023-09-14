@@ -6,9 +6,9 @@
 
 Get a list of all enemy champions.
 
-| Argument | Type                                   | Required |
-| -------- | -------------------------------------- | -------- |
-| returns  | [`table<c_object>`](/classes/c_object) |          |
+| Argument | Type                                         | Required |
+| -------- | -------------------------------------------- | -------- |
+| returns  | [`table<c_object>{:lua}`](/classes/c_object) |          |
 
 ```lua /get_enemies/
 local enemies = features.entity_list:get_enemies()
@@ -23,85 +23,85 @@ end
 
 Get a list of all ally champions.
 
-| Argument | Type                                   | Required |
-| -------- | -------------------------------------- | -------- |
-| returns  | [`table<c_object>`](/classes/c_object) |          |
+| Argument | Type                                         | Required |
+| -------- | -------------------------------------------- | -------- |
+| returns  | [`table<c_object>{:lua}`](/classes/c_object) |          |
 
 ### get_enemy_turrests
 
 Get a list of all enemy turrets.
 
-| Argument | Type                                   | Required |
-| -------- | -------------------------------------- | -------- |
-| returns  | [`table<c_object>`](/classes/c_object) |          |
+| Argument | Type                                         | Required |
+| -------- | -------------------------------------------- | -------- |
+| returns  | [`table<c_object>{:lua}`](/classes/c_object) |          |
 
 ### get_ally_turrets
 
 Get a list of all ally turrets.
 
-| Argument | Type                                   | Required |
-| -------- | -------------------------------------- | -------- |
-| returns  | [`table<c_object>`](/classes/c_object) |          |
+| Argument | Type                                         | Required |
+| -------- | -------------------------------------------- | -------- |
+| returns  | [`table<c_object>{:lua}`](/classes/c_object) |          |
 
 ### get_ally_minions
 
 Get a list of all ally minions.
 
-| Argument | Type                                   | Required |
-| -------- | -------------------------------------- | -------- |
-| returns  | [`table<c_object>`](/classes/c_object) |          |
+| Argument | Type                                         | Required |
+| -------- | -------------------------------------------- | -------- |
+| returns  | [`table<c_object>{:lua}`](/classes/c_object) |          |
 
 ### get_enemy_minions
 
 Get a list of all enemy minions.
 
-| Argument | Type                                   | Required |
-| -------- | -------------------------------------- | -------- |
-| returns  | [`table<c_object>`](/classes/c_object) |          |
+| Argument | Type                                         | Required |
+| -------- | -------------------------------------------- | -------- |
+| returns  | [`table<c_object>{:lua}`](/classes/c_object) |          |
 
 ### get_ally_missiles
 
 Get a list of all ally missiles.
 
-| Argument | Type                                   | Required |
-| -------- | -------------------------------------- | -------- |
-| returns  | [`table<c_object>`](/classes/c_object) |          |
+| Argument | Type                                         | Required |
+| -------- | -------------------------------------------- | -------- |
+| returns  | [`table<c_object>{:lua}`](/classes/c_object) |          |
 
 ### get_enemy_missiles
 
 Get a list of all enemy missiles.
 
-| Argument | Type                                   | Required |
-| -------- | -------------------------------------- | -------- |
-| returns  | [`table<c_object>`](/classes/c_object) |          |
+| Argument | Type                                         | Required |
+| -------- | -------------------------------------------- | -------- |
+| returns  | [`table<c_object>{:lua}`](/classes/c_object) |          |
 
 ### ally_uncategorized
 
 Get a list of all uncategorized ally objects.
 
-| Argument | Type                                   | Required |
-| -------- | -------------------------------------- | -------- |
-| returns  | [`table<c_object>`](/classes/c_object) |          |
+| Argument | Type                                         | Required |
+| -------- | -------------------------------------------- | -------- |
+| returns  | [`table<c_object>{:lua}`](/classes/c_object) |          |
 
 ### enemy_uncategorized
 
 Get a list of all uncategorized enemy objects.
 
-| Argument | Type                                   | Required |
-| -------- | -------------------------------------- | -------- |
-| returns  | [`table<c_object>`](/classes/c_object) |          |
+| Argument | Type                                         | Required |
+| -------- | -------------------------------------------- | -------- |
+| returns  | [`table<c_object>{:lua}`](/classes/c_object) |          |
 
 ### get_by_index
 
 Get an object by its index.
 
-| Argument | Type                            | Required |
-| -------- | ------------------------------- | -------- |
-| index    | `number`                        | +        |
-| returns  | [`c_object`](/classes/c_object) |          |
+| Argument | Type                                  | Required |
+| -------- | ------------------------------------- | -------- |
+| index    | `number`                              | +        |
+| returns  | [`c_object{:lua}`](/classes/c_object) |          |
 
 ```lua
-local local = features.entity_list:get_by_index(g_local.index)
+local local_player = features.entity_list:get_by_index(g_local.index)
 ```
 
 ### get_by_network_id

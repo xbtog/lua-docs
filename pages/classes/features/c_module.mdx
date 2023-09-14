@@ -2,31 +2,31 @@
 
 ## Members
 
-- `priority_list: table<e_spell_flag>`
+- `priority_list: table<e_spell_flag>{:lua}`
 
 ## Functions
 
 ### spell_q
 
-`module:spell_q():` `bool`
+`module:spell_q():{:lua}` `bool{:lua}`
 
 ### spell_w
 
-`module:spell_w():` `bool`
+`module:spell_w():{:lua}` `bool{:lua}`
 
 ### spell_e
 
-`module:spell_e():` `bool`
+`module:spell_e():{:lua}` `bool{:lua}`
 
 ### spell_r
 
-`module:spell_r():` `bool`
+`module:spell_r():{:lua}` `bool{:lua}`
 
 ### disable_q_on
 
-| Argument | Type       | Required |
-| -------- | ---------- | -------- |
-| func     | `function` | +        |
+| Argument | Type             | Required |
+| -------- | ---------------- | -------- |
+| func     | `function{:lua}` | +        |
 
 ```lua
 -- example usage
@@ -38,9 +38,9 @@ end)
 
 ### disable_w_on
 
-| Argument | Type       | Required |
-| -------- | ---------- | -------- |
-| func     | `function` | +        |
+| Argument | Type             | Required |
+| -------- | ---------------- | -------- |
+| func     | `function{:lua}` | +        |
 
 ```lua
 -- example usage
@@ -52,9 +52,9 @@ end)
 
 ### disable_e_on
 
-| Argument | Type       | Required |
-| -------- | ---------- | -------- |
-| func     | `function` | +        |
+| Argument | Type             | Required |
+| -------- | ---------------- | -------- |
+| func     | `function{:lua}` | +        |
 
 ```lua
 -- example usage
@@ -66,9 +66,9 @@ end)
 
 ### disable_r_on
 
-| Argument | Type       | Required |
-| -------- | ---------- | -------- |
-| func     | `function` | +        |
+| Argument | Type             | Required |
+| -------- | ---------------- | -------- |
+| func     | `function{:lua}` | +        |
 
 ```lua
 -- example usage
@@ -80,9 +80,9 @@ end)
 
 ### get_slot_q
 
-| Argument | Type                                             | Required |
-| -------- | ------------------------------------------------ | -------- |
-| returns  | [`c_spell_slot`](/classes/c_object/c_spell_slot) |          |
+| Argument | Type                                                   | Required |
+| -------- | ------------------------------------------------------ | -------- |
+| returns  | [`c_spell_slot{:lua}`](/classes/c_object/c_spell_slot) |          |
 
 ```lua
 local q_slot = module:get_slot_q()
@@ -90,9 +90,9 @@ local q_slot = module:get_slot_q()
 
 ### get_slot_w
 
-| Argument | Type                                             | Required |
-| -------- | ------------------------------------------------ | -------- |
-| returns  | [`c_spell_slot`](/classes/c_object/c_spell_slot) |          |
+| Argument | Type                                                   | Required |
+| -------- | ------------------------------------------------------ | -------- |
+| returns  | [`c_spell_slot{:lua}`](/classes/c_object/c_spell_slot) |          |
 
 ```lua
 local w_slot = module:get_slot_w()
@@ -100,9 +100,9 @@ local w_slot = module:get_slot_w()
 
 ### get_slot_e
 
-| Argument | Type                                             | Required |
-| -------- | ------------------------------------------------ | -------- |
-| returns  | [`c_spell_slot`](/classes/c_object/c_spell_slot) |          |
+| Argument | Type                                                   | Required |
+| -------- | ------------------------------------------------------ | -------- |
+| returns  | [`c_spell_slot{:lua}`](/classes/c_object/c_spell_slot) |          |
 
 ```lua
 local e_slot = module:get_slot_e()
@@ -110,9 +110,9 @@ local e_slot = module:get_slot_e()
 
 ### get_slot_r
 
-| Argument | Type                                             | Required |
-| -------- | ------------------------------------------------ | -------- |
-| returns  | [`c_spell_slot`](/classes/c_object/c_spell_slot) |          |
+| Argument | Type                                                   | Required |
+| -------- | ------------------------------------------------------ | -------- |
+| returns  | [`c_spell_slot{:lua}`](/classes/c_object/c_spell_slot) |          |
 
 ```lua
 local r_slot = module:get_slot_r()

@@ -2,8 +2,8 @@
 
 ## Members
 
-- `min_grid_pos:` [`vec3`](/structs/math/vec3)
-- `max_grid_pos:` [`vec3`](/structs/math/vec3)
+- `min_grid_pos:` [`vec3{:lua}`](/structs/math/vec3)
+- `max_grid_pos:` [`vec3{:lua}`](/structs/math/vec3)
 - `collision_map:` `number{:lua}`
 - `sampled_heights:` `number{:lua}`
 - `x_cell_count:` `number{:lua}`
@@ -14,9 +14,9 @@
 
 ### get_collision
 
-| Argument | Type                         | Required |
-| -------- | ---------------------------- | -------- |
-| position | [`vec3`](/structs/math/vec3) | +        |
+| Argument | Type                               | Required |
+| -------- | ---------------------------------- | -------- |
+| position | [`vec3{:lua}`](/structs/math/vec3) | +        |
 
 ```lua
 local collision_flag = g_navgrid:get_collision(g_local.position)
@@ -24,9 +24,9 @@ local collision_flag = g_navgrid:get_collision(g_local.position)
 
 ### is_wall
 
-| Argument | Type                         | Required |
-| -------- | ---------------------------- | -------- |
-| position | [`vec3`](/structs/math/vec3) | +        |
+| Argument | Type                               | Required |
+| -------- | ---------------------------------- | -------- |
+| position | [`vec3{:lua}`](/structs/math/vec3) | +        |
 
 ```lua /is_wall/
 local point_is_in_wall = g_navgrid:is_wall(g_local.position)
@@ -34,9 +34,9 @@ local point_is_in_wall = g_navgrid:is_wall(g_local.position)
 
 ### is_bush
 
-| Argument | Type                         | Required |
-| -------- | ---------------------------- | -------- |
-| position | [`vec3`](/structs/math/vec3) | +        |
+| Argument | Type                               | Required |
+| -------- | ---------------------------------- | -------- |
+| position | [`vec3{:lua}`](/structs/math/vec3) | +        |
 
 ```lua /is_bush/
 local in_bush = g_navgrid:is_bush(g_local.position)
@@ -44,9 +44,9 @@ local in_bush = g_navgrid:is_bush(g_local.position)
 
 ### is_building
 
-| Argument | Type                         | Required |
-| -------- | ---------------------------- | -------- |
-| position | [`vec3`](/structs/math/vec3) | +        |
+| Argument | Type                               | Required |
+| -------- | ---------------------------------- | -------- |
+| position | [`vec3{:lua}`](/structs/math/vec3) | +        |
 
 ```lua /is_building/
 local in_building = g_navgrid:is_building(g_local.position)
@@ -54,9 +54,9 @@ local in_building = g_navgrid:is_building(g_local.position)
 
 ### is_river
 
-| Argument | Type                         | Required |
-| -------- | ---------------------------- | -------- |
-| position | [`vec3`](/structs/math/vec3) | +        |
+| Argument | Type                               | Required |
+| -------- | ---------------------------------- | -------- |
+| position | [`vec3{:lua}`](/structs/math/vec3) | +        |
 
 ```lua /is_river/
 local in_river = g_navgrid:is_river(g_local.position)
@@ -64,9 +64,9 @@ local in_river = g_navgrid:is_river(g_local.position)
 
 ### is_bush
 
-| Argument | Type                         | Required |
-| -------- | ---------------------------- | -------- |
-| position | [`vec3`](/structs/math/vec3) | +        |
+| Argument | Type                               | Required |
+| -------- | ---------------------------------- | -------- |
+| position | [`vec3{:lua}`](/structs/math/vec3) | +        |
 
 ```lua
 local is_bush = g_navgrid:is_bush(g_local.position)
@@ -74,9 +74,9 @@ local is_bush = g_navgrid:is_bush(g_local.position)
 
 ### is_river
 
-| Argument | Type                         | Required |
-| -------- | ---------------------------- | -------- |
-| position | [`vec3`](/structs/math/vec3) | +        |
+| Argument | Type                               | Required |
+| -------- | ---------------------------------- | -------- |
+| position | [`vec3{:lua}`](/structs/math/vec3) | +        |
 
 ```lua
 local is_river = g_navgrid:is_river(g_local.position)
@@ -84,9 +84,9 @@ local is_river = g_navgrid:is_river(g_local.position)
 
 ### is_building
 
-| Argument | Type                         | Required |
-| -------- | ---------------------------- | -------- |
-| position | [`vec3`](/structs/math/vec3) | +        |
+| Argument | Type                               | Required |
+| -------- | ---------------------------------- | -------- |
+| position | [`vec3{:lua}`](/structs/math/vec3) | +        |
 
 ```lua
 local is_building = g_navgrid:is_building(g_local.position)
@@ -94,9 +94,9 @@ local is_building = g_navgrid:is_building(g_local.position)
 
 ### get_height
 
-| Argument | Type                         | Required |
-| -------- | ---------------------------- | -------- |
-| position | [`vec3`](/structs/math/vec3) | +        |
+| Argument | Type                               | Required |
+| -------- | ---------------------------------- | -------- |
+| position | [`vec3{:lua}`](/structs/math/vec3) | +        |
 
 ```lua
 local height = g_navgrid:get_height(g_local.position)

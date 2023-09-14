@@ -6,9 +6,9 @@
 
 Change the cursor position on screen.
 
-| Argument | Type                         | Required |
-| -------- | ---------------------------- | -------- |
-| position | [`vec2`](/structs/math/vec2) | +        |
+| Argument | Type                               | Required |
+| -------- | ---------------------------------- | -------- |
+| position | [`vec2{:lua}`](/structs/math/vec2) | +        |
 
 ```lua
 g_input:set_cursor_position(vec2:new(50, 50))
@@ -18,9 +18,9 @@ g_input:set_cursor_position(vec2:new(50, 50))
 
 Get the current cursor position.
 
-| Argument | Type                         | Required |
-| -------- | ---------------------------- | -------- |
-| returns  | [`vec2`](/structs/math/vec2) |          |
+| Argument | Type                               | Required |
+| -------- | ---------------------------------- | -------- |
+| returns  | [`vec2{:lua}`](/structs/math/vec2) |          |
 
 ```lua
 local pos = g_input:get_cursor_position()
@@ -32,10 +32,10 @@ print("vec2(" .. pos.x .. ", " .. pos.y .. " )")
 
 Send a key event to the game.
 
-| Argument | Type                                | Required |
-| -------- | ----------------------------------- | -------- |
-| key      | [`e_key`](/enums/e_key)             | +        |
-| state    | [`e_key_state`](/enums/e_key_state) | +        |
+| Argument | Type                                      | Required |
+| -------- | ----------------------------------------- | -------- |
+| key      | [`e_key{:lua}`](/enums/e_key)             | +        |
+| state    | [`e_key_state{:lua}`](/enums/e_key_state) | +        |
 
 ```lua
 g_input:send_key_event(e_key.space, e_key_state.key_down)
@@ -46,10 +46,10 @@ g_input:send_key_event(e_key.space, e_key_state.key_up)
 
 Send a mouse key event to the game.
 
-| Argument     | Type                                      | Required |
-| ------------ | ----------------------------------------- | -------- |
-| mouse_button | [`e_mouse_button`](/enums/e_mouse_button) | +        |
-| state        | [`e_key_state`](/enums/e_key_state)       | +        |
+| Argument     | Type                                            | Required |
+| ------------ | ----------------------------------------------- | -------- |
+| mouse_button | [`e_mouse_button{:lua}`](/enums/e_mouse_button) | +        |
+| state        | [`e_key_state{:lua}`](/enums/e_key_state)       | +        |
 
 ```lua
 g_input:send_mouse_key_event(e_mouse_button.left, e_key_state.key_down)
@@ -60,10 +60,10 @@ g_input:send_mouse_key_event(e_mouse_button.left, e_key_state.key_up)
 
 Call leagues internal move command.
 
-| Argument | Type                         | Required |
-| -------- | ---------------------------- | -------- |
-| position | [`vec3`](/structs/math/vec3) | +        |
-| returns  | `boolean{:lua}`              |          |
+| Argument | Type                               | Required |
+| -------- | ---------------------------------- | -------- |
+| position | [`vec3{:lua}`](/structs/math/vec3) | +        |
+| returns  | `boolean{:lua}`                    |          |
 
 ```lua
 g_input:issue_order_move(g_local.position)
@@ -217,6 +217,6 @@ Check if issue order is currently blocked.
 
 Get the current cursor position in game.
 
-| Argument | Type                         | Required |
-| -------- | ---------------------------- | -------- |
-| returns  | [`vec3`](/structs/math/vec3) |          |
+| Argument | Type                               | Required |
+| -------- | ---------------------------------- | -------- |
+| returns  | [`vec3{:lua}`](/structs/math/vec3) |          |
