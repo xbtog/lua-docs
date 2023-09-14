@@ -4,9 +4,9 @@
 
 ### send_attack
 
-| Argument   | Type     | Required |
-| ---------- | -------- | -------- |
-| network_id | `number` | +        |
+| Argument   | Type           | Required |
+| ---------- | -------------- | -------- |
+| network_id | `number{:lua}` | +        |
 
 ```lua /send_attack/
 local target = feature.targeting.get_default_target()
@@ -18,9 +18,9 @@ end
 
 ### is_in_attack
 
-| Argument | Type      | Required |
-| -------- | --------- | -------- |
-| returns  | `boolean` |          |
+| Argument | Type            | Required |
+| -------- | --------------- | -------- |
+| returns  | `boolean{:lua}` |          |
 
 ```lua
 if features.orbwalker:is_in_attack() then
@@ -30,10 +30,10 @@ end
 
 ### send_move_input
 
-| Argument | Type                         | Required |
-| -------- | ---------------------------- | -------- |
-| position | [`vec3`](/structs/math/vec3) | +        |
-| force    | `boolean`                    | +        |
+| Argument | Type                               | Required |
+| -------- | ---------------------------------- | -------- |
+| position | [`vec3{:lua}`](/structs/math/vec3) | +        |
+| force    | `boolean{:lua}`                    | +        |
 
 ```lua
 features.orbwalker:send_move_input(vec3(0, 0, 0), true)
@@ -41,9 +41,9 @@ features.orbwalker:send_move_input(vec3(0, 0, 0), true)
 
 ### set_cast_time
 
-| Argument | Type     | Required |
-| -------- | -------- | -------- |
-| time     | `number` | +        |
+| Argument | Type           | Required |
+| -------- | -------------- | -------- |
+| time     | `number{:lua}` | +        |
 
 ```lua
 features.orbwalker:set_cast_time(0.25)
@@ -51,9 +51,9 @@ features.orbwalker:set_cast_time(0.25)
 
 ### can_move
 
-| Argument | Type      | Required |
-| -------- | --------- | -------- |
-| returns  | `boolean` |          |
+| Argument | Type            | Required |
+| -------- | --------------- | -------- |
+| returns  | `boolean{:lua}` |          |
 
 ```lua
 if features.orbwalker:can_move() then
@@ -63,12 +63,12 @@ end
 
 ### is_attackable
 
-| Argument   | Type      | Required |
-| ---------- | --------- | -------- |
-| index      | `number`  | +        |
-| range      | `number`  | +        |
-| edge_range | `boolean` | +        |
-| returns    | `boolean` |          |
+| Argument   | Type            | Required |
+| ---------- | --------------- | -------- |
+| index      | `number{:lua}`  | +        |
+| range      | `number{:lua}`  | +        |
+| edge_range | `boolean{:lua}` | +        |
+| returns    | `boolean{:lua}` |          |
 
 ```lua /is_attackable/
 local target = features.target_select:get_default_target()
@@ -86,9 +86,9 @@ end
 
 ### get_ping
 
-| Argument | Type     | Required |
-| -------- | -------- | -------- |
-| returns  | `number` |          |
+| Argument | Type           | Required |
+| -------- | -------------- | -------- |
+| returns  | `number{:lua}` |          |
 
 ```lua
 print("Ping: " .. features.orbwalker:get_ping())
@@ -96,9 +96,9 @@ print("Ping: " .. features.orbwalker:get_ping())
 
 ### get_mode
 
-| Argument | Type                                          | Required |
-| -------- | --------------------------------------------- | -------- |
-| returns  | [`e_orbwalker_mode`](/enums/e_orbwalker_mode) |          |
+| Argument | Type                                                | Required |
+| -------- | --------------------------------------------------- | -------- |
+| returns  | [`e_orbwalker_mode{:lua}`](/enums/e_orbwalker_mode) |          |
 
 ### reset_aa_timer
 
@@ -109,9 +109,9 @@ features.orbwalker:reset_aa_timer()
 
 ### can_attack
 
-| Argument | Type      | Required |
-| -------- | --------- | -------- |
-| returns  | `boolean` |          |
+| Argument | Type            | Required |
+| -------- | --------------- | -------- |
+| returns  | `boolean{:lua}` |          |
 
 ```lua
 if features.orbwalker:can_attack() then
@@ -121,9 +121,9 @@ end
 
 ### should_reset_aa
 
-| Argument | Type      | Required |
-| -------- | --------- | -------- |
-| returns  | `boolean` |          |
+| Argument | Type            | Required |
+| -------- | --------------- | -------- |
+| returns  | `boolean{:lua}` |          |
 
 ```lua
 if features.orbwalker:should_reset_aa() then
@@ -133,109 +133,189 @@ end
 
 ### allow_movement
 
-| Argument | Type      | Required |
-| -------- | --------- | -------- |
-| allowed  | `boolean` | +        |
+| Argument | Type            | Required |
+| -------- | --------------- | -------- |
+| allowed  | `boolean{:lua}` | +        |
 
 ### allow_attacks
 
-| Argument | Type      | Required |
-| -------- | --------- | -------- |
-| allowed  | `boolean` | +        |
+| Argument | Type            | Required |
+| -------- | --------------- | -------- |
+| allowed  | `boolean{:lua}` | +        |
 
 ### get_last_attack_start_time
 
-| Argument | Type     | Required |
-| -------- | -------- | -------- |
-| returns  | `number` |          |
+| Argument | Type           | Required |
+| -------- | -------------- | -------- |
+| returns  | `number{:lua}` |          |
 
 ### get_last_attack_ending_time
 
-| Argument | Type     | Required |
-| -------- | -------- | -------- |
-| returns  | `number` |          |
+| Argument | Type           | Required |
+| -------- | -------------- | -------- |
+| returns  | `number{:lua}` |          |
 
 ### get_last_attack_time
 
-| Argument | Type     | Required |
-| -------- | -------- | -------- |
-| returns  | `number` |          |
+| Argument | Type           | Required |
+| -------- | -------------- | -------- |
+| returns  | `number{:lua}` |          |
 
 ### get_previous_attack_time
 
-| Argument | Type     | Required |
-|----------|----------|----------|
-| returns  | `number` |          |
+| Argument | Type           | Required |
+| -------- | -------------- | -------- |
+| returns  | `number{:lua}` |          |
 
 ### get_cast_spell_time
 
-| Argument | Type     | Required |
-|----------|----------|----------|
-| returns  | `number` |          |
+| Argument | Type           | Required |
+| -------- | -------------- | -------- |
+| returns  | `number{:lua}` |          |
 
 ### override_target
 
-| Argument       | Type      | Required |
-|----------------|-----------|----------|
-| target_index   | `number`  | +        |
-| require_attack | `boolean` | -        |
-| returns        | `boolean` |          |
+| Argument       | Type            | Required |
+| -------------- | --------------- | -------- |
+| target_index   | `number{:lua}`  | +        |
+| require_attack | `boolean{:lua}` | -        |
+| returns        | `boolean{:lua}` |          |
 
 ### is_unit_headshottable
 
-| Argument       | Type      | Required |
-|----------------|-----------|----------|
-| target_index   | `number`  | +        |
-| returns        | `boolean` |          |
+| Argument     | Type            | Required |
+| ------------ | --------------- | -------- |
+| target_index | `number{:lua}`  | +        |
+| returns      | `boolean{:lua}` |          |
 
 ### get_target_autospacing_position
 
-| Argument | Type                         | Required |
-|----------|------------------------------|----------|
-| returns  | [`vec3`](/structs/math/vec3) |          |
+| Argument | Type                               | Required |
+| -------- | ---------------------------------- | -------- |
+| returns  | [`vec3{:lua}`](/structs/math/vec3) |          |
 
 ### get_last_target_index
 
-| Argument | Type     | Required |
-|----------|----------|----------|
-| returns  | `number` |          |
+| Argument | Type           | Required |
+| -------- | -------------- | -------- |
+| returns  | `number{:lua}` |          |
 
 ### is_hard_crowdcontrolled
 
-| Argument       | Type      | Required |
-|----------------|-----------|----------|
-| returns        | `boolean` |          |
+| Argument | Type            | Required |
+| -------- | --------------- | -------- |
+| returns  | `boolean{:lua}` |          |
 
 ### get_support_limiter_active
 
-| Argument       | Type      | Required |
-|----------------|-----------|----------|
-| returns        | `boolean` |          |
+| Argument | Type            | Required |
+| -------- | --------------- | -------- |
+| returns  | `boolean{:lua}` |          |
 
 ### set_last_attack_time
 
-| Argument | Type     | Required |
-|----------|----------|----------|
-| time     | `number` | +        |
+| Argument | Type           | Required |
+| -------- | -------------- | -------- |
+| time     | `number{:lua}` | +        |
 
 ### set_last_cast
 
 ### get_aa_missile_speed
 
-| Argument | Type                            | Required |
-|----------|---------------------------------|----------|
-| target   | [`c_object`](/classes/c_object) | +        |
-| returns  | `boolean`                       |          |
+| Argument | Type                                  | Required |
+| -------- | ------------------------------------- | -------- |
+| target   | [`c_object{:lua}`](/classes/c_object) | +        |
+| returns  | `boolean{:lua}`                       |          |
 
 ### get_spellfarm_target_index
 
-| Argument | Type            | Required |
-|----------|-----------------|----------|
-| returns  | `number \| nil` |          |
+| Argument | Type                  | Required |
+| -------- | --------------------- | -------- |
+| returns  | `number \| nil{:lua}` |          |
 
 ### should_attack_target
 
-| Argument | Type       | Required |
-|----------|------------|----------|
-| target   | `c_object` | +        |
-| returns  | `boolean`  |          |
+| Argument | Type                                  | Required |
+| -------- | ------------------------------------- | -------- |
+| target   | [`c_object{:lua}`](/classes/c_object) | +        |
+| returns  | `boolean{:lua}`                       |          |
+
+### is_autoattack_allowed
+
+| Argument | Type            | Required |
+| -------- | --------------- | -------- |
+| returns  | `boolean{:lua}` |          |
+
+### is_movement_allowed
+
+| Argument | Type            | Required |
+| -------- | --------------- | -------- |
+| returns  | `boolean{:lua}` |          |
+
+### get_lasthit_target
+
+| Argument | Type                                         | Required |
+| -------- | -------------------------------------------- | -------- |
+| returns  | [`c_object \| nil{:lua}`](/classes/c_object) |          |
+
+### get_laneclear_target
+
+| Argument   | Type                                         | Required |
+| ---------- | -------------------------------------------- | -------- |
+| fast_clear | `boolean{:lua}`                              | +        |
+| returns    | [`c_object \| nil{:lua}`](/classes/c_object) |          |
+
+### get_freeze_target
+
+| Argument | Type                                         | Required |
+| -------- | -------------------------------------------- | -------- |
+| returns  | [`c_object \| nil{:lua}`](/classes/c_object) |          |
+
+### get_senna_soul_target
+
+| Argument | Type                                         | Required |
+| -------- | -------------------------------------------- | -------- |
+| returns  | [`c_object \| nil{:lua}`](/classes/c_object) |          |
+
+### get_xayah_passive_harass_target
+
+| Argument | Type                                         | Required |
+| -------- | -------------------------------------------- | -------- |
+| returns  | [`c_object \| nil{:lua}`](/classes/c_object) |          |
+
+### get_special_target
+
+| Argument | Type                                         | Required |
+| -------- | -------------------------------------------- | -------- |
+| returns  | [`c_object \| nil{:lua}`](/classes/c_object) |          |
+
+### get_special_target_low_priority
+
+| Argument | Type                                         | Required |
+| -------- | -------------------------------------------- | -------- |
+| returns  | [`c_object \| nil{:lua}`](/classes/c_object) |          |
+
+### get_turret_target
+
+| Argument | Type                                         | Required |
+| -------- | -------------------------------------------- | -------- |
+| returns  | [`c_object \| nil{:lua}`](/classes/c_object) |          |
+
+### can_attack_turret
+
+| Argument | Type            | Required |
+| -------- | --------------- | -------- |
+| returns  | `boolean{:lua}` |          |
+
+### get_magnet_position
+
+| Argument | Type                                      | Required |
+| -------- | ----------------------------------------- | -------- |
+| returns  | [`vec3 \| nil{:lua}`](/structs/math/vec3) |          |
+
+### can_override_attack
+
+| Argument | Type            | Required |
+| -------- | --------------- | -------- |
+| index    | `number{:lua}`  | +        |
+| returns  | `boolean{:lua}` |          |
