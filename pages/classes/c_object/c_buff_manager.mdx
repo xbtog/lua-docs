@@ -8,9 +8,9 @@ import { Callout } from "nextra-theme-docs";
 
 Calculates and returns current number of buffs in the buff manager.
 
-| Argument | Type     | Required |
-| -------- | -------- | -------- |
-| returns  | `number` |          |
+| Argument | Type           | Required |
+| -------- | -------------- | -------- |
+| returns  | `number{:lua}` |          |
 
 ```lua /size/
 local local_buff_manager = g_local:get_buff_manager()
@@ -25,9 +25,9 @@ print("Local player has " .. local_buff_manager:size() .. " buffs.")
   whenever possible.
 </Callout>
 
-| Argument | Type                                        | Required |
-| -------- | ------------------------------------------- | -------- |
-| returns  | [`table<c_buff>`](/classes/c_object/c_buff) |          |
+| Argument | Type                                              | Required |
+| -------- | ------------------------------------------------- | -------- |
+| returns  | [`table<c_buff>{:lua}`](/classes/c_object/c_buff) |          |
 
 ```lua /get_all/
 local local_buff_manager = g_local:get_buff_manager()

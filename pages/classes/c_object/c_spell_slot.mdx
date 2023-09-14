@@ -2,26 +2,26 @@
 
 ## Members
 
-- `level:` `number`
-- `cooldown_expire:` `number`
-- `charges:` `number`
-- `final_cooldown_expire:` `number`
-- `cooldown:` `number`
-- `coefficient:` `number`
-- `coefficient2:` `number`
-- `cooldown_time:` `number`
-- `missile_speed:` `number`
-- `channel_duration:` `number`
-- `missile_width:` `number`
-- `owner_character:` `string`
+- `level:` `number{:lua}`
+- `cooldown_expire:` `number{:lua}`
+- `charges:` `number{:lua}`
+- `final_cooldown_expire:` `number{:lua}`
+- `cooldown:` `number{:lua}`
+- `coefficient:` `number{:lua}`
+- `coefficient2:` `number{:lua}`
+- `cooldown_time:` `number{:lua}`
+- `missile_speed:` `number{:lua}`
+- `channel_duration:` `number{:lua}`
+- `missile_width:` `number{:lua}`
+- `owner_character:` `string{:lua}`
 
 ## Functions
 
 ### get_mana_cost
 
-| Argument | Type     | Required |
-| -------- | -------- | -------- |
-| returns  | `number` |          |
+| Argument | Type           | Required |
+| -------- | -------------- | -------- |
+| returns  | `number{:lua}` |          |
 
 ```lua
 print("Mana cost: " .. spell:get_mana_cost())
@@ -29,9 +29,9 @@ print("Mana cost: " .. spell:get_mana_cost())
 
 ### get_name
 
-| Argument | Type     | Required |
-| -------- | -------- | -------- |
-| returns  | `string` |          |
+| Argument | Type           | Required |
+| -------- | -------------- | -------- |
+| returns  | `string{:lua}` |          |
 
 ```lua
 print("Spell name: " .. spell:get_name())
@@ -39,9 +39,9 @@ print("Spell name: " .. spell:get_name())
 
 ### is_ready
 
-| Argument | Type      | Required |
-| -------- | --------- | -------- |
-| returns  | `boolean` |          |
+| Argument | Type            | Required |
+| -------- | --------------- | -------- |
+| returns  | `boolean{:lua}` |          |
 
 ```lua
 print("Spell is ready: " .. spell:is_ready())

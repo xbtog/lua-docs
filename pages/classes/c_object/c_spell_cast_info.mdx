@@ -2,37 +2,37 @@
 
 ## Members
 
-- `missile_index:` `number`
-- `missile_nid:` `number`
+- `missile_index:` `number{:lua}`
+- `missile_nid:` `number{:lua}`
 - `start_position:` [`vec3{:lua}`](/structs/math/vec3)
 - `end_position:` [`vec3{:lua}`](/structs/math/vec3)
-- `windup_time:` `number`
-- `total_cast_time:` `number`
-- `is_autoattack:` `boolean`
-- `is_special_attack:` `boolean`
-- `was_autoattack_cast:` `boolean`
-- `was_autoattack_cast2:` `boolean`
-- `slot:` [`e_spell_slot`](/enums/e_spell_slot)
-- `server_cast_time:` `number`
-- `end_time:` `number`
-- `start_time:` `number`
+- `windup_time:` `number{:lua}`
+- `total_cast_time:` `number{:lua}`
+- `is_autoattack:` `boolean{:lua}`
+- `is_special_attack:` `boolean{:lua}`
+- `was_autoattack_cast:` `boolean{:lua}`
+- `was_autoattack_cast2:` `boolean{:lua}`
+- `slot:` [`e_spell_slot{:lua}`](/enums/e_spell_slot)
+- `server_cast_time:` `number{:lua}`
+- `end_time:` `number{:lua}`
+- `start_time:` `number{:lua}`
 - `owner_character:` `string`
-- `coefficient:` `number`
-- `coefficient2:` `number`
-- `cooldown_time:` `number`
-- `name:` `string`
-- `mana_cost:` `number`
-- `missile_speed:` `number`
-- `channel_duration:` `number`
-- `missile_width:` `number`
+- `coefficient:` `number{:lua}`
+- `coefficient2:` `number{:lua}`
+- `cooldown_time:` `number{:lua}`
+- `name:` `string{:lua}`
+- `mana_cost:` `number{:lua}`
+- `missile_speed:` `number{:lua}`
+- `channel_duration:` `number{:lua}`
+- `missile_width:` `number{:lua}`
 
 ## Functions
 
 ### get_target_index
 
-| Argument | Type     | Required |
-| -------- | -------- | -------- |
-| returns  | `number` |          |
+| Argument | Type           | Required |
+| -------- | -------------- | -------- |
+| returns  | `number{:lua}` |          |
 
 ```lua
 print("Target " .. spell_cast_info:get_target_index())
