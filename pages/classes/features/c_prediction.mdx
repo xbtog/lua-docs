@@ -11,8 +11,10 @@
 | projectile_speed | `number`                                              | +        |
 | projectile_width | `number`                                              | +        |
 | delay            | `number`                                              | +        |
-| source_position  | [`vec3`](/structs/math/vec3)                          | +        |
-| extend           | `boolean`                                             |          |
+| source_position  | [`vec3`](/structs/math/vec3)                          | -        |
+| extend           | `boolean`                                             | -        |
+| flags            | `number`                                              | -        |
+| spell_type       | `e_spell_flag`                                        | -        |
 | returns          | [`prediction_result_t`](/structs/prediction_result_t) |          |
 
 ```lua /:predict/
