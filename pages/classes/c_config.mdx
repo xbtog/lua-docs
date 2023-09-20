@@ -8,7 +8,7 @@
 | -------- | --------------------------------------- | -------- |
 | value    | `number{:lua}`                                | +        |
 | var_name | `string{:lua}`                                | +        |
-| returns  | [`config_var_t`](/structs/config_var_t) |          |
+| returns  | [`config_var_t{:lua}`](/structs/config_var_t) |          |
 
 ```lua
 local some_name = g_config:add_int(100, "some_name")
@@ -25,7 +25,7 @@ print("Value is: " .. some_name:get_int()) -- prints 200
 | -------- | --------------------------------------- | -------- |
 | value    | `number{:lua}`                                | +        |
 | var_name | `string{:lua}`                                | +        |
-| returns  | [`config_var_t`](/structs/config_var_t) |          |
+| returns  | [`config_var_t{:lua}`](/structs/config_var_t) |          |
 
 ```lua
 local some_name = g_config:add_float(100, "some_name")
@@ -42,7 +42,7 @@ print("Value is: " .. some_name:get_float()) -- prints 0.5
 | -------- | --------------------------------------- | -------- |
 | value    | `boolean{:lua}`                               | +        |
 | var_name | `string{:lua}`                                | +        |
-| returns  | [`config_var_t`](/structs/config_var_t) |          |
+| returns  | [`config_var_t{:lua}`](/structs/config_var_t) |          |
 
 ```lua
 local some_name = g_config:add_bool(false, "some_name")
