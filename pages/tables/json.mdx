@@ -4,4 +4,16 @@
 
 ### parse
 
+```lua
+local parsed = json.parse("{\"hello\": \"world\"}");
+
+print(parsed["hello"]) -- prints: 'world'
+```
+
 ### stringify
+
+```lua
+local str = json.stringify({hello = "world"});
+
+print(str) -- prints: '{"hello":"world"}'
+```
