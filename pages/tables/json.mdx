@@ -4,6 +4,11 @@
 
 ### parse
 
+| Argument | Type           | Required |
+| -------- | -------------- | -------- |
+| data     | `string{:lua}` | +        |
+| returns  | `table{:lua}`  |          |
+
 ```lua
 local parsed = json.parse("{\"hello\": \"world\"}");
 
@@ -11,6 +16,11 @@ print(parsed["hello"]) -- prints: 'world'
 ```
 
 ### stringify
+
+| Argument | Type           | Required |
+| -------- | -------------- | -------- |
+| data     | `table{:lua}`  | +        |
+| returns  | `string{:lua}` |          |
 
 ```lua
 local str = json.stringify({hello = "world"});
